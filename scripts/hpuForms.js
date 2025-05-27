@@ -1,6 +1,6 @@
 const hpuSysParamsForm = document.querySelector('#hpu-sys-params-form');
 const hpuManifoldForm = document.querySelector('#hpu-manifold-form');
-const hpuValveForm = document.querySelector('#hpu-valve-form');
+/* const hpuValveForm = document.querySelector('#hpu-valve-form'); */
 
 const hpuSysParamsButtons = document.querySelectorAll('.hpu-sys-params-btn');
 const hpuManifoldButtons = document.querySelectorAll('.hpu-mani-btn');
@@ -21,20 +21,20 @@ const displayHpuSysParamsForm = () => {
 
     hpuSysParamsForm.style.display = 'block';
     hpuManifoldForm.style.display = 'none';
-    hpuValveForm.style.display = 'none';
+    /* hpuValveForm.style.display = 'none'; */
 };
 
 const displayHpuManifoldForm = () => {
     hpuSysParamsForm.style.display = 'none';
     hpuManifoldForm.style.display = 'block';
-    hpuValveForm.style.display = 'none';
+    /* hpuValveForm.style.display = 'none'; */
 };
 
-const displayHpuValveForm = () => {
+/* const displayHpuValveForm = () => {
     hpuSysParamsForm.style.display = 'none';
     hpuManifoldForm.style.display = 'none';
     hpuValveForm.style.display = 'block';
-};
+}; */
 
 
 // BUTTONS
@@ -172,10 +172,10 @@ const generateHpuNumberStationsDropdown = () => {
 
 
 // Process hpu input into hpuAssem when the final hpu form (valve page) is submitted
-hpuValveForm.addEventListener('submit', e => {
+/* hpuValveForm.addEventListener('submit', e => {
     e.preventDefault();
     updateHpuDiv();
-});
+}); */
 
 // Process hpu inputs and valveAssem into hpuAssem and display part number page
 async function updateHpuDiv(){
