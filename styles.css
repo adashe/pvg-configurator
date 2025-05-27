@@ -28,7 +28,12 @@ h2.part-num-disp{
 h3{
     text-align: center;
     color: #434343;
-    margin: 0;
+    margin: 0px 10px 20px 10px;
+}
+.h3popup{
+    text-align: center;
+    color: #434343;
+    margin: 20px 10px 10px 10px;
 }
 .total-price{
     text-align: center;
@@ -71,8 +76,8 @@ li h5{
 }
 .page-div{
     background: white;
-    margin: 10px;
-    padding: 10px;
+    margin: 0px 10px 10px 10px;
+    padding: 0px 10px 10px 10px;
 }
 
 
