@@ -45,38 +45,38 @@ function generatePvgSelections(){
 
     let numSections = 12;
 
-    const functionHtml = '<input type="text" id="function" placeholder="Function">';
-
-    const seriesHtml = `<select name="pvgSeries" id="pvgSeries">
-                            <option value="" disabled selected hidden>Select series...</option>
-                            <option value="32">32</option>
-                            <option value="48">48</option>
-                        </select>`;
-
-    const acutationHtml = `<select name="actuationMethod" id="actuationMethod">
-                                <option value="" disabled selected hidden>Select actuation method...</option>
-                                <option value="electrical">Electrical (PVHC)</option>
-                                <option value="mechanical">Mechanical</option>
-                            </select>`;
-
-    const spoolHtml = `<select name="spoolType" id="spoolType">
-                            <option value="" disabled selected hidden>Select spool type...</option>
-                            <option value="DAmotor">DA - Motor</option>
-                            <option value="SAmotor">SA - Motor</option>
-                            <option value="DAcylinder">DA - Cylinder</option>
-                            <option value="SAcylinder">SA - Cylinder</option>
-                        </select>`;
-
-    const gpmHtml = '<input type="number" placeholder="gpm">';
-
-    const portRelAHtml = '<input type="number" placeholder="Port Relief A">';
-
-    const portRelBHtml = '<input type="number" placeholder="Port Relief B">';
-
 
     for(i = 0; i < numSections; i++){
 
-        let html = `<div id="station${i}">Station ${i + 1}: 
+        const functionHtml = `<input type="text" id="function${i}" placeholder="Function">`;
+
+        const seriesHtml = `<select name="pvgSeries" id="pvgSeries${i}">
+                                <option value="" disabled selected hidden>Select series...</option>
+                                <option value="32">32</option>
+                                <option value="48">48</option>
+                            </select>`;
+
+        const acutationHtml = `<select name="actuationMethod" id="actuationMethod${i}">
+                                    <option value="" disabled selected hidden>Select actuation method...</option>
+                                    <option value="electrical">Electrical (PVHC)</option>
+                                    <option value="mechanical">Mechanical</option>
+                                </select>`;
+
+        const spoolHtml = `<select name="spoolType" id="spoolType${i}">
+                                <option value="" disabled selected hidden>Select spool type...</option>
+                                <option value="DAmotor">DA - Motor</option>
+                                <option value="SAmotor">SA - Motor</option>
+                                <option value="DAcylinder">DA - Cylinder</option>
+                                <option value="SAcylinder">SA - Cylinder</option>
+                            </select>`;
+
+        const gpmHtml = `<input type="number" id="gpm${i}" name="gpm" placeholder="gpm">`;
+
+        const portRelAHtml = `<input type="number" id="portRelA${i}" name="portRelA" placeholder="Port Relief A">`;
+
+        const portRelBHtml = `<input type="number" id="portRelB${i}" name="portRelB" placeholder="Port Relief B">`;
+
+        const html = `<div id="station${i}">Station ${i + 1}: 
                     ${functionHtml}
                     ${seriesHtml}
                     ${acutationHtml}

@@ -152,7 +152,7 @@ li h5{
     font-weight: 500;
 }
 .button:hover{
-    background-color: #4d91c9;
+    background-color: #3579b1;
     cursor: pointer;
 }
 button.gray{
@@ -177,7 +177,7 @@ button.yellow:hover{
     color: #67bfc2;
 }
 #advanced-opts:hover{
-    color: #72d1d4;
+    color: #4d91c9;
     cursor: pointer;
     text-decoration: underline;
 }
@@ -185,13 +185,13 @@ button.yellow:hover{
     display: none;
 }
 .li-edit:hover{
-    color: #72d1d4;
+    color: #4d91c9;
     cursor: pointer;
     text-decoration: underline;
 }
 .li-edit.active{
     display: block;
-    color: #67bfc2;
+    color: #327db9;
     font-style: italic;
     display: inherit;
 }
@@ -207,11 +207,11 @@ p.assem-price{
     margin: 0;
     font-size: 12px;
     text-align: right;
-    color: #67bfc2;
+    color: #4d91c9;
     font-style: italic;
 }
 .edit-inputs:hover {
-    color: #72d1d4;
+    color: #4d91c9;
     cursor: pointer;
     text-decoration: underline;
 }
