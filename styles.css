@@ -16,7 +16,7 @@ h2{
     margin: 10px;
 }
 h2.company{
-    color: #00467f;
+    color: #4d91c9;
     margin-top: 30px;
 }
 h2.part-num-disp{
@@ -146,20 +146,22 @@ li h5{
     padding: 10px;
     font-family: "Source Sans 3", serif;
     border: none;
-    background-color: #72d1d4;
+    background-color: #4d91c9;
     border-radius: 5px;
-    color: #434343;
+    color: white;
     font-weight: 500;
 }
 .button:hover{
-    background-color: #67bfc2;
+    background-color: #4d91c9;
     cursor: pointer;
 }
 button.gray{
     background-color: #d4d4d4;
+    color: #434343;
 }
 .button.gray:hover{
     background-color: #c2c0c0;
+    color: #434343;
     cursor: pointer;
 }
 button.yellow{
@@ -199,7 +201,7 @@ p.assem-price{
     font-size: 16px;
     text-align: left;
     font-weight: 500;
-    color: #67bfc2;
+    color: #4d91c9;
 }
 .edit-inputs{
     margin: 0;
@@ -414,7 +416,7 @@ form#contact-form{
     border-radius: 5px;
 }
 .valve-popup-div h2{
-    color: #72d1d4;
+    color: #4d91c9;
 }
 .valve-popup-close-x{
     position: absolute;

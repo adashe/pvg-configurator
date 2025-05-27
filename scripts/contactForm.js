@@ -15,7 +15,7 @@ const updateContactInputs = () => {
         companyName: contactForm.companyName.value,
         email: contactForm.email.value,
         phone: contactForm.phone.value,
-        distributor: contactForm.distributor.value
+        /* distributor: contactForm.distributor.value */
     };
 
 };
@@ -31,7 +31,7 @@ contactForm.addEventListener('submit', e => {
 })
 
 // Toggle customer settings when customer is logged in or out
-const toggleCustSettings = () => {
+/* const toggleCustSettings = () => {
     const distSelectDiv = document.querySelector('#dist-select-div');
 
     if(currentUser.userType == 'cust'){
@@ -39,4 +39,4 @@ const toggleCustSettings = () => {
     } else {
         distSelectDiv.style.display = 'none';
     };
-};
+}; */
