@@ -1,6 +1,5 @@
 const hpuSysParamsForm = document.querySelector('#hpu-sys-params-form');
 const hpuManifoldForm = document.querySelector('#hpu-manifold-form');
-/* const hpuValveForm = document.querySelector('#hpu-valve-form'); */
 
 const hpuSysParamsButtons = document.querySelectorAll('.hpu-sys-params-btn');
 const hpuManifoldButtons = document.querySelectorAll('.hpu-mani-btn');
@@ -29,12 +28,6 @@ const displayHpuManifoldForm = () => {
     hpuManifoldForm.style.display = 'block';
     /* hpuValveForm.style.display = 'none'; */
 };
-
-/* const displayHpuValveForm = () => {
-    hpuSysParamsForm.style.display = 'none';
-    hpuManifoldForm.style.display = 'none';
-    hpuValveForm.style.display = 'block';
-}; */
 
 
 // BUTTONS
@@ -93,11 +86,6 @@ const resetHpuInputs = () => {
 hpuSysParamsForm.addEventListener('submit', e => {
     e.preventDefault();
 
-/*     hpuInputs.maxPres = parseInt(hpuSysParamsForm.maxPressure.value);
-    hpuInputs.maxFlow = parseFloat(hpuSysParamsForm.maxFlow.value);
-    hpuInputs.appType = hpuSysParamsForm.applicationType.value;
-    hpuInputs.resOrient = hpuSysParamsForm.reservoirOrientation.value;
-    hpuInputs.heatExchType = hpuSysParamsForm.heatExchType.value; */
 
     displayHpuManifoldForm();
 });
@@ -106,10 +94,6 @@ hpuSysParamsForm.addEventListener('submit', e => {
 hpuManifoldForm.addEventListener('submit', e => {
     e.preventDefault();
 
-/*     hpuInputs.numStat = hpuManifoldForm.hpuNumberStations.value;
-    hpuInputs.portSize = hpuManifoldForm.hpuPortSize.value; */
-
-    /* displayHpuValveForm(); */
     displayValvePopup();
 });
 
@@ -164,18 +148,6 @@ const generateHpuNumberStationsDropdown = () => {
     });
 };
 
-// Reset number of stations and valve options form if port size is changed
-/* hpuPortSize.addEventListener('change', e => {
-    e.preventDefault();
-    generateHpuNumberStationsDropdown();
-}); */
-
-
-// Process hpu input into hpuAssem when the final hpu form (valve page) is submitted
-/* hpuValveForm.addEventListener('submit', e => {
-    e.preventDefault();
-    updateHpuDiv();
-}); */
 
 // Process hpu inputs and valveAssem into hpuAssem and display part number page
 async function updateHpuDiv(){

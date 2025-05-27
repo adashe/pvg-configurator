@@ -12,13 +12,6 @@ const errorPopupHeader = document.querySelector('.error-popup-header');
 const errorPopupContent = document.querySelector('.error-popup-content');
 
 
-// Process HMI form input
-/* hmiForm.addEventListener('submit', e => {
-    e.preventDefault();
-
-    hmiForm.reset();
-});
- */
 // Details buttons
 detailsButtons.forEach((button) => {
     button.addEventListener('click', e => {
@@ -34,6 +27,7 @@ restartButtons.forEach((button) => {
         e.preventDefault();
 
         window.location.reload();
+        window.scrollTo(0, 0);
     });
 });
 

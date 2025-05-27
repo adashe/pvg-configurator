@@ -20,19 +20,8 @@
         <h2 class="company">SCOTT INDUSTRIAL</h2>
         <h1>Hybrid Configurator</h1>
 
-        <!-- COMPONENT DIV -->
-<!--         <div id="component-div" class="page-div">
-
-            <h2 id="select-configurator">Select configurator:</h2>
-            <button class="button hpu-start">HYDRAULIC POWER UNIT</button>
-
-        </div> -->
-    
         <!-- HPU DIV -->
         <div id="hpu-div" class="page-div">
-<!--             <h2>
-                PVG CONFIGURATOR
-            </h2> -->
 
             <form id="hpu-sys-params-form">
                 <h3>Manifold Setup</h3>
@@ -76,46 +65,6 @@
                     </select>
                 </div>
 
-
-
-                <!-- <div>
-                    <label for="maxPressure">Max Pressure (psi):</label>
-                    <input type="number" id="maxPressure" placeholder="ex. 2000" min="0" max="3000" required>
-                </div>
-
-                <div>
-                    <label for="maxFlow">Max Flow (gpm):</label>
-                    <input type="number" id="maxFlow" placeholder="ex. 8" min="0" max="21" step="0.1" required>
-                </div>
-
-                <div>
-                    <label for="applicationType">Application Type:</label>
-                    <select name="applicationType" id="applicationType" required>
-                        <option value="" disabled selected hidden>...</option>
-                        <option value="pressure-holding">Pressure Holding</option>
-                        <option value="cylinder">Cylinder</option>
-                        <option value="motor">Motor</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="reservoirOrientation">Reservoir Orientation:</label>
-                    <select name="reservoirOrientation" id="reservoirOrientation" required>
-                        <option value="horizontal" selected>Horizontal (default)</option>
-                        <option value="vertical">Vertical</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="heatExchType">Heat Exchanger Type:</label>
-                    <select name="heatExchType" id="heatExchType" required>
-                        <option value="" disabled selected hidden>...</option>
-                        <option value="none">No heat exchanger</option>
-                        <option value="air">Air</option>
-                        <option value="water">Water</option>
-                    </select>
-                </div> -->
-
                 <button class="button gray restart">RESTART</button>
                 <input class="button" type="submit" value="CONTINUE">
 
@@ -140,95 +89,15 @@
                 </div>
 
 
-
-
-<!--                 <div>
-                    <label for="hpuPortSize">Valve Size:</label>
-                    <select name="hpuPortSize" id="hpuPortSize" required>
-                        <option value="" disabled selected hidden>...</option>
-                        <option value="D03">D03</option>
-                        <option value="D05">D05</option>
-                    </select>
-                </div>
-
-                <div id="hpu-number-stations-div">                    
-                    <label for="hpuNumberStations">Number of Stations:</label>
-                    <select name="hpuNumberStations" id="hpuNumberStations" required disabled>
-                        <option value="" disabled selected hidden>...</option>
-                    </select>
-                </div> -->
-
                 <button class="button gray hpu-sys-params-btn">PREVIOUS</button>
                 <input class="button" type="submit" value="CONTINUE">
                 <button class="button gray restart">RESTART</button>
 
             </form>
-
- <!--            <form id="hpu-valve-form">
-                <h3>Valve Options</h3>
-                <p>Valve selections are not required for HPU configuration, but are recommended for accuracy.</p>               
-                <button class="button yellow hpu-valves-btn" id="hpu-edit-valves-btn">EDIT VALVES</button>
-                <input class="button" type="submit" value="GENERATE PART NUMBER">
-                <button class="button gray hpu-mani-btn">PREVIOUS</button>  
-                <button class="button gray restart">RESTART CONFIGURATOR</button> 
-            </form> -->
             
 
         </div>
     
-        <!-- MS DIV -->
-<!--         <div id="msp-div" class="page-div">
-            <h2>
-                MOTOR STARTER PANEL CONFIGURATOR
-            </h2>
-
-            <form id="ms-voltage-form">
-                <div>
-                    <label for="msVoltage">Voltage: </label>
-                    <select name="msVoltage" id="msVoltage" required>
-                        <option value="" disabled selected hidden>...</option>
-                        <option value="208V">208V</option>
-                        <option value="240V">240V</option>
-                        <option value="480V">480V</option>
-                    </select>
-                </div>
-
-                <div>
-                    <label for="msNumStarters">Number of motors: </label>
-                    <select name="msNumStarters" id="msNumStarters" required>
-                        <option value="" disabled selected hidden>...</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                    </select>
-                </div>
-
-                <input class="button" type="submit" value="CONTINUE">
-                <button class="button gray restart">RESTART CONFIGURATOR</button>
-            </form>
-
-            <form id="ms-starters-form">
-
-                <div id="generated-starters-div" class="starter-div"></div>
-
-                <input class="button" type="submit" value="GENERATE PART NUMBER">
-                <button class="button gray ms-voltage-btn">PREVIOUS</button>  
-                <button class="button gray restart">RESTART CONFIGURATOR</button>
-            </form>
-        </div> -->
-    
-        <!-- HMI DIV -->
-<!--         <div id="hmi-div" class="page-div">
-            <h2>
-                HMI GLOBAL WATCH CONFIGURATOR
-            </h2>
-
-            <form id="hmi-form">        
-                <input class="button" type="submit" value="SUBMIT">
-                <button class="button gray restart">RESTART CONFIGURATOR</button>
-            </form>
-        </div> -->
     
         <!-- PART NUMBER DIV -->
         <div id="part-num-div" class="page-div">
@@ -323,19 +192,6 @@
         </div>
     </div>
 
-    <!-- TABLE POPUP DIV -->
-<!--     <div class="table-wrapper">
-        <div class="table-div">
-            <div class="table-close-x">x</div>
-            <div class="table-content">
-                <table>
-                    <h2 id="table-h2"></h2>
-                    <thead></thead>
-                    <tbody></tbody>
-                </table>
-            </div>
-        </div>
-    </div> -->
 
     <!-- VALVE FORM POPUP DIV -->
     <div class="valve-popup-wrapper">
@@ -349,22 +205,6 @@
 
             <form id="valve-popup-form">
 
-<!--                 <div id="valve-settings-div">
-                    <div id="valve-port-size-div"></div>
-                    <div id="valve-sol-volt-div">
-                        <label for="SolenoidVoltage"></label>
-                        <select name="SolenoidVoltage" id="SolenoidVoltage" required>
-                            <option value="" disabled selected hidden>Select solenoid voltage...</option>
-                            <option value="110VAC">110VAC</option>
-                            <option value="24VDC">24VDC</option>
-                        </select>
-                    </div>
-                    <div>
-                        <button class="button valve-img-btn">VIEW VALVE IMAGES</button>
-                    </div>
-                    
-                </div> -->
-
                 <div id="valve-dropdowns-div">
                     <div class="valve-popup-content"></div>
                 </div>
@@ -373,8 +213,6 @@
                     <div class="pvg-selections-content"></div>
                 </div>
                 
-
-                <!-- <input class="button" type="submit" value="SUBMIT VALVE SELECTIONS"> -->
 
                 <div class="buttons-div">
                     <button class="button gray hpu-mani-btn">PREVIOUS</button>  
@@ -387,15 +225,6 @@
         </div>
     </div>
 
-    <!-- VALVE IMAGES DIV -->
-<!--     <div class="valve-img-wrapper">
-        <div id="valve-img-div">
-            <div class="valve-img-close-x">x</div>
-            <h2>VALVE IMAGES</h2>
-            <div class="valve-img-content"></div>
-            <button class="button gray valve-img-popup-close-btn">CLOSE</button>
-        </div>
-    </div> -->
 
     <!-- ERROR POPUP DIV -->
     <div class="error-popup-wrapper">
@@ -437,26 +266,20 @@
 
     <script src="scripts/hpuAssembly.js"></script>
     <script src="scripts/valveAssembly.js"></script>
-<!--     <script src="scripts/msAssembly.js"></script> -->
 
     <script src="scripts/hpuForms.js"></script>
     <script src="scripts/valveForm.js"></script>
-    <!-- <script src="scripts/valveImages.js"></script> -->
-<!--     <script src="scripts/msForms.js"></script> -->
 
     <script src="scripts/hpuNum.js"></script>
     <script src="scripts/valveDisplay.js"></script>
-    <!-- <script src="scripts/msDisplay.js"></script> -->
 
     <script src="scripts/contactForm.js"></script>
 
     <script src="scripts/pdf.js"></script>
     <script src="scripts/pdfHpu.js"></script>
-    <!-- <script src="scripts/pdfMs.js"></script> -->
 
     <script src="scripts/email.js"></script>
     <script src="scripts/emailHpu.js"></script>
-    <!-- <script src="scripts/emailMs.js"></script> -->
 
     <script src="scripts/app.js"></script>
     <script src="scripts/ui.js"></script>
