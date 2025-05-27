@@ -51,6 +51,7 @@ hpuManifoldButtons.forEach((button) => {
     button.addEventListener('click', e => {
         e.preventDefault();
         displayHpuManifoldForm();
+        valvePopupWrapper.style.display = 'none';
     });
 });
 
@@ -108,7 +109,8 @@ hpuManifoldForm.addEventListener('submit', e => {
 /*     hpuInputs.numStat = hpuManifoldForm.hpuNumberStations.value;
     hpuInputs.portSize = hpuManifoldForm.hpuPortSize.value; */
 
-    displayHpuValveForm();
+    /* displayHpuValveForm(); */
+    displayValvePopup();
 });
 
 // Generate number of stations selector while limiting options based on port size selection

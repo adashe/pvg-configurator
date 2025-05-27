@@ -404,7 +404,7 @@ form#contact-form{
     width: 100%;
     max-width: 1000px;
     min-width: 350px;
-    margin: 120px auto;
+    margin: 20px auto;
     padding: 20px;
     background: white;
     position: relative;
@@ -479,7 +479,7 @@ button.valve-img-btn{
 }
 
 /* VALVE IMAGES STYLES */
-.valve-img-wrapper{
+/* .valve-img-wrapper{
     display: none;
     background: rgba(0,0,0,0.5);
     position: fixed;
@@ -516,7 +516,7 @@ img{
 .caption{
     margin-top: 4px;
     margin-bottom: 30px;
-}
+} */
 
 /* POPUP TABLE STYLES */
 .table-wrapper{

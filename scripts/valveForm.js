@@ -3,7 +3,7 @@ const valveSolVoltDiv = document.querySelector('#valve-sol-volt-div');
 const solenoidVoltage = document.querySelector('#SolenoidVoltage');
 
 const valvePopupWrapper = document.querySelector('.valve-popup-wrapper');
-const valvePopupCloseButtonX = document.querySelector('.valve-popup-close-x');
+/* const valvePopupCloseButtonX = document.querySelector('.valve-popup-close-x'); */
 const valvePopupContent = document.querySelector('.valve-popup-content');
 const valvePopupForm = document.querySelector('#valve-popup-form');
 
@@ -13,22 +13,23 @@ const pvgSelectionsContent = document.querySelector('.pvg-selections-content');
 // Display popup to edit valves, flow controls, and check valves
 const displayValvePopup = () => {
 
-    prefillValveSettingsFromHPUInputs();
-    prefillValvePopupFromValveAssembly();
+/*     prefillValveSettingsFromHPUInputs();
+    prefillValvePopupFromValveAssembly(); */
 
     generatePvgSelections();
 
     valvePopupWrapper.style.display = 'block';
+    valvePopupWrapper.scrollTop = 0;
 
 };
 
 // Valve popup close button
-valvePopupCloseButtonX.addEventListener('click', e => {
-    e.preventDefault();
-    solenoidVoltage.value = '';
-    resetValveInputs();
-    valvePopupWrapper.style.display = 'none';
-});
+/* valvePopupCloseButtonX.addEventListener('click', e => {
+    e.preventDefault(); */
+    /* solenoidVoltage.value = ''; */
+    /* resetValveInputs(); */
+/*     valvePopupWrapper.style.display = 'none';
+}); */
 
 // Initiate null values for valve inputs
 let valveInputs = {
@@ -47,7 +48,7 @@ const resetValveInputs = () => {
 };
 
 // Prefill popup if user has already submitted port size, num stat in HPU form
-const prefillValveSettingsFromHPUInputs = () => {
+/* const prefillValveSettingsFromHPUInputs = () => {
 
     // Reset popup when closed and reopened
     valvePopupContent.innerHTML = '';
@@ -62,10 +63,10 @@ const prefillValveSettingsFromHPUInputs = () => {
         valveInputs.numStat = hpuInputs.numStat;
     };
 
-};
+}; */
 
 // Prefill popup with valve assembly
-async function prefillValvePopupFromValveAssembly(){
+/* async function prefillValvePopupFromValveAssembly(){
 
     if(valveAssem.voltage){
         solenoidVoltage.value = valveAssem.voltage;
@@ -101,10 +102,10 @@ async function prefillValvePopupFromValveAssembly(){
             };
         };
     };
-};
+}; */
 
 // Event listener to create valve selectors based on numSt and solVolt
-solenoidVoltage.addEventListener('change', e => {
+/* solenoidVoltage.addEventListener('change', e => {
     e.preventDefault();
 
     valvePopupContent.innerHTML = '';
@@ -114,10 +115,10 @@ solenoidVoltage.addEventListener('change', e => {
     // Generate valve options dropdowns for each number of stations containing selected solVolt data
     generateAllValveDropdowns();
 
-});
+}); */
 
 // Create individual valve dropdown
-const generateValveDropdown = (data, i) => {
+/* const generateValveDropdown = (data, i) => {
 
     // i represents the station
     html = `
@@ -134,10 +135,10 @@ const generateValveDropdown = (data, i) => {
     html += `</select>`;
 
     return html;
-};
+}; */
 
 // Create individual flow control dropdown
-const generateFlowControlDropdown = (data, i) => {
+/* const generateFlowControlDropdown = (data, i) => {
 
     let html = `
                 <label for="flowControl${i}"></label>
@@ -153,10 +154,10 @@ const generateFlowControlDropdown = (data, i) => {
     html += `</select>`;
 
     return html;
-};
+}; */
 
 // Create individual check valve dropdown
-const generateCheckValveDropdown = (data, i) => {
+/* const generateCheckValveDropdown = (data, i) => {
 
     let html = `
                 <label for="checkValve${i}"></label>
@@ -175,7 +176,7 @@ const generateCheckValveDropdown = (data, i) => {
     html += `</select>`;
 
     return html;
-};
+}; */
 
 // Generate pvg selection for each section
 function generatePvgSelections(){
@@ -226,12 +227,11 @@ function generatePvgSelections(){
                 </div>`;
 
         pvgSelectionsContent.innerHTML += html;
-    }
-
-}
+    };
+};
 
 // Generate valve options dropdowns for each number of stations containing selected solVolt data
-async function generateAllValveDropdowns(){
+/* async function generateAllValveDropdowns(){
 
     if(valveInputs.solVolt == 'null'){
         valvePopupContent.innerHTML = '';
@@ -254,15 +254,15 @@ async function generateAllValveDropdowns(){
 
         };
 
-    };
+    }; */
 
     // Add event listener to enable flow control and check valve dropdowns when valve is selected
-    addEventListenerToEnableDropdowns();
+/*     addEventListenerToEnableDropdowns();
 
-};
+}; */
 
 // Event listener to enable flow control and check valve dropdowns when the valve selection is changed from null / no valve
-const addEventListenerToEnableDropdowns = () => {
+/* const addEventListenerToEnableDropdowns = () => {
     const valveDropdowns = document.querySelectorAll('.valve');
 
     valveDropdowns.forEach((dropdown, i) => {
@@ -288,14 +288,17 @@ const addEventListenerToEnableDropdowns = () => {
         });
     });
 
-};
+}; */
 
 valvePopupForm.addEventListener('submit', e => {
     e.preventDefault();
 
-    updateValvesAndHPU();
+    /* updateValvesAndHPU(); */
+
+    updateHpuDiv();
 
     valvePopupWrapper.style.display = 'none';
+
 
 });
 
