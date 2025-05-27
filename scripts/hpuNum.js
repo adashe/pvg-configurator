@@ -199,7 +199,7 @@ const buildHpuNumberDisplay = (data) => {
         + hpuCostHTML
         ;
 
-    toggleAdminSettings();
+    /* toggleAdminSettings(); */
     addEventHandlersToDropdowns();
     addEventHandlerToEditHpuInputs();
     addEventHandlerstoEditBtns();
@@ -225,7 +225,7 @@ const addEventHandlersToDropdowns = () => {
 };
 
 // Toggle admin edit abilities when admin is logged in or out
-const toggleAdminSettings = () => {
+/* const toggleAdminSettings = () => {
     const liEdits = document.querySelectorAll('.li-edit');
 
     if(currentUser.userType === 'admin'){
@@ -233,7 +233,7 @@ const toggleAdminSettings = () => {
             li.classList.toggle('active');
         });
     }
-};
+}; */
 
 // Add event handler to the edit hpu inputs button
 const addEventHandlerToEditHpuInputs = () => {
