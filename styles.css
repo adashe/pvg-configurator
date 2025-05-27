@@ -1,0 +1,610 @@
+body{
+    background: #d4d4d4;
+    font-family: "Source Sans 3", serif;
+    font-size: 16px;
+    color: #434343;
+}
+h1{
+    text-align: center;
+    margin: 10px;
+    font-family: "Source Sans 3", serif;
+    color: #434343;
+}
+h2{
+    text-align: center;
+    color: #434343;
+    margin: 10px;
+}
+h2.company{
+    color: #00467f;
+    margin-top: 30px;
+}
+h2.part-num-disp{
+    color: #f7b500;
+    border: 2px solid #f7b500;
+    margin: 20px 40px;
+    padding: 10px;
+}
+h3{
+    text-align: center;
+    color: #434343;
+    margin: 0;
+}
+.total-price{
+    text-align: center;
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #f7b500;
+    margin: 20px 60px;
+    color: #f7b500;
+}
+p{
+    text-align: center;
+}
+ul{
+    margin: 5px auto;
+    list-style-type: none;
+    padding-left: 25px;
+    padding-bottom: 10px;
+}
+li{
+    font-size: 14px;
+    color: #818181;
+}
+li h5{
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+#container{
+    display: flex;
+    flex-direction: column;
+    background: white;
+    max-width: 430px;
+    min-width: 250px;
+    margin: 20px auto;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px #c2c0c0;
+}
+.page-div{
+    background: white;
+    margin: 10px;
+    padding: 10px;
+}
+
+/* PDF STYLES */
+#container-pdf{
+    display: none;
+    width: 800px;
+    margin: 10px auto;
+}
+#pdf-page{
+    background: white;
+}
+#container-pdf div{
+    margin: 10px;
+    padding: 10px;
+}
+#container-pdf .part-num-disp{
+    margin: 30px 240px;
+}
+#container-pdf h3{
+    text-align: left;
+    margin: 5px;
+}
+#container-pdf .pdf-cost{
+    margin: 20px auto;
+    padding: 10px auto;
+}
+#container-pdf .pdf-total-list{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+#container-pdf h4{
+    display: inline;
+    text-align: left;
+    font-size: 18px;
+    color: #434343;
+    border: 2px solid;
+    padding: 10px 40px;
+}
+#container-pdf ul{
+    list-style-type: none;
+}
+#pdf-nav{
+    display: flex;
+    justify-content: space-around;
+}
+#pdf-nav button{
+    width: 180px;
+}
+@media print {
+    #container-pdf{
+        width: 100%;
+        margin: 10px;
+    }
+
+    .no-print {
+      display: none !important;
+    }
+  }
+
+/* BUTTON STYLES */
+.button{
+    display: block;
+    width: 220px;
+    margin: 10px auto;
+    padding: 10px;
+    font-family: "Source Sans 3", serif;
+    border: none;
+    background-color: #72d1d4;
+    border-radius: 5px;
+    color: #434343;
+    font-weight: 500;
+}
+.button:hover{
+    background-color: #67bfc2;
+    cursor: pointer;
+}
+button.gray{
+    background-color: #d4d4d4;
+}
+.button.gray:hover{
+    background-color: #c2c0c0;
+    cursor: pointer;
+}
+button.yellow{
+    background-color: #f6cb54;
+}
+button.yellow:hover{
+    background-color: #e7aa05;
+    cursor: pointer;
+}
+#advanced-opts{
+    text-align: right;
+    font-size: 12px;
+    color: #67bfc2;
+}
+#advanced-opts:hover{
+    color: #72d1d4;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.li-edit{
+    display: none;
+}
+.li-edit:hover{
+    color: #72d1d4;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.li-edit.active{
+    display: block;
+    color: #67bfc2;
+    font-style: italic;
+    display: inherit;
+}
+p.assem-price{
+    padding: 10px;
+    margin: 0 auto 20px auto;
+    font-size: 16px;
+    text-align: left;
+    font-weight: 500;
+    color: #67bfc2;
+}
+.edit-inputs{
+    margin: 0;
+    font-size: 12px;
+    text-align: right;
+    color: #67bfc2;
+    font-style: italic;
+}
+.edit-inputs:hover {
+    color: #72d1d4;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* FORM INPUT STYLES */
+input{
+    display: inline-block;
+    width: 155px;
+    margin: 10px auto;
+    padding: 10px;
+    font-family: "Source Sans 3", serif;
+    color: #434343;
+}
+select{
+    display: inline-block;
+    width: 180px;
+    margin: 10px auto;
+    padding: 10px;
+    font-family: "Source Sans 3", serif;
+    color: #434343;
+}
+::placeholder {
+    font-style: italic;
+}
+label{
+    display: inline-block;
+    font-family: "Source Sans 3", serif;
+    color: #434343;
+}
+
+/* FORM STYLES */
+form{
+    margin: 10px;
+    padding: 10px;
+    display: block;
+    font-family: "Source Sans 3", serif;
+    color: #434343;
+}
+form#component-form{
+    text-align: center;
+}
+
+/* HPU forms */
+form#hpu-sys-params-form{
+    text-align: right;
+}
+form#hpu-manifold-form{
+    display: none;
+    text-align: right;
+}
+form#hpu-valve-form{
+    display: none;
+    text-align: right;
+}
+
+
+/* Contact form */
+form#contact-form{
+    text-align: right;
+    margin: 10px 20px;
+}
+
+/* DIV STYLES */
+/* #component-div{
+    display: none;
+} */
+#hpu-div{
+    display: block;
+}
+#msp-div{
+    display: none;
+}
+#hmi-div{
+    display: none;
+}
+#part-num-div{
+    display: none;
+}
+#edit-div{
+    display: none;
+}
+#contact-div{
+    display: none;
+}
+#email-conf-div{
+    display: none;
+}
+
+/* HPU DROPDOWN STYLES */
+.dropdown .trigger{
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+}
+.dropdown .trigger::after{
+    content: ">";
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    transform: rotate(90deg) scale(0.5, 1);
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+.dropdown .trigger.active::after{
+    transform: rotate(-90deg) scale(0.5, 1);
+}
+.dropdown .content{
+    display: none;
+}
+.dropdown .content.active{
+    display: block;
+}
+
+/* VALVE DROPDOWN STLES */
+.valve-dropdown .trigger{
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+    font-weight: 500;
+}
+.valve-dropdown .trigger::after{
+    content: ">";
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+    transform: rotate(90deg) scale(0.5, 1);
+    font-weight: bold;
+    transition: transform 0.3s;
+}
+.valve-dropdown .trigger.active::after{
+    transform: rotate(-90deg) scale(0.5, 1);
+}
+.valve-dropdown .content{
+    display: none;
+}
+.valve-dropdown .content.active{
+    display: block;
+}
+
+/* LOGIN STYLES */
+.login-popup-wrapper{
+    background: #d4d4d4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.login-popup-div{
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 120px auto;
+    padding: 20px;
+    background: white;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+}
+.login-popup-div h2{
+    color: #72d1d4;
+}
+#login-div{
+    display: flex;
+    justify-content: space-between;
+    color: #00467f;
+    font-size: 12px;
+    margin: 0;
+}
+#logout:hover{
+    color: #72d1d4;
+    cursor: pointer;
+    text-decoration: underline;
+}
+#login-error{
+    color: #67bfc2;
+    font-style: italic;
+}
+
+
+/* VALVE POPUP STYLES */
+.valve-popup-wrapper{
+    display: none;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.valve-popup-div{
+    text-align: center;
+    width: 100%;
+    max-width: 1000px;
+    min-width: 350px;
+    margin: 120px auto;
+    padding: 20px;
+    background: white;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+}
+.valve-popup-div h2{
+    color: #72d1d4;
+}
+.valve-popup-close-x{
+    position: absolute;
+    font-size: 20px;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+}
+#valve-settings-div{
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+div#valve-port-size-div{
+    margin: 10px;
+    padding: 10px;
+    width: 160px;
+    font-size: 14px;
+    border: 1px solid;
+    border-radius: 3px;
+}
+select#solenoid-voltage{
+    margin: 10px;
+    width: 180px;
+}
+button.valve-img-btn{
+    margin: 10px;
+    width: 180px;
+}
+#valve-popup-form select{
+    margin: 0;
+    width: 180px;
+}
+#valve-dropdowns-div{
+    display: flex;
+    justify-content: space-around;
+}
+#valve-dropdowns-div select{
+    width: 160px;
+    margin: 10px;
+    padding: 10px;
+}
+#pvg-selections-div {
+    display: flex;
+    justify-content: space-around;
+}
+#pvg-selections-div select{
+    width: 100px;
+    margin: 10px;
+    padding: 10px;
+}
+#pvg-selections-div input{
+    width: 80px;
+    margin: 10px;
+    padding: 10px;
+}
+#valve-popup-content{
+    text-align: left;
+}
+
+/* VALVE IMAGES STYLES */
+.valve-img-wrapper{
+    display: none;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+#valve-img-div{
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+}
+.valve-img-div h2{
+    color: #72d1d4;
+}
+.valve-img-close-x{
+    position: absolute;
+    font-size: 20px;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+}
+img{
+    width: 780px;
+}
+.caption{
+    margin-top: 4px;
+    margin-bottom: 30px;
+}
+
+/* POPUP TABLE STYLES */
+.table-wrapper{
+    display: none;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+.table-div{
+    text-align: center;
+    width: 100%;
+    max-width: 800px;
+    margin: 150px auto;
+    padding: 20px;
+    background: white;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+}
+.table-close-x{
+    position: absolute;
+    font-size: 20px;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+}
+table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #d4d4d4;
+  }
+th,
+td {
+    padding: 5px;
+    text-align: center;
+}
+td{
+    font-size: 14px;
+    color: #818181;
+}
+tbody tr:nth-child(odd) {
+    background-color: white;
+
+}
+tbody tr:nth-child(even) {
+    background-color: #efefef;
+}
+tbody tr:hover{
+    background-color: #72d1d4;
+    cursor: pointer;
+}
+
+/* ERROR POPUP STYLES */
+.error-popup-wrapper{
+    display: none;
+    background: rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.error-popup-div{
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    margin: 140px auto;
+    padding: 20px;
+    background: white;
+    position: relative;
+    border: none;
+    border-radius: 5px;
+}
+.error-popup-div h2{
+    color: #72d1d4;
+}
+.error-popup-close-x{
+    position: absolute;
+    font-size: 20px;
+    top: 5px;
+    right: 15px;
+    cursor: pointer;
+}
+.error-popup-close-btn{
+    cursor: pointer;
+}

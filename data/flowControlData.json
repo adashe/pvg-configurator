@@ -1,0 +1,42 @@
+[
+    {
+        "code": "0",
+        "model": null,
+        "description": "NO FLOW CONTROL",
+        "cost": 0.00,
+        "valvePattern": null,
+        "controlPort": null
+    },
+    {
+        "code": "DC",
+        "model": "F03MSV-NDC-AC",
+        "description": "D03 FLOW CONTROL A AND B PORTS",
+        "cost": 318.52,
+        "valvePattern": "D03",
+        "controlPort": "A&B"
+    },
+    {
+        "code": "DA",
+        "model": "F03MSV-NDA-AC",
+        "description": "D03 FLOW CONTROL A PORT",
+        "cost": 303.70,
+        "valvePattern": "D03",
+        "controlPort": "A"
+    },
+    {
+        "code": "DB",
+        "model": "F03MSV-NDB-AC",
+        "description": "D03 FLOW CONTROL B PORT",
+        "cost": 303.70,
+        "valvePattern": "D03",
+        "controlPort": "B"
+    },
+    {
+        "code": "PC",
+        "model": "F03MSV-NIPC-AC",
+        "description": "D03 FLOW CONTROL P PORT WITH BACK CHECK",
+        "cost": 303.70,
+        "valvePattern": "D03",
+        "controlPort": "P"
+    }
+]
