@@ -10,7 +10,6 @@ const hpuPortSize = document.querySelector('#hpuPortSize');
 const hpuNumStatDiv = document.querySelector('#hpu-number-stations-div');
 
 const hpuAssem = new HpuAssembly();
-const valveAssem = new ValveAssembly();
 
 
 // DISPLAY AND HIDE FORM ELEMENTS
@@ -20,13 +19,11 @@ const displayHpuSysParamsForm = () => {
 
     hpuSysParamsForm.style.display = 'block';
     hpuManifoldForm.style.display = 'none';
-    /* hpuValveForm.style.display = 'none'; */
 };
 
 const displayHpuManifoldForm = () => {
     hpuSysParamsForm.style.display = 'none';
     hpuManifoldForm.style.display = 'block';
-    /* hpuValveForm.style.display = 'none'; */
 };
 
 
@@ -160,13 +157,12 @@ async function updateHpuDiv(){
         hpuInputs.heatExchType,
         hpuInputs.numStat, 
         hpuInputs.portSize,
-        valveAssem.numLvalves, 
-        valveAssem.numFlwCtrl,
+        0, 
+        0,
         );
 
     if(hpuAssem.totalCost != null){
         buildHpuNumberDisplay(hpuAssem);
-        buildValveDisplay(valveAssem);
         displayPartNumDiv();    
     };
 

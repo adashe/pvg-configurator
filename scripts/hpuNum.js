@@ -186,7 +186,6 @@ const buildHpuNumberDisplay = (data) => {
     };
 
     const editHpuInputsHTML = `<p class="edit-inputs" id="edit-hpu-inputs">Edit HPU inputs</p>`
-    const hpuCostHTML = `<p class="assem-price">HPU LIST PRICE: $${totalCost}</p>`;
 
     partNumDets.innerHTML = editHpuInputsHTML 
         + reservoirHTML 
@@ -196,7 +195,6 @@ const buildHpuNumberDisplay = (data) => {
         + heatExchangerHTML
         + defaultsHTML 
         + inputsHTML 
-        + hpuCostHTML
         ;
 
     /* toggleAdminSettings(); */
@@ -224,16 +222,6 @@ const addEventHandlersToDropdowns = () => {
     });
 };
 
-// Toggle admin edit abilities when admin is logged in or out
-/* const toggleAdminSettings = () => {
-    const liEdits = document.querySelectorAll('.li-edit');
-
-    if(currentUser.userType === 'admin'){
-        liEdits.forEach(li => {
-            li.classList.toggle('active');
-        });
-    }
-}; */
 
 // Add event handler to the edit hpu inputs button
 const addEventHandlerToEditHpuInputs = () => {
@@ -502,7 +490,6 @@ const buildTotalCostDisplay = () => {
 // Calculate total cost of HPU and valves
 const calcTotalHpuCost = () => {
     const hpuCost = parseFloat(hpuAssem.calcCost());
-    const valveCost = parseFloat(valveAssem.calcCost()); 
 
-    return hpuCost + valveCost;
+    return hpuCost;
 };

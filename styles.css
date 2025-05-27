@@ -20,8 +20,8 @@ h2.company{
     margin-top: 30px;
 }
 h2.part-num-disp{
-    color: #f7b500;
-    border: 2px solid #f7b500;
+    color: #4d91c9;
+    border: 2px solid #4d91c9;
     margin: 20px 40px;
     padding: 10px;
 }
@@ -39,9 +39,9 @@ h3{
     text-align: center;
     font-size: 16px;
     padding: 10px;
-    border: 2px solid #f7b500;
+    border: 2px solid #4d91c9;
     margin: 20px 60px;
-    color: #f7b500;
+    color: #4d91c9;
 }
 p{
     text-align: center;
