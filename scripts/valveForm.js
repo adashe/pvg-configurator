@@ -17,7 +17,6 @@ const displayValvePopup = () => {
 
     valvePopupWrapper.style.display = 'block';
     valvePopupWrapper.scrollTop = 0;
-
 };
 
 
@@ -99,8 +98,6 @@ valvePopupForm.addEventListener('submit', e => {
     updateHpuDiv();
 
     valvePopupWrapper.style.display = 'none';
-
-
 });
 
 // Build valve assembly object from valve form inputs 
@@ -152,7 +149,6 @@ async function addValveInputsToValveAssembly(){
 
     // Update number of flow controls (for hpu calc)
     valveAssem.countFlowControl();
-
 };
 
 // Update valve and HPU number display when edits are made from the display page, including updating the heat exchanger if necessary
@@ -163,6 +159,6 @@ async function updateValvesAndHPU(){
     if(partNumDiv.style.display == 'block'){
         await updateHpuDiv();
     };
-}
+};
 
 

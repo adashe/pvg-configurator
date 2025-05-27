@@ -28,7 +28,7 @@ contactForm.addEventListener('submit', e => {
     generatePDF();
     displayPdfContainer();
 
-})
+});
 
 // Toggle customer settings when customer is logged in or out
 /* const toggleCustSettings = () => {

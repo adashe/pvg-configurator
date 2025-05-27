@@ -15,7 +15,6 @@ generateEmailButtons.forEach(button => {
         } else if(currConfigurator == 'hmi'){
             console.log('hmi email not currently available');
         };
-
     });
 });
 
@@ -35,4 +34,4 @@ const genContactEmailBody = () => {
     };
 
     return contactHtml;
-}
+};
