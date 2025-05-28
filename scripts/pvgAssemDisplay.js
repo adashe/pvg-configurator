@@ -8,7 +8,7 @@ function buildPvgAssemDisplay(){
 
     // Build assembly number displays
     assemblyNumDisplay.forEach((element) => {
-        element.innerHTML = `${pvgAssem.mppSysNum}`;
+        element.innerHTML = `${pvgAssem.mppSysNum.toUpperCase()}`;
     });
 
     // Build dropdown for each section in assembly
