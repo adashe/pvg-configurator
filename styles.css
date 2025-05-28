@@ -19,7 +19,7 @@ h2.company{
     color: #4d91c9;
     margin-top: 30px;
 }
-h2.part-num-disp{
+h2.assembly-num-display{
     color: #4d91c9;
     border: 2px solid #4d91c9;
     margin: 20px 40px;
@@ -260,10 +260,10 @@ form#component-form{
 }
 
 /* HPU forms */
-form#hpu-sys-params-form{
+form#manifold-setup-form{
     text-align: right;
 }
-form#hpu-manifold-form{
+form#pvg-setup-form{
     display: none;
     text-align: right;
 }
@@ -280,14 +280,8 @@ form#contact-form{
 }
 
 /* DIV STYLES */
-#hpu-div{
+#pvg-setup-div{
     display: block;
-}
-#msp-div{
-    display: none;
-}
-#hmi-div{
-    display: none;
 }
 #part-num-div{
     display: none;

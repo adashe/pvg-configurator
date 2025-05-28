@@ -16,10 +16,10 @@
         <h2 class="company">SCOTT INDUSTRIAL</h2>
         <h1>Hybrid Configurator</h1>
 
-        <!-- HPU DIV -->
-        <div id="hpu-div" class="page-div">
+        <!-- PVG SETUP DIV -->
+        <div id="pvg-setup-div" class="page-div">
 
-            <form id="hpu-sys-params-form">
+            <form id="manifold-setup-form">
                 <h3>MANIFOLD SETUP</h3>
 
                 <div>
@@ -44,13 +44,13 @@
                 </div>
 
                 <div>
-                    <label for="mainRelief">Main Relief: </label>
-                    <input type="number" id="mainRelief" placeholder="ex. 100 psi">
+                    <label for="mainReliefPsi">Main Relief: </label>
+                    <input type="number" id="mainReliefPsi" placeholder="ex. 100 psi">
                 </div>
 
                 <div>
-                    <label for="spreaderRelief">Spreader Relief: </label>
-                    <input type="number" id="spreaderRelief" placeholder="ex. 100 psi">
+                    <label for="spreaderReliefPsi">Spreader Relief: </label>
+                    <input type="number" id="spreaderReliefPsi" placeholder="ex. 100 psi">
                 </div>
 
                 <div>
@@ -66,12 +66,12 @@
 
             </form>
 
-            <form id="hpu-manifold-form">
+            <form id="pvg-setup-form">
                 <h3>PVG SETUP</h3>
 
                 <div>
-                    <label for="numPvgSec">Number of PVG Sections: </label>
-                    <input type="number" id="numPvgSec" min="1" max="12">
+                    <label for="numSections">Number of PVG Sections: </label>
+                    <input type="number" id="numSections" min="1" max="12">
                 </div>
 
                 <div>
@@ -85,11 +85,42 @@
                 </div>
 
                 <input class="button" type="submit" value="CONTINUE">
-                <button class="button gray hpu-sys-params-btn">PREVIOUS</button>
+                <button class="button gray manifold-setup-btn">PREVIOUS</button>
                 <button class="button gray restart">RESTART</button>
 
             </form>
 
+        </div>
+
+        <!-- VALVE FORM POPUP DIV -->
+        <div class="valve-popup-wrapper">
+            <div class="valve-popup-div">
+
+                <h2 class="company">SCOTT INDUSTRIAL</h2>
+                <h1>Hybrid Configurator</h1>
+
+                <h3 class="h3popup">PVG SETUP</h3>
+
+                <form id="valve-popup-form">
+
+                    <div id="valve-dropdowns-div">
+                        <div class="valve-popup-content"></div>
+                    </div>
+
+                    <div id="pvg-selections-div">
+                        <div class="pvg-selections-content"></div>
+                    </div>
+                    
+
+                    <div class="buttons-div">
+                        <button class="button gray pvg-setup-btn">PREVIOUS</button>  
+                        <input class="button" type="submit" value="GENERATE PART NUMBER">
+                        <button class="button gray restart">RESTART</button> 
+                    </div>
+
+                </form>
+
+            </div>
         </div>
     
     
@@ -97,7 +128,7 @@
         <div id="part-num-div" class="page-div">
             <h2>PART NUMBER</h2>
 
-            <h2 class="part-num-disp"></h2>
+            <h2 class="assembly-num-display"></h2>
 
             <div id="part-num-dets"></div>
 
@@ -149,39 +180,6 @@
     </div>
 
 
-    <!-- VALVE FORM POPUP DIV -->
-    <div class="valve-popup-wrapper">
-        <div class="valve-popup-div">
-            <!-- <div class="valve-popup-close-x">x</div> -->
-
-            <h2 class="company">SCOTT INDUSTRIAL</h2>
-            <h1>Hybrid Configurator</h1>
-
-            <h3 class="h3popup">PVG SETUP</h3>
-
-            <form id="valve-popup-form">
-
-                <div id="valve-dropdowns-div">
-                    <div class="valve-popup-content"></div>
-                </div>
-
-                <div id="pvg-selections-div">
-                    <div class="pvg-selections-content"></div>
-                </div>
-                
-
-                <div class="buttons-div">
-                    <button class="button gray hpu-mani-btn">PREVIOUS</button>  
-                    <input class="button" type="submit" value="GENERATE PART NUMBER">
-                    <button class="button gray restart">RESTART</button> 
-                </div>
-
-            </form>
-
-        </div>
-    </div>
-
-
     <!-- ERROR POPUP DIV -->
     <div class="error-popup-wrapper">
         <div class="error-popup-div">
@@ -216,12 +214,12 @@
         </div>
     </div>
 
-    <script src="scripts/hpuAssembly.js"></script>
+    <script src="scripts/pvgAssembly.js"></script>
 
-    <script src="scripts/hpuForms.js"></script>
+    <script src="scripts/pvgSetupForms.js"></script>
     <script src="scripts/valveForm.js"></script>
 
-    <script src="scripts/hpuNum.js"></script>
+    <script src="scripts/pvgAssemDisplay.js"></script>
 
     <script src="scripts/contactForm.js"></script>
 
