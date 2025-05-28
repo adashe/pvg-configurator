@@ -85,6 +85,7 @@ pvgSetupForm.addEventListener('submit', e => {
     pvgInputs.numSections = pvgSetupForm.numSections.value;
     pvgInputs.paint = pvgSetupForm.paint.value;
 
+    updatePvgAssem();
     displayValvePopup();
 });
 
@@ -98,9 +99,4 @@ function updatePvgAssem(){
     pvgAssem.mppPowerFloat = pvgInputs.mppPowerFloat;
     pvgAssem.numSections = pvgInputs.numSections;
     pvgAssem.paint = pvgInputs.paint;
-
-    console.log(pvgAssem);
-
-    buildPvgAssemDisplay();
-    displayPartNumDiv();
-}
+};

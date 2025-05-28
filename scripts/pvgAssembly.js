@@ -8,7 +8,18 @@ class PvgAssembly{
         this.mppPowerFloat = null;
         this.numSections = null;
         this.paint = null;
-        this.sections = [];
+        this.section0 = null;
+        this.section1 = null;
+        this.section2 = null;
+        this.section3 = null;
+        this.section4 = null;
+        this.section5 = null;
+        this.section6 = null;
+        this.section7 = null;
+        this.section8 = null;
+        this.section9 = null;
+        this.section10 = null;
+        this.section11 = null;
     }
 
     reset(){
@@ -20,12 +31,25 @@ class PvgAssembly{
         this.mppPowerFloat = null;
         this.numSections = null;
         this.paint = null;
-        this.sections = [];
+        this.section0 = null;
+        this.section1 = null;
+        this.section2 = null;
+        this.section3 = null;
+        this.section4 = null;
+        this.section5 = null;
+        this.section6 = null;
+        this.section7 = null;
+        this.section8 = null;
+        this.section9 = null;
+        this.section10 = null;
+        this.section11 = null;
     }
 
     updateSection(index, description, pvgSeries, actuation, spoolType, gpm, portRelA, portRelB){
 
-        this.sections[index] = {
+        const sectionID = `section${index}`;
+
+        this[sectionID] = {
             description,
             pvgSeries,
             actuation,
@@ -35,7 +59,7 @@ class PvgAssembly{
             portRelB
         };
 
-        return this.sections[index];
+        return this[sectionID];
     }
 
     calcCost(){

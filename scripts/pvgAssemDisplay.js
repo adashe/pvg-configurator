@@ -16,17 +16,29 @@ function buildPvgAssemDisplay(){
 
     let sectionsHTML = '';
 
-    for(i = 0; i < numSections; i++){
+    for(i = 0; i < pvgAssem.numSections; i++){
+
+        const sectionID = `section${i}`;
+
+        const description = pvgAssem[sectionID].description;
+        const pvgSeries = pvgAssem[sectionID].pvgSeries;
+        const actuation = pvgAssem[sectionID].actuation;
+        const spoolType = pvgAssem[sectionID].spoolType;
+        const gpm = pvgAssem[sectionID].gpm;
+        const portRelA = pvgAssem[sectionID].portRelA;
+        const portRelB = pvgAssem[sectionID].portRelB;
+
         html = `
             <div class="dropdown">
-                <div class="trigger">SECTION ${i + 1}</div>
+                <div class="trigger">SECTION ${i + 1}: ${description.toUpperCase()}</div>
                 <div class="content">        
                     <ul>
-                        <li>PVG Series: 32</li>
-                        <li>Spool Type: Cylinder</li>
-                        <li>1000 gpm</li>
-                        <li>Port Relief A: 50 psi</li>
-                        <li>Port Relief B: 80 psi</li>
+                        <li>PVG Series: ${pvgSeries}</li>
+                        <li>Actuation: ${actuation.toUpperCase()}</li>
+                        <li>Spool Type: ${spoolType.toUpperCase()}</li>
+                        <li>${gpm} gpm</li>
+                        <li>Port Relief A: ${portRelA} psi</li>
+                        <li>Port Relief B: ${portRelB} psi</li>
                         <li>Cost: $$</li>
                     </ul>
                 </div>
@@ -34,8 +46,7 @@ function buildPvgAssemDisplay(){
         `;
 
         sectionsHTML += html;
-
-    }
+    };
 
     // Build dropdown for automatically-included parts
     const defaultsHTML = `
@@ -61,7 +72,7 @@ function buildPvgAssemDisplay(){
                 <ul>
                     <li>End Plate: $$</li>
                     <li>Tie-Rods: 20ft: $$</li>
-                    <li>Paint: Red: $$</li>
+                    <li>Paint: ${pvgAssem.paint}: $$</li>
                     <li>LIQ Populated: $$</li>
                     <li>Opened Center: $$</li>
                     <li>Power Float Manifold: $$</li>

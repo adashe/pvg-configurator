@@ -37,12 +37,11 @@ function generatePvgSelections(){
 
     pvgSelectionsContent.innerHTML = '';
 
-    let numSections = pvgInputs.numSections;
-
+    let numSections = pvgAssem.numSections;
 
     for(i = 0; i < numSections; i++){
 
-        const functionHtml = `<input type="text" id="function${i}" placeholder="Function">`;
+        const descriptionHtml = `<input type="text" id="description${i}" placeholder="Description">`;
 
         const seriesHtml = `<select name="pvgSeries" id="pvgSeries${i}">
                                 <option value="" disabled selected hidden>Select series...</option>
@@ -58,10 +57,10 @@ function generatePvgSelections(){
 
         const spoolHtml = `<select name="spoolType" id="spoolType${i}">
                                 <option value="" disabled selected hidden>Select spool type...</option>
-                                <option value="DAmotor">DA - Motor</option>
-                                <option value="SAmotor">SA - Motor</option>
-                                <option value="DAcylinder">DA - Cylinder</option>
-                                <option value="SAcylinder">SA - Cylinder</option>
+                                <option value="DA-motor">DA - Motor</option>
+                                <option value="SA-motor">SA - Motor</option>
+                                <option value="DA-cylinder">DA - Cylinder</option>
+                                <option value="SA-cylinder">SA - Cylinder</option>
                             </select>`;
 
         const gpmHtml = `<input type="number" id="gpm${i}" name="gpm" placeholder="gpm">`;
@@ -71,7 +70,7 @@ function generatePvgSelections(){
         const portRelBHtml = `<input type="number" id="portRelB${i}" name="portRelB" placeholder="Port Relief B">`;
 
         const html = `<div id="station${i}">Station ${i + 1}: 
-                    ${functionHtml}
+                    ${descriptionHtml}
                     ${seriesHtml}
                     ${acutationHtml}
                     ${spoolHtml}
@@ -84,11 +83,43 @@ function generatePvgSelections(){
     };
 };
 
+function updatePvgAssemSections(){
+
+    for(i = 0; i < pvgAssem.numSections; i++){
+        const descriptionID = `description${i}`;
+        const pvgSeriesID = `pvgSeries${i}`;
+        const actuationMethodID = `actuationMethod${i}`;
+        const spoolTypeID = `spoolType${i}`
+        const gpmID = `gpm${i}`;
+        const portRelAID = `portRelA${i}`;
+        const portRelBID = `portRelB${i}`;
+
+        const description = document.getElementById(descriptionID);
+        const pvgSeries = document.getElementById(pvgSeriesID);
+        const actuation = document.getElementById(actuationMethodID);
+        const spoolType = document.getElementById(spoolTypeID);
+        const gpm = document.getElementById(gpmID);
+        const portRelA = document.getElementById(portRelAID);
+        const portRelB = document.getElementById(portRelBID);
+
+        pvgAssem.updateSection(i, 
+            description.value, 
+            pvgSeries.value, 
+            actuation.value, 
+            spoolType.value, 
+            gpm.value, 
+            portRelA.value, 
+            portRelB.value)
+    };
+};
 
 valvePopupForm.addEventListener('submit', e => {
     e.preventDefault();
 
-    updatePvgAssem();
+    updatePvgAssemSections();
+
+    buildPvgAssemDisplay();
+    displayPartNumDiv();
 
     valvePopupWrapper.style.display = 'none';
 });
