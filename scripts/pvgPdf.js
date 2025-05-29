@@ -80,6 +80,6 @@ const fillPdfDets = () => {
 };
 
 const fillTotalCostPdfDets = () => {
-    const total = pvgAssem.calcCost();
+    const total = parseFloat(pvgAssem.calcCost());
     pdfTotalListPriceDiv.innerHTML = `<div class="pdf-total-list"><h4>TOTAL LIST PRICE: ${total.toFixed(2)}</h4></div>`;
 };

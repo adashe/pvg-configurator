@@ -53,5 +53,5 @@ const fillContactPdfDets = () => {
 
 const addCustomerMsg = () => {
     pdfCustMsgDiv.innerHTML = `<p>Print or save this page for your own records.</p>`;
-    pdfCustMsgDiv.innerHTML += `\n<p>If you wish to proceed with your order, <br>select "Submit As Email" to send this part number to Sun Coast.</p>`
+    pdfCustMsgDiv.innerHTML += `\n<p>If you wish to proceed with your order, <br>select "Submit As Email" to send this part number to Scott Industrial.</p>`
 };
