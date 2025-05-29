@@ -48,7 +48,7 @@ function buildPvgAssemDisplay(){
         sectionsHTML += html;
     };
 
-    // Build dropdown for automatically-included parts
+    // Build dropdown for included features
     const defaultsHTML = `
         <div class="dropdown">
             <div class="trigger">Included Features</div>
