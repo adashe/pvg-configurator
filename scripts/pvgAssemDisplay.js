@@ -72,7 +72,7 @@ function buildPvgAssemDisplay(){
                 <ul>
                     <li>End Plate: $$</li>
                     <li>Tie-Rods: 20ft: $$</li>
-                    <li>Paint: ${pvgAssem.paint}: $$</li>
+                    <li>Paint: ${pvgAssem.paint.toUpperCase()}: $$</li>
                     <li>LIQ Populated: $$</li>
                     <li>Opened Center: $$</li>
                     <li>Power Float Manifold: $$</li>
