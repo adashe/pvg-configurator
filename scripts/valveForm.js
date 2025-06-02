@@ -44,19 +44,19 @@ function generatePvgSelections(){
         const descriptionHtml = `<input type="text" id="description${i}" placeholder="Description">`;
 
         const seriesHtml = `<select name="pvgSeries" id="pvgSeries${i}">
-                                <option value="" disabled selected hidden>Select series...</option>
+                                <option value="" disabled selected hidden>Series...</option>
                                 <option value="32">32</option>
                                 <option value="48">48</option>
                             </select>`;
 
         const acutationHtml = `<select name="actuationMethod" id="actuationMethod${i}">
-                                    <option value="" disabled selected hidden>Select actuation method...</option>
+                                    <option value="" disabled selected hidden>Actuation...</option>
                                     <option value="electrical">Electrical (PVHC)</option>
                                     <option value="mechanical">Mechanical</option>
                                 </select>`;
 
         const spoolHtml = `<select name="spoolType" id="spoolType${i}">
-                                <option value="" disabled selected hidden>Select spool type...</option>
+                                <option value="" disabled selected hidden>Spool...</option>
                                 <option value="DA-motor">DA - Motor</option>
                                 <option value="SA-motor">SA - Motor</option>
                                 <option value="DA-cylinder">DA - Cylinder</option>
