@@ -335,9 +335,21 @@ form#contact-form{
     margin: 0;
     width: 180px;
 }
+#popupColumnHeaders{
+    display: flex;
+    justify-content: space-around;
+}
+#popupColumnHeaders div{
+    width: 100px;
+}
+#popupColumnHeaders #placeholder{
+    width: 40px;
+}
 #pvg-selections-div {
     display: flex;
     justify-content: space-around;
+    font-weight: 500;
+    /* text-align: left; */
 }
 #pvg-selections-div select{
     width: 100px;
