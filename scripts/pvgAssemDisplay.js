@@ -81,16 +81,12 @@ function buildPvgAssemDisplay(){
         </div>
     `;
 
-    const editInputsHTML = `<p class="edit-inputs" id="edit-inputs">Edit inputs</p>`
-
-    partNumDets.innerHTML = editInputsHTML
-        + sectionsHTML
+    partNumDets.innerHTML = sectionsHTML
         + defaultsHTML 
         + inputsHTML 
         ;
 
     addEventHandlersToDropdowns();
-    addEventHandlerToEditInputs();
 
     buildTotalCostDisplay();
 };
@@ -109,18 +105,6 @@ const addEventHandlersToDropdowns = () => {
             trigger.classList.toggle('active');
             content.classList.toggle('active');
         });
-    });
-};
-
-
-// Add event handler to the edit hpu inputs button
-const addEventHandlerToEditInputs = () => {
-    const editInputs = document.querySelector('#edit-inputs');
-
-    editInputs.addEventListener('click', e => {
-        e.preventDefault();
-
-        displayManifoldSetupForm();
     });
 };
 

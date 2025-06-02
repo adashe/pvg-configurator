@@ -2,6 +2,7 @@
 
 const restartButtons = document.querySelectorAll('.restart');
 const detailsButtons = document.querySelectorAll('.details');
+const editInputs = document.querySelector('#edit-inputs');
 const contactButtons = document.querySelectorAll('.contact');
 const pdfButtons = document.querySelectorAll('.pdf');
 
@@ -29,6 +30,13 @@ restartButtons.forEach((button) => {
         window.location.reload();
         window.scrollTo(0, 0);
     });
+});
+
+// Return to form without restarting
+editInputs.addEventListener('click', e => {
+    e.preventDefault();
+
+    displayManifoldSetupForm();
 });
 
 // Error popup close button
