@@ -30,11 +30,6 @@ h3{
     color: #434343;
     margin: 0px 10px 20px 10px;
 }
-.h3popup{
-    text-align: center;
-    color: #434343;
-    margin: 20px 10px 10px 10px;
-}
 .total-price{
     text-align: center;
     font-size: 16px;
@@ -255,11 +250,6 @@ form{
     font-family: "Source Sans 3", serif;
     color: #434343;
 }
-form#component-form{
-    text-align: center;
-}
-
-/* HPU forms */
 form#manifold-setup-form{
     text-align: right;
 }
@@ -267,13 +257,6 @@ form#pvg-setup-form{
     display: none;
     text-align: right;
 }
-form#hpu-valve-form{
-    display: none;
-    text-align: right;
-}
-
-
-/* Contact form */
 form#contact-form{
     text-align: right;
     margin: 10px 20px;
@@ -292,11 +275,8 @@ form#contact-form{
 #contact-div{
     display: none;
 }
-#email-conf-div{
-    display: none;
-}
 
-/* HPU DROPDOWN STYLES */
+/* DROPDOWN STYLES */
 .dropdown .trigger{
     border-bottom: 1px solid #ddd;
     padding: 10px;
@@ -323,74 +303,6 @@ form#contact-form{
     display: block;
 }
 
-/* VALVE DROPDOWN STLES */
-.valve-dropdown .trigger{
-    border-bottom: 1px solid #ddd;
-    padding: 10px;
-    position: relative;
-    cursor: pointer;
-    font-weight: 500;
-}
-.valve-dropdown .trigger::after{
-    content: ">";
-    display: inline-block;
-    position: absolute;
-    right: 15px;
-    transform: rotate(90deg) scale(0.5, 1);
-    font-weight: bold;
-    transition: transform 0.3s;
-}
-.valve-dropdown .trigger.active::after{
-    transform: rotate(-90deg) scale(0.5, 1);
-}
-.valve-dropdown .content{
-    display: none;
-}
-.valve-dropdown .content.active{
-    display: block;
-}
-
-/* LOGIN STYLES */
-.login-popup-wrapper{
-    background: #d4d4d4;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-.login-popup-div{
-    text-align: center;
-    width: 100%;
-    max-width: 400px;
-    margin: 120px auto;
-    padding: 20px;
-    background: white;
-    position: relative;
-    border: none;
-    border-radius: 5px;
-}
-.login-popup-div h2{
-    color: #72d1d4;
-}
-#login-div{
-    display: flex;
-    justify-content: space-between;
-    color: #00467f;
-    font-size: 12px;
-    margin: 0;
-}
-#logout:hover{
-    color: #72d1d4;
-    cursor: pointer;
-    text-decoration: underline;
-}
-#login-error{
-    color: #67bfc2;
-    font-style: italic;
-}
-
-
 /* VALVE POPUP STYLES */
 .valve-popup-wrapper{
     display: none;
@@ -414,41 +326,10 @@ form#contact-form{
     border: none;
     border-radius: 5px;
 }
-.valve-popup-div h2{
-    color: #4d91c9;
-}
-.valve-popup-close-x{
-    position: absolute;
-    font-size: 20px;
-    top: 5px;
-    right: 15px;
-    cursor: pointer;
-}
-#valve-settings-div{
-    background-color: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 5px;
-}
-div#valve-port-size-div{
-    margin: 10px;
-    padding: 10px;
-    width: 160px;
-    font-size: 14px;
-    border: 1px solid;
-    border-radius: 3px;
-}
-select#solenoid-voltage{
-    margin: 10px;
-    width: 180px;
-}
-button.valve-img-btn{
-    margin: 10px;
-    width: 180px;
+.valve-popup-div h3{
+    text-align: center;
+    color: #434343;
+    margin: 20px 10px 10px 10px;
 }
 #valve-popup-form select{
     margin: 0;
@@ -470,63 +351,6 @@ button.valve-img-btn{
 }
 #valve-popup-content{
     text-align: left;
-}
-
-
-/* POPUP TABLE STYLES */
-.table-wrapper{
-    display: none;
-    background: rgba(0,0,0,0.5);
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-}
-.table-div{
-    text-align: center;
-    width: 100%;
-    max-width: 800px;
-    margin: 150px auto;
-    padding: 20px;
-    background: white;
-    position: relative;
-    border: none;
-    border-radius: 5px;
-}
-.table-close-x{
-    position: absolute;
-    font-size: 20px;
-    top: 5px;
-    right: 15px;
-    cursor: pointer;
-}
-table {
-    table-layout: fixed;
-    width: 100%;
-    border-collapse: collapse;
-    background-color: #d4d4d4;
-  }
-th,
-td {
-    padding: 5px;
-    text-align: center;
-}
-td{
-    font-size: 14px;
-    color: #818181;
-}
-tbody tr:nth-child(odd) {
-    background-color: white;
-
-}
-tbody tr:nth-child(even) {
-    background-color: #efefef;
-}
-tbody tr:hover{
-    background-color: #72d1d4;
-    cursor: pointer;
 }
 
 /* ERROR POPUP STYLES */
