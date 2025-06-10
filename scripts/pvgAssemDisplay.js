@@ -14,14 +14,12 @@ function buildPvgAssemDisplay() {
 
     for (i = 0; i < pvgAssem.numSections; i++) {
         const sectionID = `section${i}`;
-
         const description = pvgAssem[sectionID].description;
-        const pvgSeries = pvgAssem[sectionID].pvgSeries;
         const actuation = pvgAssem[sectionID].actuation;
-        const spoolType = pvgAssem[sectionID].spoolType;
         const gpm = pvgAssem[sectionID].gpm;
-        const portRelA = pvgAssem[sectionID].portRelA;
-        const portRelB = pvgAssem[sectionID].portRelB;
+        const spoolType = pvgAssem[sectionID].spoolType;
+        const portA = pvgAssem[sectionID].portA;
+        const portB = pvgAssem[sectionID].portB;
 
         html = `
             <div class="dropdown">
@@ -30,13 +28,11 @@ function buildPvgAssemDisplay() {
                 }: ${description.toUpperCase()}</div>
                 <div class="content">        
                     <ul>
-                        <li>PVG Series: ${pvgSeries}</li>
                         <li>Actuation: ${actuation.toUpperCase()}</li>
+                        <li>Flow: ${gpm} gpm</li>
                         <li>Spool Type: ${spoolType.toUpperCase()}</li>
-                        <li>${gpm} gpm</li>
-                        <li>Port Relief A: ${portRelA} psi</li>
-                        <li>Port Relief B: ${portRelB} psi</li>
-                        <li>Cost: $$</li>
+                        <li>Port A: ${portA}</li>
+                        <li>Port B: ${portB}</li>
                     </ul>
                 </div>
             </div>

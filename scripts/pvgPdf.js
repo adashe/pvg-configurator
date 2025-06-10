@@ -1,6 +1,8 @@
-const pdfDetsDiv = document.querySelector('#pdf-dets-div');
-const pdfValveDiv = document.querySelector('#pdf-valve-div');
-const pdfTotalListPriceDiv = document.querySelector('#pdf-total-list-price-div');
+const pdfDetsDiv = document.querySelector("#pdf-dets-div");
+const pdfValveDiv = document.querySelector("#pdf-valve-div");
+const pdfTotalListPriceDiv = document.querySelector(
+    "#pdf-total-list-price-div"
+);
 
 // Generate all components for HPU pdf
 const generatePvgPdf = () => {
@@ -10,11 +12,10 @@ const generatePvgPdf = () => {
 
 // Build HPU pdf page
 const fillPdfDets = () => {
-
-    pdfDetsDiv.innerHTML = '';
+    pdfDetsDiv.innerHTML = "";
 
     // Build part number HTML
-    const headerHTML = `<h2>MPP System Number: ${pvgAssem.mppSysNum.toUpperCase()}</h2>`;
+    const headerHTML = `<h2>MPP System Number: ${pvgAssem.mppSysNum.toUpperCase()}-${pvgAssem.mppRevNum.toUpperCase()}</h2>`;
 
     // Build included features HTML
     const defaultsHTML = `
@@ -42,10 +43,9 @@ const fillPdfDets = () => {
     `;
 
     // Build details HTML for each section
-    let sectionsHTML = '';
+    let sectionsHTML = "";
 
-    for(i = 0; i < pvgAssem.numSections; i++){
-
+    for (i = 0; i < pvgAssem.numSections; i++) {
         const sectionID = `section${i}`;
 
         const description = pvgAssem[sectionID].description;
@@ -70,16 +70,15 @@ const fillPdfDets = () => {
         `;
 
         sectionsHTML += html;
-    };
+    }
 
-    pdfDetsDiv.innerHTML = headerHTML
-        + sectionsHTML
-        + defaultsHTML
-        + inputsHTML
-        ;
+    pdfDetsDiv.innerHTML =
+        headerHTML + sectionsHTML + defaultsHTML + inputsHTML;
 };
 
 const fillTotalCostPdfDets = () => {
     const total = parseFloat(pvgAssem.calcCost());
-    pdfTotalListPriceDiv.innerHTML = `<div class="pdf-total-list"><h4>TOTAL LIST PRICE: ${total.toFixed(2)}</h4></div>`;
+    pdfTotalListPriceDiv.innerHTML = `<div class="pdf-total-list"><h4>TOTAL LIST PRICE: ${total.toFixed(
+        2
+    )}</h4></div>`;
 };
