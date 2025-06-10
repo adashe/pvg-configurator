@@ -17,18 +17,6 @@ const fillPdfDets = () => {
     // Build part number HTML
     const headerHTML = `<h2>MPP System Number: ${pvgAssem.mppSysNum.toUpperCase()}-${pvgAssem.mppRevNum.toUpperCase()}</h2>`;
 
-    // Build included features HTML
-    const defaultsHTML = `
-        <h3>INCLUDED FEATURES</h3>
-        <ul>
-            <li>?</li>
-            <li>??</li>
-            <li>??!!</li>
-            <li>??!!!!!!!</li>
-            <li>Cleanout Covers</li>
-        </ul>
-    `;
-
     // Build inputs HTML
     const inputsHTML = `
         <h3>BASE CONFIGURATION</h3>
@@ -72,8 +60,7 @@ const fillPdfDets = () => {
         sectionsHTML += html;
     }
 
-    pdfDetsDiv.innerHTML =
-        headerHTML + sectionsHTML + defaultsHTML + inputsHTML;
+    pdfDetsDiv.innerHTML = headerHTML + sectionsHTML + inputsHTML;
 };
 
 const fillTotalCostPdfDets = () => {
