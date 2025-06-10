@@ -45,24 +45,14 @@ class PvgAssembly {
         this.section11 = null;
     }
 
-    updateSection(
-        index,
-        description,
-        pvgSeries,
-        actuation,
-        spoolType,
-        gpm,
-        portA,
-        portB
-    ) {
+    updateSection(index, description, actuation, gpm, spoolType, portA, portB) {
         const sectionID = `section${index}`;
 
         this[sectionID] = {
             description,
-            pvgSeries,
             actuation,
-            spoolType,
             gpm,
+            spoolType,
             portA,
             portB,
         };
@@ -71,6 +61,29 @@ class PvgAssembly {
     }
 
     calcCost() {
-        return 1234.5678;
+        // Manifold options
+        const costInlet = 1134.56;
+        const cost3rdFuncInlet = 98.42;
+        const costPlowPowerFloat = this.mppPowerFloat === "yes" ? 994.59 : 0;
+        const costHiFlowAux = 554.89;
+
+        // PVG section prices
+        const costPerSection = 594.1;
+        const costAllSections = costPerSection * this.numSections;
+
+        // Options
+        const costEndPlate = 132.33;
+        const costTieRodKit = 68.52;
+        const costPaint = this.paint === "black" ? 88.55 : 0;
+
+        const cost =
+            costInlet +
+            costPlowPowerFloat +
+            costAllSections +
+            costTieRodKit +
+            costEndPlate +
+            costPaint;
+
+        return cost;
     }
 }

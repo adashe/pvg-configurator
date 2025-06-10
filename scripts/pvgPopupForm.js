@@ -34,9 +34,8 @@ function generatePvgSelections() {
                             <div id="placeholder"></div>
                             <div>Description</div>
                             <div>Actuation</div>
-                            <div>Spool</div>
                             <div>GPM</div>
-                            <div>Series</div>
+                            <div>Spool</div>
                             <div>Port A Type</div>
                             <div>Port B Type</div>
                         </div>`;
@@ -48,17 +47,14 @@ function generatePvgSelections() {
     for (i = 0; i < numSections; i++) {
         const descriptionHtml = `<input type="text" id="description${i}" placeholder="Description">`;
 
-        const seriesHtml = `<select name="pvgSeries" id="pvgSeries${i}">
-                                <option value="" disabled selected hidden>Series...</option>
-                                <option value="32">32</option>
-                                <option value="48">48</option>
-                            </select>`;
-
         const acutationHtml = `<select name="actuationMethod" id="actuationMethod${i}">
                                     <option value="" disabled selected hidden>Actuation...</option>
-                                    <option value="electrical">Electrical (PVHC)</option>
+                                    <option value="electrical">Electrical (PVHC) 12V</option>
+                                    <option value="electrical">Electrical (PVHC) 24V</option>
                                     <option value="mechanical">Mechanical</option>
                                 </select>`;
+
+        const gpmHtml = `<input type="number" id="gpm${i}" name="gpm" placeholder="gpm">`;
 
         const spoolHtml = `<select name="spoolType" id="spoolType${i}">
                                 <option value="" disabled selected hidden>Spool...</option>
@@ -67,8 +63,6 @@ function generatePvgSelections() {
                                 <option value="DA-cylinder">DA - Cylinder</option>
                                 <option value="SA-cylinder">SA - Cylinder</option>
                             </select>`;
-
-        const gpmHtml = `<input type="number" id="gpm${i}" name="gpm" placeholder="gpm">`;
 
         const portAHtml = `<select name="portA" id="portA${i}">
                                 <option value="" disabled selected hidden>Port A...</option>
@@ -115,9 +109,8 @@ function generatePvgSelections() {
         const html = `<div id="section${i}">Section ${i + 1}: 
                     ${descriptionHtml}
                     ${acutationHtml}
-                    ${spoolHtml}
                     ${gpmHtml}
-                    ${seriesHtml}
+                    ${spoolHtml}
                     ${portAHtml}
                     ${portBHtml}
                 </div>`;
@@ -129,28 +122,25 @@ function generatePvgSelections() {
 function updatePvgAssemSections() {
     for (i = 0; i < pvgAssem.numSections; i++) {
         const descriptionID = `description${i}`;
-        const pvgSeriesID = `pvgSeries${i}`;
         const actuationMethodID = `actuationMethod${i}`;
-        const spoolTypeID = `spoolType${i}`;
         const gpmID = `gpm${i}`;
+        const spoolTypeID = `spoolType${i}`;
         const portAID = `portA${i}`;
         const portBID = `portB${i}`;
 
         const description = document.getElementById(descriptionID);
-        const pvgSeries = document.getElementById(pvgSeriesID);
         const actuation = document.getElementById(actuationMethodID);
-        const spoolType = document.getElementById(spoolTypeID);
         const gpm = document.getElementById(gpmID);
+        const spoolType = document.getElementById(spoolTypeID);
         const portA = document.getElementById(portAID);
         const portB = document.getElementById(portBID);
 
         pvgAssem.updateSection(
             i,
             description.value,
-            pvgSeries.value,
             actuation.value,
-            spoolType.value,
             gpm.value,
+            spoolType.value,
             portA.value,
             portB.value
         );

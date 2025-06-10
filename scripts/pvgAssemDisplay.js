@@ -1,23 +1,18 @@
-const assemblyNumDisplay = document.querySelectorAll('.assembly-num-display');
-const partNumDets = document.querySelector('#part-num-dets');
-const totalCostDisplay = document.querySelector('#total-cost-disp');
-
+const assemblyNumDisplay = document.querySelectorAll(".assembly-num-display");
+const partNumDets = document.querySelector("#part-num-dets");
+const totalCostDisplay = document.querySelector("#total-cost-disp");
 
 // Build configured HPU part number and details
-function buildPvgAssemDisplay(){
-
+function buildPvgAssemDisplay() {
     // Build assembly number displays
     assemblyNumDisplay.forEach((element) => {
         element.innerHTML = `${pvgAssem.mppSysNum.toUpperCase()}`;
     });
 
     // Build dropdown for each section in assembly
-    const numSections = pvgAssem.numSections;
+    let sectionsHTML = "";
 
-    let sectionsHTML = '';
-
-    for(i = 0; i < pvgAssem.numSections; i++){
-
+    for (i = 0; i < pvgAssem.numSections; i++) {
         const sectionID = `section${i}`;
 
         const description = pvgAssem[sectionID].description;
@@ -30,7 +25,9 @@ function buildPvgAssemDisplay(){
 
         html = `
             <div class="dropdown">
-                <div class="trigger">SECTION ${i + 1}: ${description.toUpperCase()}</div>
+                <div class="trigger">SECTION ${
+                    i + 1
+                }: ${description.toUpperCase()}</div>
                 <div class="content">        
                     <ul>
                         <li>PVG Series: ${pvgSeries}</li>
@@ -46,23 +43,7 @@ function buildPvgAssemDisplay(){
         `;
 
         sectionsHTML += html;
-    };
-
-    // Build dropdown for included features
-    const defaultsHTML = `
-        <div class="dropdown">
-            <div class="trigger">Included Features</div>
-            <div class="content">        
-                <ul>
-                    <li>?</li>
-                    <li>??</li>
-                    <li>??!!</li>
-                    <li>??!!!!!!!</li>
-                    <li>Cleanout Covers</li>
-                </ul>
-            </div>
-        </div>
-    `;
+    }
 
     // Display inputs on part number page
     const inputsHTML = `
@@ -81,37 +62,35 @@ function buildPvgAssemDisplay(){
         </div>
     `;
 
-    partNumDets.innerHTML = sectionsHTML
-        + defaultsHTML 
-        + inputsHTML 
-        ;
+    partNumDets.innerHTML = sectionsHTML + inputsHTML;
 
     addEventHandlersToDropdowns();
 
     buildTotalCostDisplay();
-};
+}
 
 // Add event handlers to dropdowns
 const addEventHandlersToDropdowns = () => {
-    const dropdowns = document.querySelectorAll('.dropdown');
+    const dropdowns = document.querySelectorAll(".dropdown");
 
-    dropdowns.forEach(dropdown => {
-        const trigger = dropdown.querySelector('.trigger');
-        const content = dropdown.querySelector('.content');
-    
-        trigger.addEventListener('click', e => {
+    dropdowns.forEach((dropdown) => {
+        const trigger = dropdown.querySelector(".trigger");
+        const content = dropdown.querySelector(".content");
+
+        trigger.addEventListener("click", (e) => {
             e.preventDefault();
 
-            trigger.classList.toggle('active');
-            content.classList.toggle('active');
+            trigger.classList.toggle("active");
+            content.classList.toggle("active");
         });
     });
 };
 
 // Build html to display total cost of HPU and valves on part number display
 const buildTotalCostDisplay = () => {
-    
     const total = pvgAssem.calcCost();
 
-    totalCostDisplay.innerHTML = `<h4 class="total-price">TOTAL LIST PRICE: $${total.toFixed(2)}</h4>`
+    totalCostDisplay.innerHTML = `<h4 class="total-price">TOTAL LIST PRICE: $${total.toFixed(
+        2
+    )}</h4>`;
 };
