@@ -6,7 +6,7 @@ const totalCostDisplay = document.querySelector("#total-cost-disp");
 function buildPvgAssemDisplay() {
     // Build assembly number displays
     assemblyNumDisplay.forEach((element) => {
-        element.innerHTML = `${pvgAssem.mppSysNum.toUpperCase()}`;
+        element.innerHTML = `${pvgAssem.mppSysNum.toUpperCase()}-${pvgAssem.mppRevNum.toUpperCase()}`;
     });
 
     // Build dropdown for each section in assembly

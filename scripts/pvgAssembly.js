@@ -1,6 +1,7 @@
 class PvgAssembly {
     constructor() {
         this.mppSysNum = null;
+        this.mppRevNum = null;
         this.mppInletSetup = null;
         this.liqPopulated = null;
         this.mainReliefPsi = null;
@@ -24,6 +25,7 @@ class PvgAssembly {
 
     reset() {
         this.mppSysNum = null;
+        this.mppRevNum = null;
         this.mppInletSetup = null;
         this.liqPopulated = null;
         this.mainReliefPsi = null;

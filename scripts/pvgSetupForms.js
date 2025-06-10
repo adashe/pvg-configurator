@@ -1,30 +1,29 @@
-const manifoldSetupForm = document.querySelector('#manifold-setup-form');
-const pvgSetupForm = document.querySelector('#pvg-setup-form');
+const manifoldSetupForm = document.querySelector("#manifold-setup-form");
+const pvgSetupForm = document.querySelector("#pvg-setup-form");
 
-const manifoldSetupButtons = document.querySelectorAll('.manifold-setup-btn');
-const pvgSetupButtons = document.querySelectorAll('.pvg-setup-btn');
+const manifoldSetupButtons = document.querySelectorAll(".manifold-setup-btn");
+const pvgSetupButtons = document.querySelectorAll(".pvg-setup-btn");
 
 const pvgAssem = new PvgAssembly();
 
-
 // DISPLAY AND HIDE FORM ELEMENTS
 const displayManifoldSetupForm = () => {
-    pvgSetupDiv.style.display = 'block';
-    partNumDiv.style.display = 'none';
+    pvgSetupDiv.style.display = "block";
+    partNumDiv.style.display = "none";
 
-    manifoldSetupForm.style.display = 'block';
-    pvgSetupForm.style.display = 'none';
+    manifoldSetupForm.style.display = "block";
+    pvgSetupForm.style.display = "none";
 };
 
 const displayPvgSetupForm = () => {
-    manifoldSetupForm.style.display = 'none';
-    pvgSetupForm.style.display = 'block';
+    manifoldSetupForm.style.display = "none";
+    pvgSetupForm.style.display = "block";
 };
 
 // BUTTONS
 // Buttons to display system parameters form
 manifoldSetupButtons.forEach((button) => {
-    button.addEventListener('click', e => {
+    button.addEventListener("click", (e) => {
         e.preventDefault();
         displayManifoldSetupForm();
     });
@@ -32,43 +31,46 @@ manifoldSetupButtons.forEach((button) => {
 
 // Buttons to display manifold options form
 pvgSetupButtons.forEach((button) => {
-    button.addEventListener('click', e => {
+    button.addEventListener("click", (e) => {
         e.preventDefault();
         displayPvgSetupForm();
-        valvePopupWrapper.style.display = 'none';
+        valvePopupWrapper.style.display = "none";
     });
 });
 
 // PROCESS FORM INPUTS
 let pvgInputs = {
     mppSysNum: null,
+    mppRevNum: null,
     mppInletSetup: null,
     liqPopulated: null,
     mainReliefPsi: null,
     spreaderReliefPsi: null,
     mppPowerFloat: null,
     numSections: null,
-    paint: null
+    paint: null,
 };
 
-function resetPvgInputs(){
+function resetPvgInputs() {
     pvgInputs = {
         mppSysNum: null,
+        mppRevNum: null,
         mppInletSetup: null,
         liqPopulated: null,
         mainReliefPsi: null,
         spreaderReliefPsi: null,
         mppPowerFloat: null,
         numSections: null,
-        paint: null
+        paint: null,
     };
-};
+}
 
 // Process manifold setup form inputs
-manifoldSetupForm.addEventListener('submit', e => {
+manifoldSetupForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     pvgInputs.mppSysNum = manifoldSetupForm.mppSysNum.value;
+    pvgInputs.mppRevNum = manifoldSetupForm.mppRevNum.value;
     pvgInputs.mppInletSetup = manifoldSetupForm.mppInletSetup.value;
     pvgInputs.liqPopulated = manifoldSetupForm.liqPopulated.value;
     pvgInputs.mainReliefPsi = manifoldSetupForm.mainReliefPsi.value;
@@ -79,7 +81,7 @@ manifoldSetupForm.addEventListener('submit', e => {
 });
 
 // Process pvg setup form inputs
-pvgSetupForm.addEventListener('submit', e => {
+pvgSetupForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
     pvgInputs.numSections = pvgSetupForm.numSections.value;
@@ -89,9 +91,9 @@ pvgSetupForm.addEventListener('submit', e => {
     displayValvePopup();
 });
 
-function updatePvgAssem(){
+function updatePvgAssem() {
     pvgAssem.mppSysNum = pvgInputs.mppSysNum;
-    pvgAssem.mppSysNum = pvgInputs.mppSysNum;
+    pvgAssem.mppRevNum = pvgInputs.mppRevNum;
     pvgAssem.mppInletSetup = pvgInputs.mppInletSetup;
     pvgAssem.liqPopulated = pvgInputs.liqPopulated;
     pvgAssem.mainReliefPsi = pvgInputs.mainReliefPsi;
@@ -99,4 +101,4 @@ function updatePvgAssem(){
     pvgAssem.mppPowerFloat = pvgInputs.mppPowerFloat;
     pvgAssem.numSections = pvgInputs.numSections;
     pvgAssem.paint = pvgInputs.paint;
-};
+}

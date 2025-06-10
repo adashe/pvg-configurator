@@ -1,234 +1,282 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <title>Part Configurator</title>
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Part Configurator</title>
+    </head>
+    <body>
+        <div id="container">
+            <h2 class="company">SCOTT INDUSTRIAL</h2>
+            <h1>Hybrid Configurator</h1>
 
-    <div id="container">
+            <!-- PVG SETUP DIV -->
+            <div id="pvg-setup-div" class="page-div">
+                <form id="manifold-setup-form">
+                    <h3>MANIFOLD SETUP</h3>
 
-        <h2 class="company">SCOTT INDUSTRIAL</h2>
-        <h1>Hybrid Configurator</h1>
+                    <div>
+                        <label for="mppSysNum">MPP System Number: </label>
+                        <input type="text" id="mppSysNum" min="5" max="10" />
+                    </div>
 
-        <!-- PVG SETUP DIV -->
-        <div id="pvg-setup-div" class="page-div">
+                    <div>
+                        <label for="mppRevNum">MPP Revision Number: </label>
+                        <input type="text" id="mppRevNum" min="0" max="10" />
+                    </div>
 
-            <form id="manifold-setup-form">
-                <h3>MANIFOLD SETUP</h3>
+                    <div>
+                        <label for="mppInletSetup">MPP Inlet Setup: </label>
+                        <select name="mppInletSetup" id="mppInletSetup">
+                            <option value="open">Open Center</option>
+                            <option value="open">Closed Center</option>
+                        </select>
+                    </div>
 
-                <div>
-                    <label for="mppSysNum">MPP System Number: </label>
-                    <input type="text" id="mppSysNum" min="5" max="10">
+                    <div>
+                        <label for="liqPopulated">LIQ Populated: </label>
+                        <select name="liqPopulated" id="liqPopulated">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="mainReliefPsi">Main Relief: </label>
+                        <input
+                            type="number"
+                            id="mainReliefPsi"
+                            placeholder="ex. 100 psi"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="spreaderReliefPsi">Spreader Relief: </label>
+                        <input
+                            type="number"
+                            id="spreaderReliefPsi"
+                            placeholder="ex. 100 psi"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="mppPowerFloat">MPP Power Float: </label>
+                        <select name="mppPowerFloat" id="mppPowerFloat">
+                            <option value="yes">Yes</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+
+                    <input class="button" type="submit" value="CONTINUE" />
+                    <button class="button gray restart">RESTART</button>
+                </form>
+
+                <form id="pvg-setup-form">
+                    <h3>PVG SETUP</h3>
+
+                    <div>
+                        <label for="numSections"
+                            >Number of PVG Sections:
+                        </label>
+                        <input
+                            type="number"
+                            id="numSections"
+                            min="1"
+                            max="12"
+                        />
+                    </div>
+
+                    <div>
+                        <label for="paint">Paint: </label>
+                        <select name="paint" id="paint">
+                            <option value="none">None</option>
+                            <option value="black">Black</option>
+                        </select>
+                    </div>
+
+                    <input class="button" type="submit" value="CONTINUE" />
+                    <button class="button gray manifold-setup-btn">
+                        PREVIOUS
+                    </button>
+                    <button class="button gray restart">RESTART</button>
+                </form>
+            </div>
+
+            <!-- VALVE FORM POPUP DIV -->
+            <div class="valve-popup-wrapper">
+                <div class="valve-popup-div">
+                    <h2 class="company">SCOTT INDUSTRIAL</h2>
+                    <h1>Hybrid Configurator</h1>
+
+                    <h3>PVG SETUP</h3>
+
+                    <form id="valve-popup-form">
+                        <div id="valve-dropdowns-div">
+                            <div class="valve-popup-content"></div>
+                        </div>
+
+                        <div id="pvg-selections-div">
+                            <div class="pvg-selections-content"></div>
+                        </div>
+
+                        <div class="buttons-div">
+                            <button class="button gray pvg-setup-btn">
+                                PREVIOUS
+                            </button>
+                            <input
+                                class="button"
+                                type="submit"
+                                value="GENERATE PART NUMBER"
+                            />
+                            <button class="button gray restart">RESTART</button>
+                        </div>
+                    </form>
                 </div>
+            </div>
 
-                <div>
-                    <label for="mppInletSetup">MPP Inlet Setup: </label>
-                    <select name="mppInletSetup" id="mppInletSetup">
-                        <option value="open">Open Center</option>
-                        <option value="open">Closed Center</option>
-                    </select>
-                </div>
+            <!-- PART NUMBER DIV -->
+            <div id="part-num-div" class="page-div">
+                <h2>PART NUMBER</h2>
 
-                <div>
-                    <label for="liqPopulated">LIQ Populated: </label>
-                    <select name="liqPopulated" id="liqPopulated">
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
+                <h2 class="assembly-num-display"></h2>
 
-                <div>
-                    <label for="mainReliefPsi">Main Relief: </label>
-                    <input type="number" id="mainReliefPsi" placeholder="ex. 100 psi">
-                </div>
+                <div id="part-num-dets"></div>
 
-                <div>
-                    <label for="spreaderReliefPsi">Spreader Relief: </label>
-                    <input type="number" id="spreaderReliefPsi" placeholder="ex. 100 psi">
-                </div>
+                <div id="total-cost-disp"></div>
 
-                <div>
-                    <label for="mppPowerFloat">MPP Power Float: </label>
-                    <select name="mppPowerFloat" id="mppPowerFloat">
-                        <option value="yes">Yes</option>
-                        <option value="no">No</option>
-                    </select>
-                </div>
-
-                <input class="button" type="submit" value="CONTINUE">
+                <button class="button contact">EMAIL OR SAVE AS PDF</button>
+                <button class="button gray" id="edit-inputs">
+                    EDIT INPUTS
+                </button>
                 <button class="button gray restart">RESTART</button>
+            </div>
 
-            </form>
+            <!-- CONTACT DIV -->
+            <div id="contact-div" class="page-div">
+                <h2>CUSTOMER DETAILS</h2>
 
-            <form id="pvg-setup-form">
-                <h3>PVG SETUP</h3>
+                <h2 class="assembly-num-display"></h2>
 
-                <div>
-                    <label for="numSections">Number of PVG Sections: </label>
-                    <input type="number" id="numSections" min="1" max="12">
-                </div>
+                <form id="contact-form">
+                    <div>
+                        <label for="contactName">Contact Name: </label>
+                        <input
+                            type="text"
+                            id="contactName"
+                            name="contactName"
+                            placeholder="Contact Name"
+                            required
+                        />
+                    </div>
 
-                <div>
-                    <label for="paint">Paint: </label>
-                    <select name="paint" id="paint">
-                        <option value="none">None</option>
-                        <option value="black">Black</option>
-                    </select>
-                </div>
+                    <div>
+                        <label for="companyName">Company Name: </label>
+                        <input
+                            type="text"
+                            id="companyName"
+                            name="companyName"
+                            placeholder="Company Name"
+                            required
+                        />
+                    </div>
 
-                <input class="button" type="submit" value="CONTINUE">
-                <button class="button gray manifold-setup-btn">PREVIOUS</button>
-                <button class="button gray restart">RESTART</button>
+                    <div>
+                        <label for="email">Email: </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            autocomplete="on"
+                            placeholder="customer@email.com"
+                            required
+                        />
+                    </div>
 
-            </form>
+                    <div>
+                        <label for="phone">Phone: </label>
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            autocomplete="on"
+                            placeholder="1-555-555-555"
+                            required
+                        />
+                    </div>
 
+                    <input
+                        id="generate-pdf"
+                        class="button"
+                        type="submit"
+                        value="GENERATE PDF"
+                    />
+                    <button class="button generate-email">
+                        SUBMIT AS EMAIL
+                    </button>
+                    <button class="button gray details">
+                        RETURN TO PART DETAILS
+                    </button>
+                    <button class="button gray restart">RESTART</button>
+                </form>
+            </div>
         </div>
 
-        <!-- VALVE FORM POPUP DIV -->
-        <div class="valve-popup-wrapper">
-            <div class="valve-popup-div">
+        <!-- ERROR POPUP DIV -->
+        <div class="error-popup-wrapper">
+            <div class="error-popup-div">
+                <div class="error-popup-close-x">x</div>
+                <h2 class="error-popup-header">Configuration Error</h2>
+                <div class="error-popup-content">
+                    <p>Error!</p>
+                </div>
+                <button class="button gray error-popup-close-btn">CLOSE</button>
+            </div>
+        </div>
 
+        <!-- PDF DIV -->
+        <div id="container-pdf">
+            <div class="no-print" id="pdf-cust-msg-div"></div>
+            <div class="no-print" id="pdf-nav">
+                <button class="button restart">RESTART</button>
+                <button class="button details">RETURN TO PART DETAILS</button>
+                <button class="button pdf-print">PRINT OR SAVE AS PDF</button>
+                <button class="button generate-email">SUBMIT AS EMAIL</button>
+            </div>
+
+            <div id="pdf-page">
                 <h2 class="company">SCOTT INDUSTRIAL</h2>
                 <h1>Hybrid Configurator</h1>
 
-                <h3>PVG SETUP</h3>
-
-                <form id="valve-popup-form">
-
-                    <div id="valve-dropdowns-div">
-                        <div class="valve-popup-content"></div>
-                    </div>
-
-                    <div id="pvg-selections-div">
-                        <div class="pvg-selections-content"></div>
-                    </div>
-                    
-
-                    <div class="buttons-div">
-                        <button class="button gray pvg-setup-btn">PREVIOUS</button>  
-                        <input class="button" type="submit" value="GENERATE PART NUMBER">
-                        <button class="button gray restart">RESTART</button> 
-                    </div>
-
-                </form>
-
+                <div id="pdf-contact-div"></div>
+                <div id="pdf-dets-div"></div>
+                <div id="pdf-valve-div"></div>
+                <div id="pdf-total-list-price-div"></div>
             </div>
         </div>
-    
-    
-        <!-- PART NUMBER DIV -->
-        <div id="part-num-div" class="page-div">
-            <h2>PART NUMBER</h2>
 
-            <h2 class="assembly-num-display"></h2>
+        <script src="scripts/pvgAssembly.js"></script>
 
-            <div id="part-num-dets"></div>
+        <script src="scripts/pvgSetupForms.js"></script>
+        <script src="scripts/pvgPopupForm.js"></script>
 
-            <div id="total-cost-disp"></div>
+        <script src="scripts/pvgAssemDisplay.js"></script>
 
-            <button class="button contact">EMAIL OR SAVE AS PDF</button>
-            <button class="button gray" id="edit-inputs">EDIT INPUTS</button>
-            <button class="button gray restart">RESTART</button>
+        <script src="scripts/contactForm.js"></script>
 
-        </div>
+        <script src="scripts/pdf.js"></script>
+        <script src="scripts/pvgPdf.js"></script>
 
-        <!-- CONTACT DIV -->
-        <div id="contact-div" class="page-div">
-            <h2>
-                CUSTOMER DETAILS
-            </h2>
+        <script src="scripts/email.js"></script>
+        <script src="scripts/pvgEmail.js"></script>
 
-            <h2 class="assembly-num-display"></h2>
-
-            <form id="contact-form">
-                <div>
-                    <label for="contactName">Contact Name: </label>
-                    <input type="text" id="contactName" name="contactName" placeholder="Contact Name" required>
-                </div>
-
-                <div>
-                    <label for="companyName">Company Name: </label>
-                    <input type="text" id="companyName" name="companyName" placeholder="Company Name" required>
-                </div>
-
-                <div>
-                    <label for="email">Email: </label>
-                    <input type="email" id="email" name="email" autocomplete="on" placeholder="customer@email.com" required>
-                </div>
-
-                <div>
-                    <label for="phone">Phone: </label>
-                    <input type="tel" id="phone" name="phone" autocomplete="on" placeholder="1-555-555-555" required>
-                </div>
-
-
-                <input id="generate-pdf" class="button" type="submit" value="GENERATE PDF">
-                <button class="button generate-email">SUBMIT AS EMAIL</button>
-                <button class="button gray details">RETURN TO PART DETAILS</button>
-                <button class="button gray restart">RESTART</button>
-            </form>
-
-        </div>
-
-    </div>
-
-
-    <!-- ERROR POPUP DIV -->
-    <div class="error-popup-wrapper">
-        <div class="error-popup-div">
-            <div class="error-popup-close-x">x</div>
-            <h2 class="error-popup-header">Configuration Error</h2>
-            <div class="error-popup-content">
-                <p>Error!</p>
-            </div>
-            <button class="button gray error-popup-close-btn">CLOSE</button>
-        </div>
-    </div>
-
-    <!-- PDF DIV -->
-    <div id="container-pdf">
-        <div class="no-print" id="pdf-cust-msg-div"></div>  
-        <div class="no-print" id="pdf-nav">
-            <button class="button restart">RESTART</button>
-            <button class="button details">RETURN TO PART DETAILS</button>
-            <button class="button pdf-print">PRINT OR SAVE AS PDF</button>
-            <button class="button generate-email">SUBMIT AS EMAIL</button>
-        </div>
-
-        <div id="pdf-page">
-            <h2 class="company">SCOTT INDUSTRIAL</h2>
-            <h1>Hybrid Configurator</h1>
-    
-            <div id="pdf-contact-div"></div>  
-            <div id="pdf-dets-div"></div>
-            <div id="pdf-valve-div"></div>
-            <div id="pdf-total-list-price-div"></div>
-
-        </div>
-    </div>
-
-    <script src="scripts/pvgAssembly.js"></script>
-
-    <script src="scripts/pvgSetupForms.js"></script>
-    <script src="scripts/pvgPopupForm.js"></script>
-
-    <script src="scripts/pvgAssemDisplay.js"></script>
-
-    <script src="scripts/contactForm.js"></script>
-
-    <script src="scripts/pdf.js"></script>
-    <script src="scripts/pvgPdf.js"></script>
-
-    <script src="scripts/email.js"></script>
-    <script src="scripts/pvgEmail.js"></script>
-
-    <script src="scripts/app.js"></script>
-    <script src="scripts/ui.js"></script>
-</body>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/ui.js"></script>
+    </body>
 </html>
