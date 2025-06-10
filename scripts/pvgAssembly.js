@@ -75,6 +75,8 @@ class PvgAssembly {
     }
 
     calcCost() {
+        let cost = 0;
+
         // Manifold options
         const costInlet = 1134.56;
         const cost3rdFuncInlet = 98.42;
@@ -90,7 +92,7 @@ class PvgAssembly {
         const costTieRodKit = 68.52;
         const costPaint = this.paint === "black" ? 88.55 : 0;
 
-        const cost =
+        cost =
             costInlet +
             costPlowPowerFloat +
             costAllSections +

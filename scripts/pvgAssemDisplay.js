@@ -14,14 +14,17 @@ function buildPvgAssemDisplay() {
 
     for (i = 0; i < pvgAssem.numSections; i++) {
         const sectionID = `section${i}`;
-        const description = pvgAssem[sectionID].description;
-        const actuation = pvgAssem[sectionID].actuation;
-        const gpm = pvgAssem[sectionID].gpm;
-        const spoolType = pvgAssem[sectionID].spoolType;
-        const portA = pvgAssem[sectionID].portA;
-        const portB = pvgAssem[sectionID].portB;
-        const loadSenseA = pvgAssem[sectionID].loadSenseA;
-        const loadSenseB = pvgAssem[sectionID].loadSenseB;
+
+        const {
+            description,
+            actuation,
+            gpm,
+            spoolType,
+            portA,
+            portB,
+            loadSenseA,
+            loadSenseB,
+        } = pvgAssem[sectionID];
 
         html = `
             <div class="dropdown">
