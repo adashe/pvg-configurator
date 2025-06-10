@@ -1,5 +1,5 @@
-class PvgAssembly{
-    constructor(){
+class PvgAssembly {
+    constructor() {
         this.mppSysNum = null;
         this.mppInletSetup = null;
         this.liqPopulated = null;
@@ -22,7 +22,7 @@ class PvgAssembly{
         this.section11 = null;
     }
 
-    reset(){
+    reset() {
         this.mppSysNum = null;
         this.mppInletSetup = null;
         this.liqPopulated = null;
@@ -45,8 +45,16 @@ class PvgAssembly{
         this.section11 = null;
     }
 
-    updateSection(index, description, pvgSeries, actuation, spoolType, gpm, portRelA, portRelB){
-
+    updateSection(
+        index,
+        description,
+        pvgSeries,
+        actuation,
+        spoolType,
+        gpm,
+        portA,
+        portB
+    ) {
         const sectionID = `section${index}`;
 
         this[sectionID] = {
@@ -55,15 +63,14 @@ class PvgAssembly{
             actuation,
             spoolType,
             gpm,
-            portRelA,
-            portRelB
+            portA,
+            portB,
         };
 
         return this[sectionID];
     }
 
-    calcCost(){
+    calcCost() {
         return 1234.5678;
     }
-
 }
