@@ -20,6 +20,8 @@ function buildPvgAssemDisplay() {
         const spoolType = pvgAssem[sectionID].spoolType;
         const portA = pvgAssem[sectionID].portA;
         const portB = pvgAssem[sectionID].portB;
+        const loadSenseA = pvgAssem[sectionID].loadSenseA;
+        const loadSenseB = pvgAssem[sectionID].loadSenseB;
 
         html = `
             <div class="dropdown">
@@ -33,6 +35,8 @@ function buildPvgAssemDisplay() {
                         <li>Spool Type: ${spoolType.toUpperCase()}</li>
                         <li>Port A: ${portA}</li>
                         <li>Port B: ${portB}</li>
+                        <li>Load Sense A: ${loadSenseA}</li>
+                        <li>Load Sense B: ${loadSenseB}</li>
                     </ul>
                 </div>
             </div>

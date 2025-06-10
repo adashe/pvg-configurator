@@ -38,6 +38,8 @@ function generatePvgSelections() {
                             <div>Spool</div>
                             <div>Port A Type</div>
                             <div>Port B Type</div>
+                            <div>Load Sense A</div>
+                            <div>Load Sense B</div>
                         </div>`;
 
     pvgSelectionsContent.innerHTML = `${headerHtml}`;
@@ -106,6 +108,10 @@ function generatePvgSelections() {
                                 <option value="157B2250">157B2250 (3626 PSI, +363/-0 PSI)</option>
                             </select>`;
 
+        const loadSenseAHtml = `<input type="number" id="loadSenseA${i}" name="loadSenseA" placeholder="??">`;
+
+        const loadSenseBHtml = `<input type="number" id="loadSenseB${i}" name="loadSenseB" placeholder="??">`;
+
         const html = `<div id="section${i}">Section ${i + 1}: 
                     ${descriptionHtml}
                     ${acutationHtml}
@@ -113,6 +119,8 @@ function generatePvgSelections() {
                     ${spoolHtml}
                     ${portAHtml}
                     ${portBHtml}
+                    ${loadSenseAHtml}
+                    ${loadSenseBHtml}
                 </div>`;
 
         pvgSelectionsContent.innerHTML += html;
@@ -127,6 +135,8 @@ function updatePvgAssemSections() {
         const spoolTypeID = `spoolType${i}`;
         const portAID = `portA${i}`;
         const portBID = `portB${i}`;
+        const loadSenseAID = `loadSenseA${i}`;
+        const loadSenseBID = `loadSenseB${i}`;
 
         const description = document.getElementById(descriptionID);
         const actuation = document.getElementById(actuationMethodID);
@@ -134,6 +144,8 @@ function updatePvgAssemSections() {
         const spoolType = document.getElementById(spoolTypeID);
         const portA = document.getElementById(portAID);
         const portB = document.getElementById(portBID);
+        const loadSenseA = document.getElementById(loadSenseAID);
+        const loadSenseB = document.getElementById(loadSenseBID);
 
         pvgAssem.updateSection(
             i,
@@ -142,7 +154,9 @@ function updatePvgAssemSections() {
             gpm.value,
             spoolType.value,
             portA.value,
-            portB.value
+            portB.value,
+            loadSenseA.value,
+            loadSenseB.value
         );
     }
 }

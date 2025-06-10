@@ -1,36 +1,36 @@
-body{
+body {
     background: #d4d4d4;
     font-family: "Source Sans 3", serif;
     font-size: 16px;
     color: #434343;
 }
-h1{
+h1 {
     text-align: center;
     margin: 0px;
     font-family: "Source Sans 3", serif;
     color: #434343;
 }
-h2{
+h2 {
     text-align: center;
     color: #434343;
     margin: 10px;
 }
-h2.company{
+h2.company {
     color: #4d91c9;
     margin-top: 30px;
 }
-h2.assembly-num-display{
+h2.assembly-num-display {
     color: #4d91c9;
     border: 2px solid #4d91c9;
     margin: 20px 40px;
     padding: 10px;
 }
-h3{
+h3 {
     text-align: center;
     color: #434343;
     margin: 0px 10px 20px 10px;
 }
-.total-price{
+.total-price {
     text-align: center;
     font-size: 16px;
     padding: 10px;
@@ -38,26 +38,26 @@ h3{
     margin: 20px 60px;
     color: #4d91c9;
 }
-p{
+p {
     text-align: center;
 }
-ul{
+ul {
     margin: 5px auto;
     list-style-type: none;
     padding-left: 25px;
     padding-bottom: 10px;
 }
-li{
+li {
     font-size: 14px;
     color: #818181;
 }
-li h5{
+li h5 {
     font-size: 14px;
     font-weight: 600;
     margin-top: 0;
     margin-bottom: 0;
 }
-#container{
+#container {
     display: flex;
     flex-direction: column;
     background: white;
@@ -69,43 +69,42 @@ li h5{
     border-radius: 5px;
     box-shadow: 2px 2px #c2c0c0;
 }
-.page-div{
+.page-div {
     background: white;
     margin: 0px 10px 10px 10px;
     padding: 0px 10px 10px 10px;
 }
 
-
 /* PDF STYLES */
-#container-pdf{
+#container-pdf {
     display: none;
     width: 800px;
     margin: 10px auto;
 }
-#pdf-page{
+#pdf-page {
     background: white;
 }
-#container-pdf div{
+#container-pdf div {
     margin: 10px;
     padding: 10px;
 }
-#container-pdf .part-num-disp{
+#container-pdf .part-num-disp {
     margin: 30px 240px;
 }
-#container-pdf h3{
+#container-pdf h3 {
     text-align: left;
     margin: 5px;
 }
-#container-pdf .pdf-cost{
+#container-pdf .pdf-cost {
     margin: 20px auto;
     padding: 10px auto;
 }
-#container-pdf .pdf-total-list{
+#container-pdf .pdf-total-list {
     margin: 0;
     padding: 0;
     text-align: center;
 }
-#container-pdf h4{
+#container-pdf h4 {
     display: inline;
     text-align: left;
     font-size: 18px;
@@ -113,33 +112,33 @@ li h5{
     border: 2px solid;
     padding: 10px 40px;
 }
-#container-pdf ul{
+#container-pdf ul {
     list-style-type: none;
 }
-#pdf-nav{
+#pdf-nav {
     display: flex;
     justify-content: space-around;
 }
-#pdf-nav button{
+#pdf-nav button {
     width: 180px;
 }
 @media print {
-    #container-pdf{
+    #container-pdf {
         width: 100%;
         margin: 10px;
     }
 
     .no-print {
-      display: none !important;
+        display: none !important;
     }
-  }
+}
 
 /* BUTTON STYLES */
-.buttons-div{
+.buttons-div {
     display: flex;
     justify-content: space-around;
 }
-.button{
+.button {
     display: block;
     width: 180px;
     margin: 10px auto;
@@ -151,51 +150,51 @@ li h5{
     color: white;
     font-weight: 500;
 }
-.button:hover{
+.button:hover {
     background-color: #3579b1;
     cursor: pointer;
 }
-button.gray{
+button.gray {
     background-color: #d4d4d4;
     color: #434343;
 }
-.button.gray:hover{
+.button.gray:hover {
     background-color: #c2c0c0;
     color: #434343;
     cursor: pointer;
 }
-button.yellow{
+button.yellow {
     background-color: #f6cb54;
 }
-button.yellow:hover{
+button.yellow:hover {
     background-color: #e7aa05;
     cursor: pointer;
 }
-#advanced-opts{
+#advanced-opts {
     text-align: right;
     font-size: 12px;
     color: #67bfc2;
 }
-#advanced-opts:hover{
+#advanced-opts:hover {
     color: #4d91c9;
     cursor: pointer;
     text-decoration: underline;
 }
-.li-edit{
+.li-edit {
     display: none;
 }
-.li-edit:hover{
+.li-edit:hover {
     color: #4d91c9;
     cursor: pointer;
     text-decoration: underline;
 }
-.li-edit.active{
+.li-edit.active {
     display: block;
     color: #327db9;
     font-style: italic;
     display: inherit;
 }
-p.assem-price{
+p.assem-price {
     padding: 10px;
     margin: 0 auto 20px auto;
     font-size: 16px;
@@ -203,7 +202,7 @@ p.assem-price{
     font-weight: 500;
     color: #4d91c9;
 }
-.edit-inputs{
+.edit-inputs {
     margin: 0;
     font-size: 12px;
     text-align: right;
@@ -217,7 +216,7 @@ p.assem-price{
 }
 
 /* FORM INPUT STYLES */
-input{
+input {
     display: inline-block;
     width: 155px;
     margin: 10px auto;
@@ -225,7 +224,7 @@ input{
     font-family: "Source Sans 3", serif;
     color: #434343;
 }
-select{
+select {
     display: inline-block;
     width: 180px;
     margin: 10px auto;
@@ -236,55 +235,55 @@ select{
 ::placeholder {
     font-style: italic;
 }
-label{
+label {
     display: inline-block;
     font-family: "Source Sans 3", serif;
     color: #434343;
 }
 
 /* FORM STYLES */
-form{
+form {
     margin: 10px;
     padding: 10px;
     display: block;
     font-family: "Source Sans 3", serif;
     color: #434343;
 }
-form#manifold-setup-form{
+form#manifold-setup-form {
     text-align: right;
 }
-form#pvg-setup-form{
+form#pvg-setup-form {
     display: none;
     text-align: right;
 }
-form#contact-form{
+form#contact-form {
     text-align: right;
     margin: 10px 20px;
 }
 
 /* DIV STYLES */
-#pvg-setup-div{
+#pvg-setup-div {
     display: block;
 }
-#part-num-div{
+#part-num-div {
     display: none;
 }
-#edit-div{
+#edit-div {
     display: none;
 }
-#contact-div{
+#contact-div {
     display: none;
 }
 
 /* DROPDOWN STYLES */
-.dropdown .trigger{
+.dropdown .trigger {
     border-bottom: 1px solid #ddd;
     padding: 10px;
     position: relative;
     cursor: pointer;
     font-weight: 500;
 }
-.dropdown .trigger::after{
+.dropdown .trigger::after {
     content: ">";
     display: inline-block;
     position: absolute;
@@ -293,18 +292,18 @@ form#contact-form{
     font-weight: bold;
     transition: transform 0.3s;
 }
-.dropdown .trigger.active::after{
+.dropdown .trigger.active::after {
     transform: rotate(-90deg) scale(0.5, 1);
 }
-.dropdown .content{
+.dropdown .content {
     display: none;
 }
-.dropdown .content.active{
+.dropdown .content.active {
     display: block;
 }
 
 /* PVG POPUP STYLES */
-.valve-popup-wrapper{
+.valve-popup-wrapper {
     display: none;
     background: #d4d4d4;
     position: fixed;
@@ -314,7 +313,7 @@ form#contact-form{
     height: 100%;
     overflow: auto;
 }
-.valve-popup-div{
+.valve-popup-div {
     text-align: center;
     width: 100%;
     max-width: 1000px;
@@ -326,24 +325,24 @@ form#contact-form{
     border: none;
     border-radius: 5px;
 }
-.valve-popup-div h3{
+.valve-popup-div h3 {
     text-align: center;
     color: #434343;
     margin: 20px 10px 10px 10px;
 }
-#valve-popup-form select{
+#valve-popup-form select {
     margin: 0;
     width: 180px;
 }
-#popupColumnHeaders{
+#popupColumnHeaders {
     display: flex;
     justify-content: space-around;
 }
-#popupColumnHeaders div{
-    width: 100px;
+#popupColumnHeaders div {
+    width: 90px;
 }
-#popupColumnHeaders #placeholder{
-    width: 40px;
+#popupColumnHeaders #placeholder {
+    width: 50px;
 }
 #pvg-selections-div {
     display: flex;
@@ -351,31 +350,31 @@ form#contact-form{
     font-weight: 500;
     /* text-align: left; */
 }
-#pvg-selections-div select{
-    width: 100px;
-    margin: 10px;
-    padding: 10px;
+#pvg-selections-div select {
+    width: 90px;
+    margin: 8px;
+    padding: 8px;
 }
-#pvg-selections-div input{
-    width: 80px;
-    margin: 10px;
-    padding: 10px;
+#pvg-selections-div input {
+    width: 70px;
+    margin: 8px;
+    padding: 8px;
 }
-#valve-popup-content{
+#valve-popup-content {
     text-align: left;
 }
 
 /* ERROR POPUP STYLES */
-.error-popup-wrapper{
+.error-popup-wrapper {
     display: none;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
 }
-.error-popup-div{
+.error-popup-div {
     text-align: center;
     width: 100%;
     max-width: 400px;
@@ -386,16 +385,16 @@ form#contact-form{
     border: none;
     border-radius: 5px;
 }
-.error-popup-div h2{
+.error-popup-div h2 {
     color: #72d1d4;
 }
-.error-popup-close-x{
+.error-popup-close-x {
     position: absolute;
     font-size: 20px;
     top: 5px;
     right: 15px;
     cursor: pointer;
 }
-.error-popup-close-btn{
+.error-popup-close-btn {
     cursor: pointer;
 }

@@ -37,23 +37,24 @@ const fillPdfDets = () => {
         const sectionID = `section${i}`;
 
         const description = pvgAssem[sectionID].description;
-        const pvgSeries = pvgAssem[sectionID].pvgSeries;
         const actuation = pvgAssem[sectionID].actuation;
-        const spoolType = pvgAssem[sectionID].spoolType;
         const gpm = pvgAssem[sectionID].gpm;
-        const portRelA = pvgAssem[sectionID].portRelA;
-        const portRelB = pvgAssem[sectionID].portRelB;
+        const spoolType = pvgAssem[sectionID].spoolType;
+        const portA = pvgAssem[sectionID].portA;
+        const portB = pvgAssem[sectionID].portB;
+        const loadSenseA = pvgAssem[sectionID].loadSenseA;
+        const loadSenseB = pvgAssem[sectionID].loadSenseB;
 
         html = `
             <h3>SECTION ${i + 1}: ${description.toUpperCase()}</h3>       
             <ul>
-                <li>PVG Series: ${pvgSeries}</li>
                 <li>Actuation: ${actuation.toUpperCase()}</li>
+                <li>Flow: ${gpm} gpm</li>
                 <li>Spool Type: ${spoolType.toUpperCase()}</li>
-                <li>${gpm} gpm</li>
-                <li>Port Relief A: ${portRelA} psi</li>
-                <li>Port Relief B: ${portRelB} psi</li>
-                <li>Cost: $$</li>
+                <li>Port Relief A: ${portA}</li>
+                <li>Port Relief B: ${portB}</li>
+                <li>Load Sense A: ${loadSenseA}</li>
+                <li>Load Sense B: ${loadSenseB}</li>
             </ul>
         `;
 
@@ -65,7 +66,9 @@ const fillPdfDets = () => {
 
 const fillTotalCostPdfDets = () => {
     const total = parseFloat(pvgAssem.calcCost());
-    pdfTotalListPriceDiv.innerHTML = `<div class="pdf-total-list"><h4>TOTAL LIST PRICE: ${total.toFixed(
-        2
-    )}</h4></div>`;
+    pdfTotalListPriceDiv.innerHTML = `
+        <div class="pdf-total-list">
+            <h4>TOTAL LIST PRICE: ${total.toFixed(2)}</h4>
+        </div>
+    `;
 };

@@ -47,7 +47,17 @@ class PvgAssembly {
         this.section11 = null;
     }
 
-    updateSection(index, description, actuation, gpm, spoolType, portA, portB) {
+    updateSection(
+        index,
+        description,
+        actuation,
+        gpm,
+        spoolType,
+        portA,
+        portB,
+        loadSenseA,
+        loadSenseB
+    ) {
         const sectionID = `section${index}`;
 
         this[sectionID] = {
@@ -57,6 +67,8 @@ class PvgAssembly {
             spoolType,
             portA,
             portB,
+            loadSenseA,
+            loadSenseB,
         };
 
         return this[sectionID];
