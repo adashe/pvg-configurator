@@ -58,8 +58,19 @@ function buildPvgAssemDisplay() {
     const inputsHTML = `
         <div class="dropdown">
             <div class="trigger">Base Configuration</div>
-            <div class="content">        
+            <div class="content">
                 <ul>
+                    <li>Main Relief: ${
+                        pvgAssem.mainReliefPsi
+                            ? `${pvgAssem.mainReliefPsi} psi`
+                            : "none"
+                    }</li>
+                    <li>Spreader Relief: ${
+                        pvgAssem.spreaderReliefPsi
+                            ? `${pvgAssem.spreaderReliefPsi} psi`
+                            : "none"
+                    }</li>
+                    <li>Open Center Relief: </li>
                     <li>End Plate: $$</li>
                     <li>Tie-Rods: 20ft: $$</li>
                     <li>Paint: ${pvgAssem.paint.toUpperCase()}: $$</li>
