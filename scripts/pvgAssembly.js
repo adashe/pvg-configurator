@@ -77,19 +77,14 @@ class PvgAssembly {
     generateInletAssemNum() {
         let inletAssemNum = "";
 
-        // what is "MAN"?
-        inletAssemNum += "MPP";
+        inletAssemNum += "MPP"; // add generic option "MAN"later
         inletAssemNum += this.mppInletSetup === "open" ? "-O" : "-C";
         inletAssemNum += this.paint === "black" ? "-P" : "-NP";
         inletAssemNum += this.liqPopulated === "yes" ? "-LIQ" : "";
         inletAssemNum += this.mppPowerFloat === "yes" ? "-PF" : "";
 
-        // what codes to use for main relief, spreader relief, open center relief?
-        inletAssemNum += this.mainReliefPsi ? `-MR${this.mainReliefPsi}` : "";
-        inletAssemNum += this.spreaderReliefPsi
-            ? `-PR${this.spreaderReliefPsi}`
-            : "";
-
+        inletAssemNum += this.mainReliefPsi ? "-MR" : "";
+        inletAssemNum += this.spreaderReliefPsi ? "-PR" : "";
         // add open center relief psi
 
         return inletAssemNum;
@@ -105,8 +100,28 @@ class PvgAssembly {
         sectionAssemNum += `-${this[sectionID].gpm}G`;
         sectionAssemNum += `-${this[sectionID].spoolType}`;
 
-        // what are the port options?
-        // what codes to use for additional information?
+        if (this[sectionID].portA === "anti-cav") {
+            sectionAssemNum += "-AC";
+        } else if (this[sectionID].portA === "plug") {
+            sectionAssemNum += "-PL";
+        } else {
+            sectionAssemNum += `-PR`;
+        }
+
+        if (this[sectionID].portB === "anti-cav") {
+            sectionAssemNum += "-AC";
+        } else if (this[sectionID].portA === "plug") {
+            sectionAssemNum += "-PL";
+        } else {
+            sectionAssemNum += "-PR";
+        }
+
+        sectionAssemNum += this[sectionID].loadSenseA
+            ? `-LS${this[sectionID].loadSenseA}`
+            : "";
+        sectionAssemNum += this[sectionID].loadSenseB
+            ? `-LS${this[sectionID].loadSenseB}`
+            : "";
 
         return sectionAssemNum;
     }

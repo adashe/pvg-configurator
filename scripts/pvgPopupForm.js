@@ -55,7 +55,16 @@ function generatePvgSelections() {
                                     <option value="mechanical">Mechanical</option>
                                 </select>`;
 
-        const gpmHtml = `<input type="number" id="gpm${i}" name="gpm" placeholder="gpm">`;
+        // const gpmHtml = `<input type="number" id="gpm${i}" name="gpm" placeholder="gpm">`;
+
+        const gpmHtml = `<select name="gpm" id="gpm${i}">
+                            <option value="2.6">2.6 gpm</option> 
+                            <option value="6.6">6.6 gpm</option>
+                            <option value="10.6">10.6 gpm</option>
+                            <option value="17.2">17.2 gpm</option>
+                            <option value="26.4">26.4 gpm</option>
+                            <option value="34.3">34.3 gpm</option>
+                        </select>`;
 
         const spoolHtml = `<select name="spoolType" id="spoolType${i}">
                                 <option value="" disabled selected hidden>Spool...</option>
@@ -67,44 +76,44 @@ function generatePvgSelections() {
 
         const portAHtml = `<select name="portA" id="portA${i}">
                                 <option value="" disabled selected hidden>Port A...</option>
-                                <option value="157B2001">157B2001 Anti-Cav Facility</option>
-                                <option value="157B2002">157B2002 Plug</option>
-                                <option value="157B2032">157B2032 (464 PSI, +290/-0 PSI)</option>
-                                <option value="157B2050">157B2050 (725 PSI, +290/-0 PSI)</option>
-                                <option value="157B2063">157B2063 (913 PSI, +290/-0 PSI)</option>
-                                <option value="157B2080">157B2080 (1160 PSI, +290/-0 PSI)</option>
-                                <option value="157B2100">157B2100 (1450 PSI, +334/-0 PSI)</option>
-                                <option value="157B2125">157B2125 (1813 PSI, +334/-0 PSI)</option>
-                                <option value="157B2140">157B2140 (2031 PSI, +334/-0 PSI)</option>
-                                <option value="157B2150">157B2150 (2176 PSI, +334/-0 PSI)</option>
-                                <option value="157B2160">157B2160 (2321 PSI, +334/-0 PSI)</option>
-                                <option value="157B2175">157B2175 (2538 PSI, +334/-0 PSI)</option>
-                                <option value="157B2190">157B2190 (2756 PSI, +334/-0 PSI)</option>
-                                <option value="157B2210">157B2210 (3045 PSI, +334/-0 PSI)</option>
-                                <option value="157B2230">157B2230 (3335 PSI, +334/-0 PSI)</option>
-                                <option value="157B2240">157B2240 (3480 PSI, +348/-0 PSI)</option>
-                                <option value="157B2250">157B2250 (3626 PSI, +363/-0 PSI)</option>
+                                <option value="anti-cav">Anti-Cav Facility</option>
+                                <option value="plug"> Plug</option>
+                                <option value="464">464 PSI, +290/-0 PSI</option>
+                                <option value="725">725 PSI, +290/-0 PSI</option>
+                                <option value="913">913 PSI, +290/-0 PSI</option>
+                                <option value="1160">1160 PSI, +290/-0 PSI</option>
+                                <option value="1450">1450 PSI, +334/-0 PSI</option>
+                                <option value="1813">1813 PSI, +334/-0 PSI</option>
+                                <option value="2031">2031 PSI, +334/-0 PSI</option>
+                                <option value="2176">2176 PSI, +334/-0 PSI</option>
+                                <option value="2321">2321 PSI, +334/-0 PSI</option>
+                                <option value="2538">2538 PSI, +334/-0 PSI</option>
+                                <option value="2756">2756 PSI, +334/-0 PSI</option>
+                                <option value="3045">3045 PSI, +334/-0 PSI</option>
+                                <option value="3335">3335 PSI, +334/-0 PSI</option>
+                                <option value="3480">3480 PSI, +348/-0 PSI</option>
+                                <option value="3626">3626 PSI, +363/-0 PSI</option>
                             </select>`;
 
         const portBHtml = `<select name="portB" id="portB${i}">
                                 <option value="" disabled selected hidden>Port B...</option>
-                                <option value="157B2001">157B2001 Anti-Cav Facility</option>
-                                <option value="157B2002">157B2002 Plug</option>
-                                <option value="157B2032">157B2032 (464 PSI, +290/-0 PSI)</option>
-                                <option value="157B2050">157B2050 (725 PSI, +290/-0 PSI)</option>
-                                <option value="157B2063">157B2063 (913 PSI, +290/-0 PSI)</option>
-                                <option value="157B2080">157B2080 (1160 PSI, +290/-0 PSI)</option>
-                                <option value="157B2100">157B2100 (1450 PSI, +334/-0 PSI)</option>
-                                <option value="157B2125">157B2125 (1813 PSI, +334/-0 PSI)</option>
-                                <option value="157B2140">157B2140 (2031 PSI, +334/-0 PSI)</option>
-                                <option value="157B2150">157B2150 (2176 PSI, +334/-0 PSI)</option>
-                                <option value="157B2160">157B2160 (2321 PSI, +334/-0 PSI)</option>
-                                <option value="157B2175">157B2175 (2538 PSI, +334/-0 PSI)</option>
-                                <option value="157B2190">157B2190 (2756 PSI, +334/-0 PSI)</option>
-                                <option value="157B2210">157B2210 (3045 PSI, +334/-0 PSI)</option>
-                                <option value="157B2230">157B2230 (3335 PSI, +334/-0 PSI)</option>
-                                <option value="157B2240">157B2240 (3480 PSI, +348/-0 PSI)</option>
-                                <option value="157B2250">157B2250 (3626 PSI, +363/-0 PSI)</option>
+                                <option value="anti-cav">Anti-Cav Facility</option>
+                                <option value="plug"> Plug</option>
+                                <option value="464">464 PSI, +290/-0 PSI</option>
+                                <option value="725">725 PSI, +290/-0 PSI</option>
+                                <option value="913">913 PSI, +290/-0 PSI</option>
+                                <option value="1160">1160 PSI, +290/-0 PSI</option>
+                                <option value="1450">1450 PSI, +334/-0 PSI</option>
+                                <option value="1813">1813 PSI, +334/-0 PSI</option>
+                                <option value="2031">2031 PSI, +334/-0 PSI</option>
+                                <option value="2176">2176 PSI, +334/-0 PSI</option>
+                                <option value="2321">2321 PSI, +334/-0 PSI</option>
+                                <option value="2538">2538 PSI, +334/-0 PSI</option>
+                                <option value="2756">2756 PSI, +334/-0 PSI</option>
+                                <option value="3045">3045 PSI, +334/-0 PSI</option>
+                                <option value="3335">3335 PSI, +334/-0 PSI</option>
+                                <option value="3480">3480 PSI, +348/-0 PSI</option>
+                                <option value="3626">3626 PSI, +363/-0 PSI</option>
                             </select>`;
 
         const loadSenseAHtml = `<input type="number" id="loadSenseA${i}" name="loadSenseA" placeholder="??">`;

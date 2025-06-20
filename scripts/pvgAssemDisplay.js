@@ -34,13 +34,18 @@ function buildPvgAssemDisplay() {
                 <div class="trigger">SECTION ${i + 1}: ${sectionAssemNum}</div>
                 <div class="content">        
                     <ul>
+                        <li>Description: ${description.toUpperCase()}</li>
                         <li>Actuation: ${actuation.toUpperCase()}</li>
                         <li>Flow: ${gpm} gpm</li>
                         <li>Spool Type: ${spoolType.toUpperCase()}</li>
                         <li>Port A: ${portA}</li>
                         <li>Port B: ${portB}</li>
-                        <li>Load Sense A: ${loadSenseA}</li>
-                        <li>Load Sense B: ${loadSenseB}</li>
+                        <li>Load Sense A: ${
+                            loadSenseA ? loadSenseA : "none"
+                        }</li>
+                        <li>Load Sense B: ${
+                            loadSenseB ? loadSenseB : "none"
+                        }</li>
                     </ul>
                 </div>
             </div>
