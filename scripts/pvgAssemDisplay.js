@@ -70,7 +70,11 @@ function buildPvgAssemDisplay() {
                             ? `${pvgAssem.spreaderReliefPsi} psi`
                             : "none"
                     }</li>
-                    <li>Open Center Relief: </li>
+                    <li>Open Center Relief: ${
+                        pvgAssem.openCenterReliefPsi
+                            ? `${pvgAssem.spreaderReliefPsi} psi`
+                            : "none"
+                    }</li>
                     <li>End Plate: $$</li>
                     <li>Tie-Rods: 20ft: $$</li>
                     <li>Paint: ${pvgAssem.paint.toUpperCase()}: $$</li>
