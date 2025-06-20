@@ -51,8 +51,7 @@ function generatePvgSelections() {
 
         const acutationHtml = `<select name="actuationMethod" id="actuationMethod${i}">
                                     <option value="" disabled selected hidden>Actuation...</option>
-                                    <option value="electrical">Electrical (PVHC) 12V</option>
-                                    <option value="electrical">Electrical (PVHC) 24V</option>
+                                    <option value="12V">Electrical (PVHC) 12V</option>
                                     <option value="mechanical">Mechanical</option>
                                 </select>`;
 
@@ -60,10 +59,10 @@ function generatePvgSelections() {
 
         const spoolHtml = `<select name="spoolType" id="spoolType${i}">
                                 <option value="" disabled selected hidden>Spool...</option>
-                                <option value="DA-motor">DA - Motor</option>
-                                <option value="SA-motor">SA - Motor</option>
-                                <option value="DA-cylinder">DA - Cylinder</option>
-                                <option value="SA-cylinder">SA - Cylinder</option>
+                                <option value="DM">DA - Motor</option>
+                                <option value="SM">SA - Motor</option>
+                                <option value="DC">DA - Cylinder</option>
+                                <option value="SC">SA - Cylinder</option>
                             </select>`;
 
         const portAHtml = `<select name="portA" id="portA${i}">

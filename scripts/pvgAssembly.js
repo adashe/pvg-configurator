@@ -74,6 +74,43 @@ class PvgAssembly {
         return this[sectionID];
     }
 
+    generateInletAssemNum() {
+        let inletAssemNum = "";
+
+        // what is "MAN"?
+        inletAssemNum += "MPP";
+        inletAssemNum += this.mppInletSetup === "open" ? "-O" : "-C";
+        inletAssemNum += this.paint === "black" ? "-P" : "-NP";
+        inletAssemNum += this.liqPopulated === "yes" ? "-LIQ" : "";
+        inletAssemNum += this.mppPowerFloat === "yes" ? "-PF" : "";
+
+        // what codes to use for main relief, spreader relief, open center relief?
+        inletAssemNum += this.mainReliefPsi ? `-MR${this.mainReliefPsi}` : "";
+        inletAssemNum += this.spreaderReliefPsi
+            ? `-PR${this.spreaderReliefPsi}`
+            : "";
+
+        // add open center relief psi
+
+        return inletAssemNum;
+    }
+
+    generateSectionAssemNum(sectionID) {
+        let sectionAssemNum = "";
+
+        sectionAssemNum +=
+            this[sectionID].actuation === "mechanical"
+                ? "M"
+                : `${this[sectionID].actuation}`;
+        sectionAssemNum += `-${this[sectionID].gpm}G`;
+        sectionAssemNum += `-${this[sectionID].spoolType}`;
+
+        // what are the port options?
+        // what codes to use for additional information?
+
+        return sectionAssemNum;
+    }
+
     calcCost() {
         let cost = 0;
 

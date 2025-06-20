@@ -6,7 +6,8 @@ const totalCostDisplay = document.querySelector("#total-cost-disp");
 function buildPvgAssemDisplay() {
     // Build assembly number displays
     assemblyNumDisplay.forEach((element) => {
-        element.innerHTML = `${pvgAssem.mppSysNum.toUpperCase()}-${pvgAssem.mppRevNum.toUpperCase()}`;
+        // element.innerHTML = `${pvgAssem.mppSysNum.toUpperCase()}-${pvgAssem.mppRevNum.toUpperCase()}`;
+        element.innerHTML = `${pvgAssem.generateInletAssemNum()}`;
     });
 
     // Build dropdown for each section in assembly
@@ -26,11 +27,11 @@ function buildPvgAssemDisplay() {
             loadSenseB,
         } = pvgAssem[sectionID];
 
+        const sectionAssemNum = pvgAssem.generateSectionAssemNum(sectionID);
+
         html = `
             <div class="dropdown">
-                <div class="trigger">SECTION ${
-                    i + 1
-                }: ${description.toUpperCase()}</div>
+                <div class="trigger">SECTION ${i + 1}: ${sectionAssemNum}</div>
                 <div class="content">        
                     <ul>
                         <li>Actuation: ${actuation.toUpperCase()}</li>
