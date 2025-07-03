@@ -46,7 +46,6 @@ let pvgInputs = {
     liqPopulated: null,
     mainReliefPsi: null,
     spreaderReliefPsi: null,
-    openCenterReliefPsi: null,
     mppPowerFloat: null,
     numSections: null,
     paint: null,
@@ -60,7 +59,6 @@ function resetPvgInputs() {
         liqPopulated: null,
         mainReliefPsi: null,
         spreaderReliefPsi: null,
-        openCenterReliefPsi: null,
         mppPowerFloat: null,
         numSections: null,
         paint: null,
@@ -77,7 +75,6 @@ manifoldSetupForm.addEventListener("submit", (e) => {
     pvgInputs.liqPopulated = manifoldSetupForm.liqPopulated.value;
     pvgInputs.mainReliefPsi = manifoldSetupForm.mainReliefPsi.value;
     pvgInputs.spreaderReliefPsi = manifoldSetupForm.spreaderReliefPsi.value;
-    pvgInputs.openCenterReliefPsi = manifoldSetupForm.openCenterReliefPsi.value;
     pvgInputs.mppPowerFloat = manifoldSetupForm.mppPowerFloat.value;
 
     displayPvgSetupForm();
@@ -101,7 +98,6 @@ function updatePvgAssem() {
     pvgAssem.liqPopulated = pvgInputs.liqPopulated;
     pvgAssem.mainReliefPsi = pvgInputs.mainReliefPsi;
     pvgAssem.spreaderReliefPsi = pvgInputs.spreaderReliefPsi;
-    pvgAssem.openCenterReliefPsi = pvgInputs.openCenterReliefPsi;
     pvgAssem.mppPowerFloat = pvgInputs.mppPowerFloat;
     pvgAssem.numSections = pvgInputs.numSections;
     pvgAssem.paint = pvgInputs.paint;

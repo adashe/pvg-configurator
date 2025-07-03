@@ -6,7 +6,6 @@ class PvgAssembly {
         this.liqPopulated = null;
         this.mainReliefPsi = null;
         this.spreaderReliefPsi = null;
-        this.openCenterReliefPsi = null;
         this.mppPowerFloat = null;
         this.numSections = null;
         this.paint = null;
@@ -31,7 +30,6 @@ class PvgAssembly {
         this.liqPopulated = null;
         this.mainReliefPsi = null;
         this.spreaderReliefPsi = null;
-        this.openCenterReliefPsi = null;
         this.mppPowerFloat = null;
         this.numSections = null;
         this.paint = null;
