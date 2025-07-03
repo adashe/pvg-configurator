@@ -54,8 +54,8 @@ function buildPvgAssemDisplay() {
         sectionsHTML += html;
     }
 
-    // Display inputs on part number page
-    const inputsHTML = `
+    // Display base configuration on part number page
+    const baseConfigurationHTML = `
         <div class="dropdown">
             <div class="trigger">Base Configuration</div>
             <div class="content">
@@ -63,30 +63,39 @@ function buildPvgAssemDisplay() {
                     <li>Main Relief: ${
                         pvgAssem.mainReliefPsi
                             ? `${pvgAssem.mainReliefPsi} psi`
-                            : "none"
+                            : "None"
                     }</li>
                     <li>Spreader Relief: ${
                         pvgAssem.spreaderReliefPsi
                             ? `${pvgAssem.spreaderReliefPsi} psi`
-                            : "none"
+                            : "None"
                     }</li>
-                    <li>Open Center Relief: ${
-                        pvgAssem.openCenterReliefPsi
-                            ? `${pvgAssem.spreaderReliefPsi} psi`
-                            : "none"
+                </ul>
+            </div>
+        </div>
+    `;
+
+    // Display included features and optional features
+    const addersHTML = `
+        <div class="dropdown">
+            <div class="trigger">Adders</div>
+            <div class="content">
+                <ul>
+                    <li>End Plate: $132.33</li>
+                    <li>##ft Tie-Rods: $68.52</li>
+                    <li>${
+                        pvgAssem.paint === "black"
+                            ? "Black Paint: $88.55"
+                            : "No Paint"
                     }</li>
-                    <li>End Plate: $$</li>
-                    <li>Tie-Rods: 20ft: $$</li>
-                    <li>Paint: ${pvgAssem.paint.toUpperCase()}: $$</li>
                     <li>LIQ Populated: $$</li>
-                    <li>Opened Center: $$</li>
                     <li>Power Float Manifold: $$</li>
                 </ul>
             </div>
         </div>
     `;
 
-    partNumDets.innerHTML = sectionsHTML + inputsHTML;
+    partNumDets.innerHTML = sectionsHTML + baseConfigurationHTML + addersHTML;
 
     addEventHandlersToDropdowns();
 
