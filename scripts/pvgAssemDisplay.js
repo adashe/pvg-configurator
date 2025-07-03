@@ -82,7 +82,7 @@ function buildPvgAssemDisplay() {
             <div class="content">
                 <ul>
                     <li>End Plate: $132.33</li>
-                    <li>##ft Tie-Rods: $68.52</li>
+                    <li>Tie-Rods: $68.52</li>
                     <li>${
                         pvgAssem.paint === "black"
                             ? "Black Paint: $88.55"
