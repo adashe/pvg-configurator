@@ -40,10 +40,10 @@ function buildPvgAssemDisplay() {
                         <li>Spool Type: ${spoolType.toUpperCase()}</li>
                         <li>Port A: ${portA}</li>
                         <li>Port B: ${portB}</li>
-                        <li>Load Sense A: ${
+                        <li>LS Relief A: ${
                             loadSenseA ? loadSenseA : "none"
                         }</li>
-                        <li>Load Sense B: ${
+                        <li>LS Relief B: ${
                             loadSenseB ? loadSenseB : "none"
                         }</li>
                     </ul>

@@ -38,8 +38,8 @@ function generatePvgSelections() {
                             <div>Spool</div>
                             <div>Port A Type</div>
                             <div>Port B Type</div>
-                            <div>Load Sense A</div>
-                            <div>Load Sense B</div>
+                            <div>LS Relief A</div>
+                            <div>LS Relief B</div>
                         </div>`;
 
     pvgSelectionsContent.innerHTML = `${headerHtml}`;
