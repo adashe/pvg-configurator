@@ -97,10 +97,16 @@ class PvgAssembly {
             this[sectionID].actuation === "mechanical"
                 ? "M"
                 : `${this[sectionID].actuation}`;
-        sectionAssemNum += `-${this[sectionID].gpm}G`;
-        sectionAssemNum += `-${this[sectionID].spoolType}`;
+        sectionAssemNum += this[sectionID].gpm
+            ? `-${this[sectionID].gpm}G`
+            : "";
+        sectionAssemNum += this[sectionID].spoolType
+            ? `-${this[sectionID].spoolType}`
+            : "";
 
-        if (this[sectionID].portA === "anti-cav") {
+        if (!this[sectionID].portA) {
+            sectionAssemNum += "";
+        } else if (this[sectionID].portA === "anti-cav") {
             sectionAssemNum += "-AC";
         } else if (this[sectionID].portA === "plug") {
             sectionAssemNum += "-PL";
@@ -108,7 +114,9 @@ class PvgAssembly {
             sectionAssemNum += `-PR`;
         }
 
-        if (this[sectionID].portB === "anti-cav") {
+        if (!this[sectionID].portB) {
+            sectionAssemNum += "";
+        } else if (this[sectionID].portB === "anti-cav") {
             sectionAssemNum += "-AC";
         } else if (this[sectionID].portA === "plug") {
             sectionAssemNum += "-PL";

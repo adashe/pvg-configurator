@@ -78,7 +78,7 @@ function generatePvgSelections() {
         const portAHtml = `<select name="portA" id="portA${i}">
                                 <option value="" disabled selected hidden>...</option>
                                 <option value="anti-cav">Anti-Cav Facility</option>
-                                <option value="plug"> Plug</option>
+                                <option value="plug">Plug</option>
                                 <option value="464">464 PSI, +290/-0 PSI</option>
                                 <option value="725">725 PSI, +290/-0 PSI</option>
                                 <option value="913">913 PSI, +290/-0 PSI</option>
@@ -99,7 +99,7 @@ function generatePvgSelections() {
         const portBHtml = `<select name="portB" id="portB${i}">
                                 <option value="" disabled selected hidden>...</option>
                                 <option value="anti-cav">Anti-Cav Facility</option>
-                                <option value="plug"> Plug</option>
+                                <option value="plug">Plug</option>
                                 <option value="464">464 PSI, +290/-0 PSI</option>
                                 <option value="725">725 PSI, +290/-0 PSI</option>
                                 <option value="913">913 PSI, +290/-0 PSI</option>
