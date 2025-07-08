@@ -47,10 +47,10 @@ function generatePvgSelections() {
     let numSections = pvgAssem.numSections;
 
     for (i = 0; i < numSections; i++) {
-        const descriptionHtml = `<input type="text" id="description${i}" placeholder="Description">`;
+        const descriptionHtml = `<input type="text" id="description${i}" placeholder="...">`;
 
         const acutationHtml = `<select name="actuationMethod" id="actuationMethod${i}">
-                                    <option value="" disabled selected hidden>Actuation...</option>
+                                    <option value="" disabled selected hidden>...</option>
                                     <option value="12V">Electrical (PVHC) 12V</option>
                                     <option value="mechanical">Mechanical</option>
                                 </select>`;
@@ -58,6 +58,7 @@ function generatePvgSelections() {
         // const gpmHtml = `<input type="number" id="gpm${i}" name="gpm" placeholder="gpm">`;
 
         const gpmHtml = `<select name="gpm" id="gpm${i}">
+        <option value="" disabled selected hidden>...</option>
                             <option value="2.6">2.6 gpm</option> 
                             <option value="6.6">6.6 gpm</option>
                             <option value="10.6">10.6 gpm</option>
@@ -67,7 +68,7 @@ function generatePvgSelections() {
                         </select>`;
 
         const spoolHtml = `<select name="spoolType" id="spoolType${i}">
-                                <option value="" disabled selected hidden>Spool...</option>
+                                <option value="" disabled selected hidden>...</option>
                                 <option value="DM">DA - Motor</option>
                                 <option value="SM">SA - Motor</option>
                                 <option value="DC">DA - Cylinder</option>
@@ -75,7 +76,7 @@ function generatePvgSelections() {
                             </select>`;
 
         const portAHtml = `<select name="portA" id="portA${i}">
-                                <option value="" disabled selected hidden>Port A...</option>
+                                <option value="" disabled selected hidden>...</option>
                                 <option value="anti-cav">Anti-Cav Facility</option>
                                 <option value="plug"> Plug</option>
                                 <option value="464">464 PSI, +290/-0 PSI</option>
@@ -96,7 +97,7 @@ function generatePvgSelections() {
                             </select>`;
 
         const portBHtml = `<select name="portB" id="portB${i}">
-                                <option value="" disabled selected hidden>Port B...</option>
+                                <option value="" disabled selected hidden>...</option>
                                 <option value="anti-cav">Anti-Cav Facility</option>
                                 <option value="plug"> Plug</option>
                                 <option value="464">464 PSI, +290/-0 PSI</option>
@@ -116,9 +117,9 @@ function generatePvgSelections() {
                                 <option value="3626">3626 PSI, +363/-0 PSI</option>
                             </select>`;
 
-        const loadSenseAHtml = `<input type="number" id="loadSenseA${i}" name="loadSenseA" placeholder="??">`;
+        const loadSenseAHtml = `<input type="number" id="loadSenseA${i}" name="loadSenseA" placeholder="...">`;
 
-        const loadSenseBHtml = `<input type="number" id="loadSenseB${i}" name="loadSenseB" placeholder="??">`;
+        const loadSenseBHtml = `<input type="number" id="loadSenseB${i}" name="loadSenseB" placeholder="...">`;
 
         const html = `<div id="section${i}">Section ${i + 1}: 
                     ${descriptionHtml}
