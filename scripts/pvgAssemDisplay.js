@@ -36,10 +36,10 @@ function buildPvgAssemDisplay() {
                     <ul>
                         <li>Description: ${description.toUpperCase()}</li>
                         <li>Actuation: ${actuation.toUpperCase()}</li>
-                        <li>Flow: ${gpm} gpm</li>
+                        <li>Flow: ${gpm ? `{gpm} gpm` : ""}</li>
                         <li>Spool Type: ${spoolType.toUpperCase()}</li>
-                        <li>Port A: ${portA} psi</li>
-                        <li>Port B: ${portB} psi</li>
+                        <li>Port A: ${portA ? `${portA} psi` : ""}</li>
+                        <li>Port B: ${portA ? `${portB} psi` : ""}</li>
                         ${
                             loadSenseA
                                 ? `<li>LS Relief A: ${loadSenseA} psi`
