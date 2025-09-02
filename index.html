@@ -9,6 +9,11 @@
             href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
             rel="stylesheet"
         />
+        <!-- use version 0.20.3 -->
+        <script
+            type="text/javascript"
+            src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"
+        ></script>
         <link rel="stylesheet" href="styles.css" />
         <title>Part Configurator</title>
     </head>
@@ -217,8 +222,12 @@
                         type="submit"
                         value="GENERATE PDF"
                     />
+
                     <button class="button generate-email">
                         SUBMIT AS EMAIL
+                    </button>
+                    <button class="button download-xlsx">
+                        DOWNLOAD PARTS LIST
                     </button>
                     <button class="button gray details">
                         RETURN TO PART DETAILS
@@ -275,6 +284,8 @@
 
         <script src="scripts/email.js"></script>
         <script src="scripts/pvgEmail.js"></script>
+
+        <script src="scripts/xlsx.js"></script>
 
         <script src="scripts/app.js"></script>
         <script src="scripts/ui.js"></script>

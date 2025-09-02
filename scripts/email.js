@@ -1,9 +1,9 @@
-const defaultEmail = 'configurator@email.com';
+const defaultEmail = "configurator@email.com";
 
-const generateEmailButtons = document.querySelectorAll('.generate-email');
+const generateEmailButtons = document.querySelectorAll(".generate-email");
 
-generateEmailButtons.forEach(button => {
-    button.addEventListener('click', e => {
+generateEmailButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
         e.preventDefault();
         updateContactInputs();
         generateEmail();
@@ -18,7 +18,6 @@ const createMailtoLink = (email, subject, bodyText) => {
 };
 
 const genContactEmailBody = () => {
-
     let contactHtml = `\n\nCUSTOMER INFO:\n${contactInputs.contactName}\n${contactInputs.companyName}\n${contactInputs.email}\n${contactInputs.phone}`;
 
     return contactHtml;
