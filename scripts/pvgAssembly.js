@@ -47,6 +47,13 @@ class PvgAssembly {
         this.section11 = null;
     }
 
+    async getPvgData() {
+        const uri = "data/pvgData.json";
+        const response = await fetch(uri);
+        const data = await response.json();
+        return data;
+    }
+
     updateSection(
         index,
         description,
