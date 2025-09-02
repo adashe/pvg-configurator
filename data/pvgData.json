@@ -1,280 +1,342 @@
 [
     {
+        "id": "12V",
         "description": "PVHC 12V",
         "partNumber": "11112038",
         "type": "actuation"
     },
     {
+        "id": "24V",
         "description": "PVHC 24V",
         "partNumber": "11112039",
         "type": "actuation"
     },
     {
+        "id": "mechanical",
+        "description": "Mechanical",
+        "partNumber": "",
+        "type": "actuation"
+    },
+    {
+        "id": "",
         "description": "Standard Body",
         "partNumber": "157B906",
         "type": "body"
     },
     {
+        "id": "",
         "description": "Manual Cable Operated",
         "partNumber": "11075638",
         "type": "body"
     },
     {
+        "id": "",
         "description": "PVHC CYL 2.6 GPM with Shuttle",
         "partNumber": "157B9020",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC CYL 2.6 GPM without Shuttle",
         "partNumber": "157B9000",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC MTR 2.6 GPM with Shuttle",
         "partNumber": "157B9120",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC MTR 2.6 GPM without Shuttle",
         "partNumber": "157B9100",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC CYL 6.6 GPM with Shuttle",
         "partNumber": "157B9021",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC CYL 6.6 GPM without Shuttle",
         "partNumber": "157B9001",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC MTR 6.6 GPM with Shuttle",
         "partNumber": "157B9121",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC MTR 6.6 GPM without Shuttle",
         "partNumber": "157B9101",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "MANUAL CYL 6.6 GPM without Shuttle",
         "partNumber": "11079334",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "MANUAL MTR 6.6 GPM without Shuttle",
         "partNumber": "11074846",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC CYL 10.6 GPM with Shuttle",
         "partNumber": "157B9022",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC CYL 10.6 GPM without Shuttle",
         "partNumber": "157B9002",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC MTR 10.6 GPM with Shuttle",
         "partNumber": "157B9122",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC MTR 10.6 GPM without Shuttle",
         "partNumber": "157B9102",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "MANUAL CYL 10.6 GPM without Shuttle",
         "partNumber": "11079335",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "MANUAL MTR 10.6 GPM without Shuttle",
         "partNumber": "11078328",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC CYL 17.2 GPM with Shuttle",
         "partNumber": "157B9023",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC CYL 17.2 GPM without Shuttle",
         "partNumber": "157B9003",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC MTR 17.2 GPM with Shuttle",
         "partNumber": "157B9123",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC MTR 17.2 GPM without Shuttle",
         "partNumber": "157B9103",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "MANUAL CYL 17.2 GPM without Shuttle",
         "partNumber": "11078324",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "MANUAL MTR 17.2 GPM without Shuttle",
         "partNumber": "11078325",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC CYL 26.4 GPM with Shuttle",
         "partNumber": "157B9024",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC CYL 26.4 GPM without Shuttle",
         "partNumber": "157B9004",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC MTR 26.4 GPM with Shuttle",
         "partNumber": "157B9124",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC MTR 26.4 GPM without Shuttle",
         "partNumber": "157B9104",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "MANUAL CYL 26.4 GPM without Shuttle",
         "partNumber": "11078323",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC CYL 34.3 GPM with Shuttle",
         "partNumber": "157B9026",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC CYL 34.3 GPM without Shuttle",
         "partNumber": "157B9006",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC MTR 34.3 GPM with Shuttle",
         "partNumber": "157B9126",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "PVHC MTR 34.3 GPM without Shuttle",
         "partNumber": "157B9106",
         "type": "spool"
     },
     {
+        "id": "",
         "description": "MANUAL CYL 34.3 GPM without Shuttle",
         "partNumber": "11074855",
         "type": "spool"
     },
     {
+        "id": "plug",
         "description": "PVLP-RELIEF Plug",
         "partNumber": "157B2002",
         "type": "pvlp"
     },
     {
+        "id": "464",
         "description": "PVLP-RELIEF 464 PSI, +290/-0 PSI",
         "partNumber": "157B2032",
         "type": "pvlp"
     },
     {
+        "id": "725",
         "description": "PVLP-RELIEF 725 PSI, +290/-0 PSI",
         "partNumber": "157B2050",
         "type": "pvlp"
     },
     {
+        "id": "913",
         "description": "PVLP-RELIEF 913 PSI, +290/-0 PSI",
         "partNumber": "157B2063",
         "type": "pvlp"
     },
     {
+        "id": "1160",
         "description": "PVLP-RELIEF 1160 PSI, +290/-0 PSI",
         "partNumber": "157B2080",
         "type": "pvlp"
     },
     {
+        "id": "1450",
         "description": "PVLP-RELIEF 1450 PSI, +334/-0 PSI",
         "partNumber": "157B2100",
         "type": "pvlp"
     },
     {
+        "id": "1813",
         "description": "PVLP-RELIEF 1813 PSI, +334/-0 PSI",
         "partNumber": "157B2125",
         "type": "pvlp"
     },
     {
+        "id": "2031",
         "description": "PVLP-RELIEF 2031 PSI, +334/-0 PSI",
         "partNumber": "157B2140",
         "type": "pvlp"
     },
     {
+        "id": "2176",
         "description": "PVLP-RELIEF 2176 PSI, +334/-0 PSI",
         "partNumber": "157B2150",
         "type": "pvlp"
     },
     {
+        "id": "2321",
         "description": "PVLP-RELIEF 2321 PSI, +334/-0 PSI",
         "partNumber": "157B2160",
         "type": "pvlp"
     },
     {
+        "id": "2538",
         "description": "PVLP-RELIEF 2538 PSI, +334/-0 PSI",
         "partNumber": "157B2175",
         "type": "pvlp"
     },
     {
+        "id": "2756",
         "description": "PVLP-RELIEF 2756 PSI, +334/-0 PSI",
         "partNumber": "157B2190",
         "type": "pvlp"
     },
     {
+        "id": "3045",
         "description": "PVLP-RELIEF 3045 PSI, +334/-0 PSI",
         "partNumber": "157B2210",
         "type": "pvlp"
     },
     {
+        "id": "3335",
         "description": "PVLP-RELIEF 3335 PSI, +334/-0 PSI",
         "partNumber": "157B2230",
         "type": "pvlp"
     },
     {
+        "id": "3480",
         "description": "PVLP-RELIEF 3480 PSI, +348/-0 PSI",
         "partNumber": "157B2240",
         "type": "pvlp"
     },
     {
+        "id": "3626",
         "description": "PVLP-RELIEF 3626 PSI, +363/-0 PSI",
         "partNumber": "157B2250",
         "type": "pvlp"
     },
     {
+        "id": "anti-cav",
         "description": "PVLA Anti-Cavity Facility",
         "partNumber": "157B2001",
         "type": "pvla"
     },
     {
+        "id": "",
         "description": "LEVER BASE",
         "partNumber": "157B3174",
         "type": "misc"
     },
     {
+        "id": "",
         "description": "LEVER BASE AND LEVER",
         "partNumber": "157B3191",
         "type": "misc"
     },
     {
+        "id": "",
         "description": "CABLE KIT",
         "partNumber": "01-5001-102",
         "type": "misc"

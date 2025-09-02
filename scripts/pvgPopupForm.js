@@ -136,7 +136,7 @@ function generatePvgSelections() {
     }
 }
 
-function updatePvgAssemSections() {
+async function updatePvgAssemSections() {
     for (i = 0; i < pvgAssem.numSections; i++) {
         const descriptionID = `description${i}`;
         const actuationMethodID = `actuationMethod${i}`;
@@ -156,7 +156,7 @@ function updatePvgAssemSections() {
         const loadSenseA = document.getElementById(loadSenseAID);
         const loadSenseB = document.getElementById(loadSenseBID);
 
-        pvgAssem.updateSection(
+        await pvgAssem.updateSection(
             i,
             description.value,
             actuation.value,

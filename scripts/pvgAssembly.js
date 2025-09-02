@@ -65,6 +65,31 @@ class PvgAssembly {
         loadSenseA,
         loadSenseB
     ) {
+        // const data = await this.getPvgData();
+
+        // actuation part number
+        // const actuationPartNumber = actuation
+        //     ? data.filter((part) => part.id === actuation)[0].partNumber
+        //     : null;
+
+        // console.log(actuationPartNumber);
+
+        // handle for Port A side part number
+
+        // body part number
+
+        // spool part number
+
+        // port A part number
+
+        // port B part number
+
+        // lever base part number
+
+        // lever base and lever part number
+
+        // cable kit part number
+
         const sectionID = `section${index}`;
 
         this[sectionID] = {
