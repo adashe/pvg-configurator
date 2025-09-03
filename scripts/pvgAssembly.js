@@ -58,29 +58,27 @@ class PvgAssembly {
         const data = await this.getPvgData();
 
         const sectionID = `section${index}`;
-        console.log({ sectionID });
 
-        // actuation part number
+        // actuation part
         const actuationPart = this[sectionID].actuation
             ? data.filter((part) => part.id === this[sectionID].actuation)[0]
             : null;
-        console.log({ actuationPart });
 
-        // handle for Port A side part number
+        // handle for Port A side part
         const portAhandlePart = this[sectionID].actuation
             ? this[sectionID].actuation !== "mechanical"
                 ? data.filter((part) => part.id === "PVM32")[0]
                 : null
             : null;
 
-        // body part number
+        // body part
         const bodyPart = this[sectionID].actuation
             ? this[sectionID].actuation === "mechanical"
                 ? data.filter((part) => part.id === "manualBody")[0]
                 : data.filter((part) => part.id === "standardBody")[0]
             : null;
 
-        // spool part number
+        // spool part
         let spoolID = "";
 
         this[sectionID].actuation
@@ -98,43 +96,44 @@ class PvgAssembly {
 
         this[sectionID].gpm ? (spoolID += `-${this[sectionID].gpm}`) : null;
 
-        this[sectionID].loadSenseA || this[sectionID].loadSenseB
-            ? (spoolID += "-sh")
-            : "-nsh";
+        if (this[sectionID].loadSenseA || this[sectionID].loadSenseB) {
+            spoolID += "-sh";
+        } else {
+            spoolID += "-nsh";
+        }
 
         const spoolPart = data.filter((part) => part.id === spoolID)[0];
-        // port A part number
+
+        console.log(spoolID);
+
+        // port A part
         const portAPart = this[sectionID].portA
             ? data.filter((part) => part.id === this[sectionID].portA)[0]
             : null;
 
-        // port B part number
+        // port B part
         const portBPart = this[sectionID].portB
             ? data.filter((part) => part.id === this[sectionID].portB)[0]
             : null;
 
-        // lever base part number
+        // lever base part
         const leverBasePart = this[sectionID].actuation
             ? this[sectionID].actuation !== "mechanical"
                 ? data.filter((part) => part.id === "leverBase")[0]
                 : null
             : null;
 
-        console.log({ leverBasePart });
-
-        // lever base and lever part number
+        // lever base and lever part
         const leverBaseLeverPart = this[sectionID].actuation
             ? this[sectionID].actuation !== "mechanical"
                 ? data.filter((part) => part.id === "leverBaseAndLever")[0]
                 : null
             : null;
 
-        console.log({ leverBaseLeverPart });
-
-        // cable kit part number
+        // cable kit part
         const cableKitPart = this[sectionID].actuation
             ? this[sectionID].actuation === "mechanical"
-                ? data.filter((part) => part.id === "cableKit")[0].partNumber
+                ? data.filter((part) => part.id === "cableKit")[0]
                 : null
             : null;
 
