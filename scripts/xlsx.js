@@ -66,6 +66,12 @@ async function downloadXlsx() {
                 Value: pvgAssem?.paint.toUpperCase(),
                 "Part Num": null,
             },
+            {
+                "Section Number": "manifold",
+                Description: "Tie Rod Kit",
+                Value: null,
+                "Part Num": null,
+            },
         ];
 
         // add row for manifold

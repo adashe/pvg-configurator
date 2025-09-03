@@ -104,8 +104,6 @@ class PvgAssembly {
 
         const spoolPart = data.filter((part) => part.id === spoolID)[0];
 
-        console.log(spoolID);
-
         // port A part
         const portAPart = this[sectionID].portA
             ? data.filter((part) => part.id === this[sectionID].portA)[0]
