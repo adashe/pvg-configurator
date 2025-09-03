@@ -118,13 +118,13 @@ async function downloadXlsx() {
                     "Section Number": i + 1,
                     Description: "Section Description",
                     Value: description.toUpperCase(),
-                    "Part Num": "",
+                    "Part Num": null,
                 },
                 {
                     "Section Number": i + 1,
                     Description: "Rated Flow and Actuator",
                     Value: `${actuatorName} ${gpm} GPM`,
-                    "Part Num": "",
+                    "Part Num": null,
                 },
                 {
                     "Section Number": i + 1,
