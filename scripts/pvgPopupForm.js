@@ -47,9 +47,9 @@ function generatePvgSelections() {
     let numSections = pvgAssem.numSections;
 
     for (i = 0; i < numSections; i++) {
-        const descriptionHtml = `<input type="text" id="description${i}" placeholder="...">`;
+        const descriptionHtml = `<input type="text" id="description${i}" placeholder="..." required>`;
 
-        const acutationHtml = `<select name="actuationMethod" id="actuationMethod${i}">
+        const acutationHtml = `<select name="actuationMethod" id="actuationMethod${i}" required>
                                     <option value="" disabled selected hidden>...</option>
                                     <option value="12V">Electrical (PVHC) 12V</option>
                                     <option value="mechanical">Mechanical</option>
@@ -57,8 +57,8 @@ function generatePvgSelections() {
 
         // const gpmHtml = `<input type="number" id="gpm${i}" name="gpm" placeholder="gpm">`;
 
-        const gpmHtml = `<select name="gpm" id="gpm${i}">
-        <option value="" disabled selected hidden>...</option>
+        const gpmHtml = `<select name="gpm" id="gpm${i}" required>
+                            <option value="" disabled selected hidden>...</option>
                             <option value="2.6">2.6 gpm</option> 
                             <option value="6.6">6.6 gpm</option>
                             <option value="10.6">10.6 gpm</option>
@@ -67,7 +67,7 @@ function generatePvgSelections() {
                             <option value="34.3">34.3 gpm</option>
                         </select>`;
 
-        const spoolHtml = `<select name="spoolType" id="spoolType${i}">
+        const spoolHtml = `<select name="spoolType" id="spoolType${i}" required>
                                 <option value="" disabled selected hidden>...</option>
                                 <option value="DM">DA - Motor</option>
                                 <option value="SM">SA - Motor</option>

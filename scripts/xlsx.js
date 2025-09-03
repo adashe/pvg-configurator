@@ -87,13 +87,13 @@ async function downloadXlsx() {
                 {
                     "Section Number": i + 1,
                     Description: "Port A",
-                    Value: portAPart.description,
+                    Value: portAPart?.description,
                     "Part Num": portAPart?.partNumber,
                 },
                 {
                     "Section Number": i + 1,
                     Description: "Port B",
-                    Value: portBPart.description,
+                    Value: portBPart?.description,
                     "Part Num": portBPart?.partNumber,
                 },
                 {
@@ -131,8 +131,6 @@ async function downloadXlsx() {
             // add row for each section
             rows = [...rows, ...sectionRows];
         }
-
-        console.log(rows);
 
         // const title = ["PVG 32"];
 
