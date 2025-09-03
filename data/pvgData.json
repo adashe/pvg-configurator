@@ -14,209 +14,215 @@
     {
         "id": "mechanical",
         "description": "Mechanical",
-        "partNumber": "",
+        "partNumber": null,
         "type": "actuation"
     },
     {
-        "id": "",
+        "id": "PVM32",
+        "description": "Port A Handle",
+        "partNumber": "157B3174",
+        "type": "handle"
+    },
+    {
+        "id": "standardBody",
         "description": "Standard Body",
-        "partNumber": "157B906",
+        "partNumber": "157B6906",
         "type": "body"
     },
     {
-        "id": "",
+        "id": "manualBody",
         "description": "Manual Cable Operated",
         "partNumber": "11075638",
         "type": "body"
     },
     {
-        "id": "",
+        "id": "pvhc-cyl-2.6-sh",
         "description": "PVHC CYL 2.6 GPM with Shuttle",
         "partNumber": "157B9020",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-cyl-2.6-nsh",
         "description": "PVHC CYL 2.6 GPM without Shuttle",
         "partNumber": "157B9000",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-mtr-2.6-sh",
         "description": "PVHC MTR 2.6 GPM with Shuttle",
         "partNumber": "157B9120",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-mtr-2.6-nsh",
         "description": "PVHC MTR 2.6 GPM without Shuttle",
         "partNumber": "157B9100",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-cyl-6.6-sh",
         "description": "PVHC CYL 6.6 GPM with Shuttle",
         "partNumber": "157B9021",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-cyl-6.6-nsh",
         "description": "PVHC CYL 6.6 GPM without Shuttle",
         "partNumber": "157B9001",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-mtr-6.6-sh",
         "description": "PVHC MTR 6.6 GPM with Shuttle",
         "partNumber": "157B9121",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-mtr-6.6-nsh",
         "description": "PVHC MTR 6.6 GPM without Shuttle",
         "partNumber": "157B9101",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "man-cyl-6.6-nsh",
         "description": "MANUAL CYL 6.6 GPM without Shuttle",
         "partNumber": "11079334",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "man-mtr-6.6-nsh",
         "description": "MANUAL MTR 6.6 GPM without Shuttle",
         "partNumber": "11074846",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-cyl-10.6-sh",
         "description": "PVHC CYL 10.6 GPM with Shuttle",
         "partNumber": "157B9022",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-cyl-10.6.nsh",
         "description": "PVHC CYL 10.6 GPM without Shuttle",
         "partNumber": "157B9002",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-mtr-10.6-sh",
         "description": "PVHC MTR 10.6 GPM with Shuttle",
         "partNumber": "157B9122",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-mtr-10.6-nsh",
         "description": "PVHC MTR 10.6 GPM without Shuttle",
         "partNumber": "157B9102",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "man-cyl-10.6-nsh",
         "description": "MANUAL CYL 10.6 GPM without Shuttle",
         "partNumber": "11079335",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "man-mtr-10.6-nsh",
         "description": "MANUAL MTR 10.6 GPM without Shuttle",
         "partNumber": "11078328",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-cyl-17.2-sh",
         "description": "PVHC CYL 17.2 GPM with Shuttle",
         "partNumber": "157B9023",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-cyl-17.2-nsh",
         "description": "PVHC CYL 17.2 GPM without Shuttle",
         "partNumber": "157B9003",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-mtr-17.2-sh",
         "description": "PVHC MTR 17.2 GPM with Shuttle",
         "partNumber": "157B9123",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-mtr-17.2-nsh",
         "description": "PVHC MTR 17.2 GPM without Shuttle",
         "partNumber": "157B9103",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "man-cyl-17.2-nsh",
         "description": "MANUAL CYL 17.2 GPM without Shuttle",
         "partNumber": "11078324",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "man-mtr-17.2-nsh",
         "description": "MANUAL MTR 17.2 GPM without Shuttle",
         "partNumber": "11078325",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-cyl-26.4-sh",
         "description": "PVHC CYL 26.4 GPM with Shuttle",
         "partNumber": "157B9024",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-cyl-26.4-nsh",
         "description": "PVHC CYL 26.4 GPM without Shuttle",
         "partNumber": "157B9004",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-mtr-26.4-sh",
         "description": "PVHC MTR 26.4 GPM with Shuttle",
         "partNumber": "157B9124",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-mtr-26.4-nsh",
         "description": "PVHC MTR 26.4 GPM without Shuttle",
         "partNumber": "157B9104",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "man-cyl-26.4-nsh",
         "description": "MANUAL CYL 26.4 GPM without Shuttle",
         "partNumber": "11078323",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-cyl-34.3-sh",
         "description": "PVHC CYL 34.3 GPM with Shuttle",
         "partNumber": "157B9026",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-cyl-34.3-nsh",
         "description": "PVHC CYL 34.3 GPM without Shuttle",
         "partNumber": "157B9006",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-mtr-34.3-sh",
         "description": "PVHC MTR 34.3 GPM with Shuttle",
         "partNumber": "157B9126",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "pvhc-mtr-34.3-nsh",
         "description": "PVHC MTR 34.3 GPM without Shuttle",
         "partNumber": "157B9106",
         "type": "spool"
     },
     {
-        "id": "",
+        "id": "man-mtr-34.3-nsh",
         "description": "MANUAL CYL 34.3 GPM without Shuttle",
         "partNumber": "11074855",
         "type": "spool"
@@ -324,19 +330,19 @@
         "type": "pvla"
     },
     {
-        "id": "",
+        "id": "leverBase",
         "description": "LEVER BASE",
         "partNumber": "157B3174",
         "type": "misc"
     },
     {
-        "id": "",
+        "id": "leverBaseAndLever",
         "description": "LEVER BASE AND LEVER",
         "partNumber": "157B3191",
         "type": "misc"
     },
     {
-        "id": "",
+        "id": "cableKit",
         "description": "CABLE KIT",
         "partNumber": "01-5001-102",
         "type": "misc"

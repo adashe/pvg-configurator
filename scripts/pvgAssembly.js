@@ -54,6 +54,105 @@ class PvgAssembly {
         return data;
     }
 
+    async updatePartNumbers(index) {
+        const data = await this.getPvgData();
+
+        const sectionID = `section${index}`;
+        console.log({ sectionID });
+
+        // actuation part number
+        const actuationPart = this[sectionID].actuation
+            ? data.filter((part) => part.id === this[sectionID].actuation)[0]
+            : null;
+        console.log({ actuationPart });
+
+        // handle for Port A side part number
+        const portAhandlePart = this[sectionID].actuation
+            ? this[sectionID].actuation !== "mechanical"
+                ? data.filter((part) => part.id === "PVM32")[0]
+                : null
+            : null;
+
+        // body part number
+        const bodyPart = this[sectionID].actuation
+            ? this[sectionID].actuation === "mechanical"
+                ? data.filter((part) => part.id === "manualBody")[0]
+                : data.filter((part) => part.id === "standardBody")[0]
+            : null;
+
+        // spool part number
+        let spoolID = "";
+
+        this[sectionID].actuation
+            ? this[sectionID].actuation !== "mechanical"
+                ? (spoolID += "pvhc")
+                : (spoolID += "man")
+            : null;
+
+        this[sectionID].spoolType
+            ? this[sectionID].spoolType === "DC" ||
+              this[sectionID].spoolType === "SC"
+                ? (spoolID += "-cyl")
+                : (spoolID += "-mtr")
+            : null;
+
+        this[sectionID].gpm ? (spoolID += `-${this[sectionID].gpm}`) : null;
+
+        this[sectionID].loadSenseA || this[sectionID].loadSenseB
+            ? (spoolID += "-sh")
+            : "-nsh";
+
+        const spoolPart = data.filter((part) => part.id === spoolID)[0];
+        // port A part number
+        const portAPart = this[sectionID].portA
+            ? data.filter((part) => part.id === this[sectionID].portA)[0]
+            : null;
+
+        // port B part number
+        const portBPart = this[sectionID].portB
+            ? data.filter((part) => part.id === this[sectionID].portB)[0]
+            : null;
+
+        // lever base part number
+        const leverBasePart = this[sectionID].actuation
+            ? this[sectionID].actuation !== "mechanical"
+                ? data.filter((part) => part.id === "leverBase")[0]
+                : null
+            : null;
+
+        console.log({ leverBasePart });
+
+        // lever base and lever part number
+        const leverBaseLeverPart = this[sectionID].actuation
+            ? this[sectionID].actuation !== "mechanical"
+                ? data.filter((part) => part.id === "leverBaseAndLever")[0]
+                : null
+            : null;
+
+        console.log({ leverBaseLeverPart });
+
+        // cable kit part number
+        const cableKitPart = this[sectionID].actuation
+            ? this[sectionID].actuation === "mechanical"
+                ? data.filter((part) => part.id === "cableKit")[0].partNumber
+                : null
+            : null;
+
+        const parts = {
+            actuationPart,
+            portAhandlePart,
+            bodyPart,
+            spoolPart,
+            portAPart,
+            portBPart,
+            leverBasePart,
+            leverBaseLeverPart,
+            cableKitPart,
+        };
+
+        return parts;
+    }
+
     updateSection(
         index,
         description,
@@ -65,31 +164,6 @@ class PvgAssembly {
         loadSenseA,
         loadSenseB
     ) {
-        // const data = await this.getPvgData();
-
-        // actuation part number
-        // const actuationPartNumber = actuation
-        //     ? data.filter((part) => part.id === actuation)[0].partNumber
-        //     : null;
-
-        // console.log(actuationPartNumber);
-
-        // handle for Port A side part number
-
-        // body part number
-
-        // spool part number
-
-        // port A part number
-
-        // port B part number
-
-        // lever base part number
-
-        // lever base and lever part number
-
-        // cable kit part number
-
         const sectionID = `section${index}`;
 
         this[sectionID] = {

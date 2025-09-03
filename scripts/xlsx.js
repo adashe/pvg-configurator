@@ -8,12 +8,24 @@ downloadXlsxButtons.forEach((button) => {
     });
 });
 
-function downloadXlsx() {
+async function downloadXlsx() {
     if (window.confirm("Are you sure you want to download this file?")) {
         let rows = [];
 
         // build rows for each section
         for (i = 0; i < pvgAssem.numSections; i++) {
+            const {
+                actuationPart,
+                portAhandlePart,
+                bodyPart,
+                spoolPart,
+                portAPart,
+                portBPart,
+                leverBasePart,
+                leverBaseLeverPart,
+                cableKitPart,
+            } = await pvgAssem.updatePartNumbers(i);
+
             const sectionID = `section${i}`;
 
             const {
@@ -39,7 +51,7 @@ function downloadXlsx() {
                 {
                     "Section Number": i + 1,
                     Description: "Section Description",
-                    Value: description,
+                    Value: description.toUpperCase(),
                     "Part Num": "",
                 },
                 {
@@ -52,67 +64,67 @@ function downloadXlsx() {
                     "Section Number": i + 1,
                     Description: "Actuation",
                     Value: actuation,
-                    "Part Num": "",
+                    "Part Num": actuationPart?.partNumber,
                 },
                 {
                     "Section Number": i + 1,
                     Description: "Handle for Port A Side",
                     Value: "PVM32",
-                    "Part Num": "157B3174",
+                    "Part Num": portAhandlePart?.partNumber,
                 },
                 {
                     "Section Number": i + 1,
                     Description: "Body",
-                    Value: "",
-                    "Part Num": "",
+                    Value: bodyPart?.description,
+                    "Part Num": bodyPart?.partNumber,
                 },
                 {
                     "Section Number": i + 1,
                     Description: "Spool",
-                    Value: "",
-                    "Part Num": "",
+                    Value: spoolPart?.description,
+                    "Part Num": spoolPart?.partNumber,
                 },
                 {
                     "Section Number": i + 1,
                     Description: "Port A",
-                    Value: portA,
-                    "Part Num": "",
+                    Value: portAPart.description,
+                    "Part Num": portAPart?.partNumber,
                 },
                 {
                     "Section Number": i + 1,
                     Description: "Port B",
-                    Value: portB,
-                    "Part Num": "",
+                    Value: portBPart.description,
+                    "Part Num": portBPart?.partNumber,
                 },
                 {
                     "Section Number": i + 1,
                     Description: "LS Relief A",
-                    Value: loadSenseA,
-                    "Part Num": "",
+                    Value: `${loadSenseA} PSI`,
+                    "Part Num": null,
                 },
                 {
                     "Section Number": i + 1,
                     Description: "LS Relief B",
-                    Value: loadSenseB,
-                    "Part Num": "",
+                    Value: `${loadSenseB} PSI`,
+                    "Part Num": null,
                 },
                 {
                     "Section Number": i + 1,
                     Description: "Lever Base",
-                    Value: "",
-                    "Part Num": "",
+                    Value: leverBasePart?.description,
+                    "Part Num": leverBasePart?.partNumber,
                 },
                 {
                     "Section Number": i + 1,
                     Description: "Lever Base and Lever",
-                    Value: "",
-                    "Part Num": "",
+                    Value: leverBaseLeverPart?.description,
+                    "Part Num": leverBaseLeverPart?.partNumber,
                 },
                 {
                     "Section Number": i + 1,
                     Description: "Cable Kit",
-                    Value: "",
-                    "Part Num": "",
+                    Value: cableKitPart?.description,
+                    "Part Num": cableKitPart?.partNumber,
                 },
             ];
 
