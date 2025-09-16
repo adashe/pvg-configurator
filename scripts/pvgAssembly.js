@@ -249,6 +249,9 @@ class PvgAssembly {
         const costTieRodKit = 68.52;
         const costPaint = this.paint === "black" ? 88.55 : 0;
 
+        // Tariff
+        const tariffRate = 0.175;
+
         cost =
             costInlet +
             costPlowPowerFloat +
@@ -256,6 +259,8 @@ class PvgAssembly {
             costTieRodKit +
             costEndPlate +
             costPaint;
+
+        cost += cost * tariffRate;
 
         return cost;
     }

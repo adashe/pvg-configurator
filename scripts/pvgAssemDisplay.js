@@ -94,6 +94,7 @@ function buildPvgAssemDisplay() {
                     }</li>
                     <li>LIQ Populated: $$</li>
                     <li>Power Float Manifold: $$</li>
+                    <li>Tariff Charge: 17.5%</li>
                 </ul>
             </div>
         </div>
