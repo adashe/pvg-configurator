@@ -36,7 +36,8 @@ async function downloadXlsx() {
                 "Section Number": "manifold",
                 Description: "LIQ Populated",
                 Value: pvgAssem?.liqPopulated.toUpperCase(),
-                "Part Num": null,
+                "Part Num":
+                    pvgAssem.liqPopulated === "yes" ? "SOLMAN10057" : "",
             },
             {
                 "Section Number": "manifold",
@@ -44,7 +45,7 @@ async function downloadXlsx() {
                 Value: pvgAssem.mainReliefPsi
                     ? `${pvgAssem?.mainReliefPsi} PSI`
                     : "NONE",
-                "Part Num": null,
+                "Part Num": pvgAssem.liqPopulated ? "" : "SOLMAN10064",
             },
             {
                 "Section Number": "manifold",
@@ -58,7 +59,8 @@ async function downloadXlsx() {
                 "Section Number": "manifold",
                 Description: "MPP Power Float",
                 Value: pvgAssem?.mppPowerFloat.toUpperCase(),
-                "Part Num": null,
+                "Part Num":
+                    pvgAssem.mppPowerFloat === "yes" ? "SOLMAN10058" : "",
             },
             {
                 "Section Number": "manifold",
@@ -70,7 +72,7 @@ async function downloadXlsx() {
                 "Section Number": "manifold",
                 Description: "Tie Rod Kit",
                 Value: null,
-                "Part Num": null,
+                "Part Num": "5555555555",
             },
         ];
 
@@ -81,7 +83,6 @@ async function downloadXlsx() {
         for (i = 0; i < pvgAssem.numSections; i++) {
             const {
                 actuationPart,
-                portAhandlePart,
                 bodyPart,
                 spoolPart,
                 portAPart,
@@ -158,18 +159,6 @@ async function downloadXlsx() {
 
             // optional section rows
 
-            portAhandlePart
-                ? (rows = [
-                      ...rows,
-                      {
-                          "Section Number": i + 1,
-                          Description: "Handle for Port A Side",
-                          Value: "PVM32",
-                          "Part Num": portAhandlePart.partNumber,
-                      },
-                  ])
-                : null;
-
             portA
                 ? (rows = [
                       ...rows,
@@ -201,7 +190,7 @@ async function downloadXlsx() {
                           "Section Number": i + 1,
                           Description: "LS Relief A",
                           Value: `${loadSenseA} PSI`,
-                          "Part Num": null,
+                          "Part Num": Math.round(loadSenseA / 14.5),
                       },
                   ])
                 : null;
@@ -213,7 +202,7 @@ async function downloadXlsx() {
                           "Section Number": i + 1,
                           Description: "LS Relief B",
                           Value: `${loadSenseB} PSI`,
-                          "Part Num": null,
+                          "Part Num": Math.round(loadSenseB / 14.5),
                       },
                   ])
                 : null;
@@ -223,7 +212,7 @@ async function downloadXlsx() {
                       ...rows,
                       {
                           "Section Number": i + 1,
-                          Description: "Lever Base",
+                          Description: "PVM32: Handle for Port A Side",
                           Value: leverBasePart.description,
                           "Part Num": leverBasePart.partNumber,
                       },
@@ -235,7 +224,7 @@ async function downloadXlsx() {
                       ...rows,
                       {
                           "Section Number": i + 1,
-                          Description: "Lever Base and Lever",
+                          Description: "PVM32: Handle for Port A Sde",
                           Value: leverBaseLeverPart.description,
                           "Part Num": leverBaseLeverPart.partNumber,
                       },

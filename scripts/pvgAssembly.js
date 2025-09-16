@@ -64,13 +64,6 @@ class PvgAssembly {
             ? data.filter((part) => part.id === this[sectionID].actuation)[0]
             : null;
 
-        // handle for Port A side part
-        const portAhandlePart = this[sectionID].actuation
-            ? this[sectionID].actuation !== "mechanical"
-                ? data.filter((part) => part.id === "PVM32")[0]
-                : null
-            : null;
-
         // body part
         const bodyPart = this[sectionID].actuation
             ? this[sectionID].actuation === "mechanical"
@@ -114,17 +107,19 @@ class PvgAssembly {
             ? data.filter((part) => part.id === this[sectionID].portB)[0]
             : null;
 
-        // lever base part
-        const leverBasePart = this[sectionID].actuation
-            ? this[sectionID].actuation !== "mechanical"
-                ? data.filter((part) => part.id === "leverBase")[0]
+        // lever base and lever part on first section only
+        const leverBaseLeverPart = this[sectionID].actuation
+            ? this[sectionID].actuation !== "mechanical" &&
+              sectionID === "section0"
+                ? data.filter((part) => part.id === "leverBaseAndLever")[0]
                 : null
             : null;
 
-        // lever base and lever part
-        const leverBaseLeverPart = this[sectionID].actuation
-            ? this[sectionID].actuation !== "mechanical"
-                ? data.filter((part) => part.id === "leverBaseAndLever")[0]
+        // lever base part on additional sections
+        const leverBasePart = this[sectionID].actuation
+            ? this[sectionID].actuation !== "mechanical" &&
+              sectionID !== "section0"
+                ? data.filter((part) => part.id === "leverBase")[0]
                 : null
             : null;
 
@@ -137,7 +132,6 @@ class PvgAssembly {
 
         const parts = {
             actuationPart,
-            portAhandlePart,
             bodyPart,
             spoolPart,
             portAPart,

@@ -18,12 +18,6 @@
         "type": "actuation"
     },
     {
-        "id": "PVM32",
-        "description": "Port A Handle",
-        "partNumber": "157B3174",
-        "type": "handle"
-    },
-    {
         "id": "standardBody",
         "description": "Standard Body",
         "partNumber": "157B6906",
@@ -338,13 +332,31 @@
     {
         "id": "leverBaseAndLever",
         "description": "LEVER BASE AND LEVER",
-        "partNumber": "157B3191",
+        "partNumber": "157B3171",
         "type": "misc"
     },
     {
         "id": "cableKit",
         "description": "CABLE KIT",
         "partNumber": "01-5001-102",
+        "type": "misc"
+    },
+    {
+        "id": "liqPop",
+        "description": "LIQ POPULATED",
+        "partNumber": "SOLMAN10057",
+        "type": "misc"
+    },
+    {
+        "id": "mppPowerFloat",
+        "description": "MPP POWER FLOAT",
+        "partNumber": "SOLMAN10058",
+        "type": "misc"
+    },
+    {
+        "id": "tieRodKit",
+        "description": "TIE ROD KIT",
+        "partNumber": "tIeRoD12345",
         "type": "misc"
     }
 ]
