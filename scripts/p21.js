@@ -202,11 +202,7 @@ async function downloadP21() {
         /* create workbook and append worksheets */
         const wb = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(wb, ws, "Assembly");
-        XLSX.utils.book_append_sheet(
-            wb,
-            partsWs,
-            `${pvgAssem.mppSysNum} Prophet21 BoM Input`
-        );
+        XLSX.utils.book_append_sheet(wb, partsWs, "Components");
 
         /* export to XLSX */
         XLSX.writeFile(wb, `${pvgAssem.mppSysNum} Prophet21 BoM Input.xlsx`);
