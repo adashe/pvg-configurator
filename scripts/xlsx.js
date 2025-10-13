@@ -28,6 +28,12 @@ async function downloadXlsx() {
             },
             {
                 "Section Number": "manifold",
+                Description: "Number of Sections",
+                Value: pvgAssem?.numSections,
+                "Part Num": null,
+            },
+            {
+                "Section Number": "manifold",
                 Description: "MPP Inlet Setup",
                 Value: pvgAssem?.mppInletSetup.toUpperCase(),
                 "Part Num": null,
@@ -224,7 +230,7 @@ async function downloadXlsx() {
                       ...rows,
                       {
                           "Section Number": i + 1,
-                          Description: "PVM32: Handle for Port A Sde",
+                          Description: "PVM32: Handle for Port A Side",
                           Value: leverBaseLeverPart.description,
                           "Part Num": leverBaseLeverPart.partNumber,
                       },
