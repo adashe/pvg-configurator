@@ -78,7 +78,7 @@ async function downloadXlsx() {
                 "Section Number": "manifold",
                 Description: "Tie Rod Kit",
                 Value: null,
-                "Part Num": "5555555555",
+                "Part Num": "555555555",
             },
         ];
 
