@@ -250,7 +250,7 @@ class PvgAssembly {
         const costPaint = this.paint === "black" ? 88.55 : 0;
 
         // Tariff
-        const tariffRate = 0.175;
+        const tariffRate = 0.139;
 
         cost =
             costInlet +

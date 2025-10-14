@@ -85,8 +85,6 @@ function buildPvgAssemDisplay() {
             <div class="trigger">Adders</div>
             <div class="content">
                 <ul>
-                    <li>End Plate: $132.33</li>
-                    <li>Tie-Rods: $68.52</li>
                     <li>${
                         pvgAssem.paint === "black"
                             ? "Black Paint: $88.55"
@@ -94,7 +92,7 @@ function buildPvgAssemDisplay() {
                     }</li>
                     <li>LIQ Populated: $$</li>
                     <li>Power Float Manifold: $$</li>
-                    <li>Tariff Charge: 17.5%</li>
+                    <li>Tariff Charge: 13.9% (included)</li>
                 </ul>
             </div>
         </div>
