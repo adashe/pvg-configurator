@@ -123,10 +123,10 @@ const addEventHandlersToDropdowns = () => {
 };
 
 // Build html to display total cost of HPU and valves on part number display
-const buildTotalCostDisplay = () => {
-    const total = pvgAssem.calcCost();
+async function buildTotalCostDisplay() {
+    const total = await pvgAssem.calcCost();
 
-    totalCostDisplay.innerHTML = `<h4 class="total-price">TOTAL LIST PRICE: $${total.toFixed(
+    totalCostDisplay.innerHTML = `<h4 class="total-price">TOTAL LIST PRICE: $${total?.toFixed(
         2
     )}</h4>`;
-};
+}

@@ -3,360 +3,420 @@
         "id": "12V",
         "description": "PVHC 12V",
         "partNumber": "11112038",
-        "type": "actuation"
+        "type": "actuation",
+        "price": 395.26
     },
     {
         "id": "24V",
         "description": "PVHC 24V",
         "partNumber": "11112039",
-        "type": "actuation"
+        "type": "actuation",
+        "price": 395.26
     },
     {
         "id": "mechanical",
         "description": "Mechanical",
         "partNumber": null,
-        "type": "actuation"
+        "type": "actuation",
+        "price": 0.0
     },
     {
         "id": "standardBody",
         "description": "Standard Body",
         "partNumber": "157B6906",
-        "type": "body"
+        "type": "body",
+        "price": 431.34
     },
     {
         "id": "manualBody",
         "description": "Manual Cable Operated",
         "partNumber": "11075638",
-        "type": "body"
+        "type": "body",
+        "price": 464.12
     },
     {
         "id": "pvhc-cyl-2.6-sh",
         "description": "PVHC CYL 2.6 GPM with Shuttle",
         "partNumber": "157B9020",
-        "type": "spool"
+        "type": "spool",
+        "price": 83.42
     },
     {
         "id": "pvhc-cyl-2.6-nsh",
         "description": "PVHC CYL 2.6 GPM without Shuttle",
         "partNumber": "157B9000",
-        "type": "spool"
+        "type": "spool",
+        "price": 64.17
     },
     {
         "id": "pvhc-mtr-2.6-sh",
         "description": "PVHC MTR 2.6 GPM with Shuttle",
         "partNumber": "157B9120",
-        "type": "spool"
+        "type": "spool",
+        "price": 83.42
     },
     {
         "id": "pvhc-mtr-2.6-nsh",
         "description": "PVHC MTR 2.6 GPM without Shuttle",
         "partNumber": "157B9100",
-        "type": "spool"
+        "type": "spool",
+        "price": 64.17
     },
     {
         "id": "pvhc-cyl-6.6-sh",
         "description": "PVHC CYL 6.6 GPM with Shuttle",
         "partNumber": "157B9021",
-        "type": "spool"
+        "type": "spool",
+        "price": 83.42
     },
     {
         "id": "pvhc-cyl-6.6-nsh",
         "description": "PVHC CYL 6.6 GPM without Shuttle",
         "partNumber": "157B9001",
-        "type": "spool"
+        "type": "spool",
+        "price": 64.17
     },
     {
         "id": "pvhc-mtr-6.6-sh",
         "description": "PVHC MTR 6.6 GPM with Shuttle",
         "partNumber": "157B9121",
-        "type": "spool"
+        "type": "spool",
+        "price": 83.42
     },
     {
         "id": "pvhc-mtr-6.6-nsh",
         "description": "PVHC MTR 6.6 GPM without Shuttle",
         "partNumber": "157B9101",
-        "type": "spool"
+        "type": "spool",
+        "price": 64.17
     },
     {
         "id": "man-cyl-6.6-nsh",
         "description": "MANUAL CYL 6.6 GPM without Shuttle",
         "partNumber": "11079334",
-        "type": "spool"
+        "type": "spool",
+        "price": 162.88
     },
     {
         "id": "man-mtr-6.6-nsh",
         "description": "MANUAL MTR 6.6 GPM without Shuttle",
         "partNumber": "11074846",
-        "type": "spool"
+        "type": "spool",
+        "price": 162.88
     },
     {
         "id": "pvhc-cyl-10.6-sh",
         "description": "PVHC CYL 10.6 GPM with Shuttle",
         "partNumber": "157B9022",
-        "type": "spool"
+        "type": "spool",
+        "price": 83.42
     },
     {
         "id": "pvhc-cyl-10.6.nsh",
         "description": "PVHC CYL 10.6 GPM without Shuttle",
         "partNumber": "157B9002",
-        "type": "spool"
+        "type": "spool",
+        "price": 64.17
     },
     {
         "id": "pvhc-mtr-10.6-sh",
         "description": "PVHC MTR 10.6 GPM with Shuttle",
         "partNumber": "157B9122",
-        "type": "spool"
+        "type": "spool",
+        "price": 83.42
     },
     {
         "id": "pvhc-mtr-10.6-nsh",
         "description": "PVHC MTR 10.6 GPM without Shuttle",
         "partNumber": "157B9102",
-        "type": "spool"
+        "type": "spool",
+        "price": 64.17
     },
     {
         "id": "man-cyl-10.6-nsh",
         "description": "MANUAL CYL 10.6 GPM without Shuttle",
         "partNumber": "11079335",
-        "type": "spool"
+        "type": "spool",
+        "price": 162.88
     },
     {
         "id": "man-mtr-10.6-nsh",
         "description": "MANUAL MTR 10.6 GPM without Shuttle",
         "partNumber": "11078328",
-        "type": "spool"
+        "type": "spool",
+        "price": 162.88
     },
     {
         "id": "pvhc-cyl-17.2-sh",
         "description": "PVHC CYL 17.2 GPM with Shuttle",
         "partNumber": "157B9023",
-        "type": "spool"
+        "type": "spool",
+        "price": 83.42
     },
     {
         "id": "pvhc-cyl-17.2-nsh",
         "description": "PVHC CYL 17.2 GPM without Shuttle",
         "partNumber": "157B9003",
-        "type": "spool"
+        "type": "spool",
+        "price": 64.17
     },
     {
         "id": "pvhc-mtr-17.2-sh",
         "description": "PVHC MTR 17.2 GPM with Shuttle",
         "partNumber": "157B9123",
-        "type": "spool"
+        "type": "spool",
+        "price": 83.42
     },
     {
         "id": "pvhc-mtr-17.2-nsh",
         "description": "PVHC MTR 17.2 GPM without Shuttle",
         "partNumber": "157B9103",
-        "type": "spool"
+        "type": "spool",
+        "price": 64.17
     },
     {
         "id": "man-cyl-17.2-nsh",
         "description": "MANUAL CYL 17.2 GPM without Shuttle",
         "partNumber": "11078324",
-        "type": "spool"
+        "type": "spool",
+        "price": 162.88
     },
     {
         "id": "man-mtr-17.2-nsh",
         "description": "MANUAL MTR 17.2 GPM without Shuttle",
         "partNumber": "11078325",
-        "type": "spool"
+        "type": "spool",
+        "price": 162.88
     },
     {
         "id": "pvhc-cyl-26.4-sh",
         "description": "PVHC CYL 26.4 GPM with Shuttle",
         "partNumber": "157B9024",
-        "type": "spool"
+        "type": "spool",
+        "price": 83.42
     },
     {
         "id": "pvhc-cyl-26.4-nsh",
         "description": "PVHC CYL 26.4 GPM without Shuttle",
         "partNumber": "157B9004",
-        "type": "spool"
+        "type": "spool",
+        "price": 64.17
     },
     {
         "id": "pvhc-mtr-26.4-sh",
         "description": "PVHC MTR 26.4 GPM with Shuttle",
         "partNumber": "157B9124",
-        "type": "spool"
+        "type": "spool",
+        "price": 83.42
     },
     {
         "id": "pvhc-mtr-26.4-nsh",
         "description": "PVHC MTR 26.4 GPM without Shuttle",
         "partNumber": "157B9104",
-        "type": "spool"
+        "type": "spool",
+        "price": 64.17
     },
     {
         "id": "man-cyl-26.4-nsh",
         "description": "MANUAL CYL 26.4 GPM without Shuttle",
         "partNumber": "11078323",
-        "type": "spool"
+        "type": "spool",
+        "price": 162.88
     },
     {
         "id": "pvhc-cyl-34.3-sh",
         "description": "PVHC CYL 34.3 GPM with Shuttle",
         "partNumber": "157B9026",
-        "type": "spool"
+        "type": "spool",
+        "price": 83.42
     },
     {
         "id": "pvhc-cyl-34.3-nsh",
         "description": "PVHC CYL 34.3 GPM without Shuttle",
         "partNumber": "157B9006",
-        "type": "spool"
+        "type": "spool",
+        "price": 64.17
     },
     {
         "id": "pvhc-mtr-34.3-sh",
         "description": "PVHC MTR 34.3 GPM with Shuttle",
         "partNumber": "157B9126",
-        "type": "spool"
+        "type": "spool",
+        "price": 83.42
     },
     {
         "id": "pvhc-mtr-34.3-nsh",
         "description": "PVHC MTR 34.3 GPM without Shuttle",
         "partNumber": "157B9106",
-        "type": "spool"
+        "type": "spool",
+        "price": 64.17
     },
     {
         "id": "man-mtr-34.3-nsh",
         "description": "MANUAL CYL 34.3 GPM without Shuttle",
         "partNumber": "11074855",
-        "type": "spool"
+        "type": "spool",
+        "price": 170.28
     },
     {
         "id": "plug",
         "description": "PVLP-RELIEF Plug",
         "partNumber": "157B2002",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 16.76
     },
     {
         "id": "464",
         "description": "PVLP-RELIEF 464 PSI, +290/-0 PSI",
         "partNumber": "157B2032",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "725",
         "description": "PVLP-RELIEF 725 PSI, +290/-0 PSI",
         "partNumber": "157B2050",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "913",
         "description": "PVLP-RELIEF 913 PSI, +290/-0 PSI",
         "partNumber": "157B2063",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "1160",
         "description": "PVLP-RELIEF 1160 PSI, +290/-0 PSI",
         "partNumber": "157B2080",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "1450",
         "description": "PVLP-RELIEF 1450 PSI, +334/-0 PSI",
         "partNumber": "157B2100",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "1813",
         "description": "PVLP-RELIEF 1813 PSI, +334/-0 PSI",
         "partNumber": "157B2125",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "2031",
         "description": "PVLP-RELIEF 2031 PSI, +334/-0 PSI",
         "partNumber": "157B2140",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "2176",
         "description": "PVLP-RELIEF 2176 PSI, +334/-0 PSI",
         "partNumber": "157B2150",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "2321",
         "description": "PVLP-RELIEF 2321 PSI, +334/-0 PSI",
         "partNumber": "157B2160",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "2538",
         "description": "PVLP-RELIEF 2538 PSI, +334/-0 PSI",
         "partNumber": "157B2175",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "2756",
         "description": "PVLP-RELIEF 2756 PSI, +334/-0 PSI",
         "partNumber": "157B2190",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "3045",
         "description": "PVLP-RELIEF 3045 PSI, +334/-0 PSI",
         "partNumber": "157B2210",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "3335",
         "description": "PVLP-RELIEF 3335 PSI, +334/-0 PSI",
         "partNumber": "157B2230",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "3480",
         "description": "PVLP-RELIEF 3480 PSI, +348/-0 PSI",
         "partNumber": "157B2240",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "3626",
         "description": "PVLP-RELIEF 3626 PSI, +363/-0 PSI",
         "partNumber": "157B2250",
-        "type": "pvlp"
+        "type": "pvlp",
+        "price": 33.33
     },
     {
         "id": "anti-cav",
         "description": "PVLA Anti-Cavity Facility",
         "partNumber": "157B2001",
-        "type": "pvla"
+        "type": "pvla",
+        "price": 17.67
     },
     {
         "id": "leverBase",
         "description": "LEVER BASE",
         "partNumber": "157B3174",
-        "type": "misc"
+        "type": "misc",
+        "price": 81.43
     },
     {
         "id": "leverBaseAndLever",
         "description": "LEVER BASE AND LEVER",
         "partNumber": "157B3171",
-        "type": "misc"
+        "type": "misc",
+        "price": 84.96
     },
     {
         "id": "cableKit",
         "description": "CABLE KIT",
         "partNumber": "01-5001-102",
-        "type": "misc"
+        "type": "misc",
+        "price": 0.0
     },
     {
         "id": "liqPop",
         "description": "LIQ POPULATED",
         "partNumber": "SOLMAN10057",
-        "type": "misc"
+        "type": "misc",
+        "price": 0.0
     },
     {
         "id": "mppPowerFloat",
         "description": "MPP POWER FLOAT",
         "partNumber": "SOLMAN10058",
-        "type": "misc"
+        "type": "misc",
+        "price": 994.59
     },
     {
         "id": "tieRodKit",
         "description": "TIE ROD KIT",
         "partNumber": "tIeRoD12345",
-        "type": "misc"
+        "type": "misc",
+        "price": 68.52
     }
 ]

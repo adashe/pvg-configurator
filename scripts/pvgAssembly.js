@@ -231,7 +231,7 @@ class PvgAssembly {
         return sectionAssemNum;
     }
 
-    calcCost() {
+    async calcCost() {
         let cost = 0;
 
         // Manifold options
@@ -241,8 +241,15 @@ class PvgAssembly {
         const costHiFlowAux = 554.89;
 
         // PVG section prices
-        const costPerSection = 594.1;
-        const costAllSections = costPerSection * this.numSections;
+        // const costPerSection = 594.1;
+        // const costAllSections = costPerSection * this.numSections;
+
+        let sumAllSections = 0;
+
+        for (let i = 0; i < this.numSections; i++) {
+            sumAllSections += await this.calcSectionCost(i);
+        }
+        // console.log({ sumAllSections });
 
         // Options
         const costEndPlate = 132.33;
@@ -255,7 +262,8 @@ class PvgAssembly {
         cost =
             costInlet +
             costPlowPowerFloat +
-            costAllSections +
+            // costAllSections +
+            sumAllSections +
             costTieRodKit +
             costEndPlate +
             costPaint;
@@ -263,5 +271,51 @@ class PvgAssembly {
         cost += cost * tariffRate;
 
         return cost;
+    }
+
+    async calcSectionCost(index) {
+        const {
+            actuationPart,
+            bodyPart,
+            spoolPart,
+            portAPart,
+            portBPart,
+            leverBasePart,
+            leverBaseLeverPart,
+            cableKitPart,
+        } = await this.updatePartNumbers(index);
+
+        // console.log(
+        //     actuationPart?.price | 0,
+        //     bodyPart?.price | 0,
+        //     spoolPart?.price | 0,
+        //     portAPart?.price | 0,
+        //     portBPart?.price | 0,
+        //     leverBasePart?.price | 0,
+        //     leverBaseLeverPart?.price | 0,
+        //     cableKitPart?.price | 0
+        // );
+
+        // console.log(
+        //     (actuationPart?.price | 0) +
+        //         (bodyPart?.price | 0) +
+        //         (spoolPart?.price | 0) +
+        //         (portAPart?.price | 0) +
+        //         (portBPart?.price | 0) +
+        //         (leverBasePart?.price | 0) +
+        //         (leverBaseLeverPart?.price | 0) +
+        //         (cableKitPart?.price | 0)
+        // );
+
+        return (
+            (actuationPart?.price | 0) +
+            (bodyPart?.price | 0) +
+            (spoolPart?.price | 0) +
+            (portAPart?.price | 0) +
+            (portBPart?.price | 0) +
+            (leverBasePart?.price | 0) +
+            (leverBaseLeverPart?.price | 0) +
+            (cableKitPart?.price | 0)
+        );
     }
 }
