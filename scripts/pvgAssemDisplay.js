@@ -135,7 +135,11 @@ const addEventHandlersToDropdowns = () => {
 async function buildTotalCostDisplay() {
     const total = await pvgAssem.calcCost();
 
-    totalCostDisplay.innerHTML = `<h4 class="total-price">TOTAL LIST PRICE: $${total?.toFixed(
-        2
+    totalCostDisplay.innerHTML = `<h4 class="total-price">TOTAL LIST PRICE: ${total?.toLocaleString(
+        "en-US",
+        {
+            style: "currency",
+            currency: "USD",
+        }
     )}</h4>`;
 }
