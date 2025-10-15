@@ -3,7 +3,7 @@ const partNumDets = document.querySelector("#part-num-dets");
 const totalCostDisplay = document.querySelector("#total-cost-disp");
 
 // Build configured HPU part number and details
-function buildPvgAssemDisplay() {
+async function buildPvgAssemDisplay() {
     // Build assembly number displays
     assemblyNumDisplay.forEach((element) => {
         // element.innerHTML = `${pvgAssem.mppSysNum.toUpperCase()}-${pvgAssem.mppRevNum.toUpperCase()}`;
@@ -26,6 +26,8 @@ function buildPvgAssemDisplay() {
             loadSenseA,
             loadSenseB,
         } = pvgAssem[sectionID];
+
+        const sectionPrice = await pvgAssem.calcSectionCost(i);
 
         const sectionAssemNum = pvgAssem.generateSectionAssemNum(sectionID);
 
@@ -50,6 +52,13 @@ function buildPvgAssemDisplay() {
                                 ? `<li>LS Relief B: ${loadSenseB} psi`
                                 : ""
                         }
+                        <li>Section Price: ${sectionPrice.toLocaleString(
+                            "en-US",
+                            {
+                                style: "currency",
+                                currency: "USD",
+                            }
+                        )}</li>
                     </ul>
                 </div>
             </div>
